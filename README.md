@@ -31,14 +31,13 @@ Khai báo trong khối `CONTACT` ở phần script của `index.html`:
 
 ```js
 const CONTACT = {
-  phone: '0915 506 709',
   zalo: 'https://zalo.me/0915506709',
   messenger: 'https://m.me/quynhtrangkt',
   facebook: 'https://facebook.com/quynhtrangkt'
 };
 ```
 
-Sửa khối này khi cần đổi số điện thoại hoặc kênh liên hệ.
+Website không hiển thị số điện thoại hay tên tài khoản; các thẻ liên hệ chỉ mở đúng kênh khi khách bấm. Sửa khối này khi cần đổi kênh liên hệ.
 
 ## Trợ lý tư vấn
 
