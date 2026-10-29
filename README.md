@@ -25,18 +25,20 @@ Sau khi đẩy code lên, vào **Settings → Pages**, mục *Build and deployme
 | `robots.txt`, `sitemap.xml` | Hỗ trợ Google lập chỉ mục |
 | `.nojekyll` | Báo GitHub Pages phục vụ file nguyên trạng |
 
-## Cần thay trước khi chạy thật
+## Thông tin liên hệ
 
-Mở `index.html`, tìm khối `CONTACT` trong phần script và điền thông tin thật:
+Khai báo trong khối `CONTACT` ở phần script của `index.html`:
 
 ```js
 const CONTACT = {
-  phone: '09xx xxx xxx',
-  zalo: 'https://zalo.me/<số điện thoại>',
-  messenger: 'https://m.me/<tên trang>',
-  facebook: 'https://facebook.com/<tên trang>'
+  phone: '0915 506 706',
+  zalo: 'https://zalo.me/0915506709',
+  messenger: 'https://m.me/quynhtrangkt',
+  facebook: 'https://facebook.com/quynhtrangkt'
 };
 ```
+
+Sửa khối này khi cần đổi số điện thoại hoặc kênh liên hệ.
 
 ## Trợ lý tư vấn
 
