@@ -31,7 +31,7 @@ Khai báo trong khối `CONTACT` ở phần script của `index.html`:
 
 ```js
 const CONTACT = {
-  phone: '0915 506 706',
+  phone: '0915 506 709',
   zalo: 'https://zalo.me/0915506709',
   messenger: 'https://m.me/quynhtrangkt',
   facebook: 'https://facebook.com/quynhtrangkt'
