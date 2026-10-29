@@ -634,6 +634,16 @@ footer .legal{border-top:1px solid var(--line);padding-top:22px;font-size:12.5px
   .rv.pre{opacity:1;transform:none}
 }
 
+.case-mini{margin-top:20px;display:flex;align-items:center;gap:18px;padding:18px 20px;border:1px solid var(--line);border-radius:var(--r-l,20px);background:var(--surface);text-decoration:none;color:var(--ink);transition:transform .5s var(--ease-out),box-shadow .5s var(--ease-out),border-color .3s}
+.case-mini:hover{transform:translateY(-3px);box-shadow:var(--lift);border-color:color-mix(in srgb,var(--blue) 35%,var(--line))}
+.cm-ic{width:52px;height:52px;border-radius:14px;background:#f8e3da;display:grid;place-items:center;font-size:26px;flex:none}
+.cm-txt{display:grid;gap:2px;min-width:0;flex:1}
+.cm-txt small{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.cm-txt b{font-size:18px}
+.cm-txt em{font-style:normal;font-size:14.5px;color:var(--muted)}
+.cm-go{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--blue);flex:none}
+.cm-go svg{width:18px;height:18px}
+@media (max-width:640px){.case-mini{flex-wrap:wrap;gap:12px;padding:16px}.cm-go{width:100%}}
 /* ================= MOBILE LAYER ================= */
 html,body{max-width:100%;overflow-x:clip}
 .wrap > *{min-width:0}
@@ -991,6 +1001,11 @@ html,body{max-width:100%;overflow-x:clip}
         </div>
       </div>
     </article>
+    <a class="case-mini rv" href="https://tichxanh.github.io/mau/caphe-khe-sanh/" target="_blank" rel="noopener">
+      <span class="cm-ic">☕</span>
+      <span class="cm-txt"><small>Mẫu trang giới thiệu, đặt hàng qua Zalo</small><b>Đất Đỏ Coffee Khe Sanh</b><em>Một trang gọn cho cơ sở sản xuất nhỏ: giới thiệu sản phẩm, nút Zalo trên từng món, không cần giỏ hàng.</em></span>
+      <span class="cm-go">Xem mẫu <svg><use href="#i-arrow"/></svg></span>
+    </a>
   </div>
 </section>
 

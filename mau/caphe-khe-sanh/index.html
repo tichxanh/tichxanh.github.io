@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Đất Đỏ Coffee Khe Sanh</title>
+<meta name="description" content="Cà phê rang mộc từ vùng Khe Sanh, Quảng Trị. Rang theo mẻ mỗi tuần, nhận đặt hàng qua Zalo, giá sỉ cho quán. Trang mẫu do Tích Xanh thiết kế.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#b4442a">
+<meta property="og:title" content="Đất Đỏ Coffee Khe Sanh – trang giới thiệu mẫu">
+<meta property="og:description" content="Mẫu trang giới thiệu sản phẩm, nhận đặt hàng qua Zalo. Thiết kế bởi Tích Xanh.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Ccircle cx=%2220%22 cy=%2220%22 r=%2220%22 fill=%22%23b4442a%22/%3E%3Cpath d=%22M20 9c-6 3-8.5 8-7 13.5 1.2 4.6 4.6 7.8 7 8.5 2.4-.7 5.8-3.9 7-8.5C28.5 17 26 12 20 9z%22 fill=%22%23fbf3e6%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+/* Layout: bao cà phê giấy kraft trên nền đất đỏ — dải băng chữ chạy như tem niêm phong, thẻ sản phẩm như nhãn bao */
+:root{
+  --bg:#fbf7f2; --surface:#ffffff; --kraft:#f1e6d6; --ink:#26170f; --muted:#6b584b; --line:#eadccd;
+  --soil:#b4442a; --soil-ink:#9a3720; --soil-soft:#f8e3da; --roast:#3a2416; --leaf:#2f6b3f; --leaf-soft:#e3f0e5;
+  --zalo:#0068ff; --on-dark:#fbf3ea;
+  --f-display:"Bricolage Grotesque","Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:18px; --ease:cubic-bezier(.16,1,.3,1);
+  --shadow:0 1px 2px rgba(58,36,22,.06),0 18px 40px -22px rgba(58,36,22,.35);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#15100c; --surface:#1f1712; --kraft:#2a1f18; --ink:#f3e9df; --muted:#bba897; --line:#3a2c22;
+  --soil:#e0704f; --soil-ink:#f0957a; --soil-soft:#3a1d14; --roast:#0f0a07; --leaf:#77c08b; --leaf-soft:#18291d;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 20px 44px -22px rgba(0,0,0,.8); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#15100c; --surface:#1f1712; --kraft:#2a1f18; --ink:#f3e9df; --muted:#bba897; --line:#3a2c22;
+  --soil:#e0704f; --soil-ink:#f0957a; --soil-soft:#3a1d14; --roast:#0f0a07; --leaf:#77c08b; --leaf-soft:#18291d;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 20px 44px -22px rgba(0,0,0,.8); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+h1,h2,h3{font-family:var(--f-display);margin:0;letter-spacing:-.02em;text-wrap:balance;line-height:1.08}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.sec{padding-block:84px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--soil-ink)}
+.eyebrow::before{content:"";width:18px;height:2px;border-radius:2px;background:currentColor}
+.sec-head{display:grid;gap:12px;max-width:640px;margin-bottom:36px}
+.sec-head h2{font-size:clamp(30px,4.4vw,46px);font-weight:800}
+.sec-head p{color:var(--muted);font-size:17px}
+:focus-visible{outline:2.5px solid var(--soil);outline-offset:3px;border-radius:8px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:600 15.5px/1 var(--f-body);padding:15px 22px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;text-decoration:none;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .25s,border-color .25s,color .25s}
+.btn:active{transform:scale(.97)}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-zalo{background:var(--zalo);color:#fff;box-shadow:0 12px 26px -14px rgba(0,104,255,.9)}
+.btn-zalo:hover{transform:translateY(-2px)}
+.btn-soil{background:var(--soil);color:#fff}
+:root[data-theme="dark"] .btn-soil{color:#1a0d07}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-soil{color:#1a0d07}}
+.btn-soil:hover{transform:translateY(-2px)}
+.btn-line{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-line:hover{border-color:var(--soil);color:var(--soil-ink)}
+
+/* sample bar */
+.samplebar{background:var(--roast);color:var(--on-dark);font-size:13px}
+.samplebar .wrap{display:flex;gap:10px;justify-content:center;align-items:center;padding-block:8px;flex-wrap:wrap;text-align:center}
+.samplebar a{color:#ffd9c9;font-weight:600;text-decoration:none}
+.samplebar a:hover{text-decoration:underline}
+
+/* header */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:saturate(1.3) blur(12px);backdrop-filter:saturate(1.3) blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav-in{display:flex;align-items:center;gap:22px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-display);font-weight:800;font-size:20px;letter-spacing:-.02em}
+.logo-mark{width:36px;height:36px;flex:none}
+.logo small{display:block;font-family:var(--f-body);font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--muted);margin-top:2px}
+.nav-links{display:flex;gap:2px;margin-left:auto}
+.nav-links a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px;padding:9px 13px;border-radius:999px;transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--ink);background:var(--kraft)}
+.nav .btn{padding:11px 16px;font-size:14.5px}
+@media (max-width:860px){.nav-links{display:none}.nav .btn{margin-left:auto}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:56px 72px}
+.hero::before{content:"";position:absolute;right:-12%;top:-30%;width:62%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 40% 40%,var(--soil-soft),transparent 68%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:48px;align-items:center}
+.hero-copy{display:grid;gap:22px;justify-items:start}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--leaf-soft);color:var(--leaf);font-weight:600;font-size:13.5px;padding:7px 14px;border-radius:999px}
+.badge i{width:8px;height:8px;border-radius:50%;background:currentColor;animation:pulse 2s infinite}
+.hero h1{font-size:clamp(40px,6.4vw,72px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--soil)}
+.hook{font-family:var(--f-display);font-weight:700;font-size:clamp(19px,2.2vw,23px);color:var(--roast);background:var(--kraft);padding:10px 16px;border-radius:12px;border-left:4px solid var(--soil)}
+:root[data-theme="dark"] .hook{color:var(--ink)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hook{color:var(--ink)}}
+.hero-lead{color:var(--muted);font-size:17.5px;max-width:52ch}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-art{position:relative;display:grid;place-items:center;min-width:0}
+.hero-art svg{width:100%;max-width:440px;height:auto;overflow:visible}
+.steam path{stroke-dasharray:60;animation:steam 3.2s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:.6s}.steam path:nth-child(3){animation-delay:1.2s}
+.bean{transform-box:fill-box;transform-origin:center;animation:float 5s ease-in-out infinite}
+.bean.b2{animation-delay:-1.6s}.bean.b3{animation-delay:-3.1s}
+@keyframes steam{0%{stroke-dashoffset:60;opacity:0}30%{opacity:.85}100%{stroke-dashoffset:-60;opacity:0}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(8deg)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero-copy > *{animation:rise .9s var(--ease) both}
+.hero-copy > *:nth-child(2){animation-delay:.07s}.hero-copy > *:nth-child(3){animation-delay:.14s}.hero-copy > *:nth-child(4){animation-delay:.21s}.hero-copy > *:nth-child(5){animation-delay:.28s}
+.hero-art{animation:rise 1.1s .2s var(--ease) both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* ticker */
+.ticker{background:var(--soil);color:#fff;overflow:hidden;padding-block:14px;transform:rotate(-1.2deg);margin-block:-6px 0;position:relative;z-index:2}
+:root[data-theme="dark"] .ticker{color:#1a0d07}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ticker{color:#1a0d07}}
+.ticker-track{display:flex;width:max-content;animation:marquee 32s linear infinite}
+.ticker span{font-family:var(--f-display);font-weight:700;font-size:18px;white-space:nowrap;padding-inline:18px}
+.ticker span::before{content:"✦";margin-right:18px;opacity:.75}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* about: 4 reasons */
+.reasons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.reason{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:grid;gap:10px;align-content:start;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.reason:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.reason .ic{width:46px;height:46px;border-radius:14px;background:var(--soil-soft);color:var(--soil-ink);display:grid;place-items:center}
+.reason .ic svg{width:24px;height:24px}
+.reason h3{font-size:19px;font-weight:700}
+.reason p{font-size:15px;color:var(--muted)}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:36px}
+.intro p{color:var(--muted);font-size:17px}
+
+/* menu */
+.menu-sec{background:var(--kraft)}
+.menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.item{background:var(--surface);border-radius:22px;padding:14px;display:grid;gap:14px;grid-template-rows:auto 1fr auto;border:1px solid var(--line);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.item:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.pack{aspect-ratio:4/3;border-radius:14px;display:grid;place-items:center;position:relative;overflow:hidden;background:var(--c,#7a4a2a);max-width:100%}
+.pack::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.05) 0 2px,transparent 2px 9px)}
+.pack .label{position:relative;z-index:1;background:#fbf3e6;color:#2b1a10;border-radius:10px;padding:12px 16px;text-align:center;min-width:58%;box-shadow:0 10px 24px -14px rgba(0,0,0,.6);transform:rotate(-2deg);transition:transform .5s var(--ease)}
+.item:hover .pack .label{transform:rotate(0) scale(1.03)}
+.pack .label b{display:block;font-family:var(--f-display);font-size:19px;letter-spacing:-.01em}
+.pack .label small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a5a3b;font-weight:700}
+.tag-new{position:absolute;top:12px;left:12px;z-index:1;background:var(--leaf);color:#fff;font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px}
+.item-body{display:grid;gap:10px;align-content:start;padding-inline:6px}
+.item h3{font-size:20px;font-weight:700}
+.item p{font-size:14.5px;color:var(--muted)}
+.notes{display:flex;flex-wrap:wrap;gap:6px}
+.notes span{font-size:12.5px;font-weight:500;background:var(--kraft);color:var(--ink);padding:4px 10px;border-radius:999px}
+.roast{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.roast i{display:flex;gap:4px}
+.roast i b{width:16px;height:6px;border-radius:3px;background:var(--line)}
+.roast i b.on{background:var(--roast)}
+:root[data-theme="dark"] .roast i b.on{background:var(--soil)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .roast i b.on{background:var(--soil)}}
+.item-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:4px 6px 4px}
+.item-foot small{font-size:13px;color:var(--muted);line-height:1.35}
+.item-foot .btn{padding:11px 15px;font-size:14px}
+
+/* farm to cup */
+.journey{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;counter-reset:j;position:relative}
+.journey::before{content:"";position:absolute;left:5%;right:5%;top:38px;height:2px;background:repeating-linear-gradient(90deg,var(--soil) 0 8px,transparent 8px 16px);opacity:.5}
+.j{position:relative;display:grid;gap:10px;justify-items:center;text-align:center}
+.j .dot{width:76px;height:76px;border-radius:50%;background:var(--surface);border:1.5px solid var(--line);display:grid;place-items:center;font-size:30px;transition:transform .5s var(--ease),border-color .3s}
+.j:hover .dot{transform:translateY(-4px) rotate(-6deg);border-color:var(--soil)}
+.j h3{font-size:16px;font-weight:700}
+.j p{font-size:13.5px;color:var(--muted)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:200px 200px;gap:14px}
+.ph{border-radius:20px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:16px;color:#fff;background:var(--g)}
+.ph:first-child{grid-row:span 2}
+.ph .emo{position:absolute;inset:0;display:grid;place-items:center;font-size:64px;opacity:.9;transition:transform .8s var(--ease)}
+.ph:hover .emo{transform:scale(1.1) rotate(-4deg)}
+.ph span{position:relative;font-weight:600;font-size:14.5px;background:rgba(20,10,5,.5);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:6px 12px;border-radius:999px}
+.ph-note{font-size:13px;color:var(--muted);margin-top:12px}
+
+/* who */
+.who{display:flex;flex-wrap:wrap;gap:12px}
+.who span{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:12px 18px;font-weight:600;font-size:15.5px;transition:border-color .3s,transform .4s var(--ease)}
+.who span:hover{border-color:var(--soil);transform:translateY(-2px)}
+.who span i{font-style:normal;font-size:20px}
+
+/* how to order */
+.order-sec{background:var(--roast);color:var(--on-dark)}
+.order-sec .eyebrow{color:#ffb79f}
+.order-sec .sec-head p{color:rgba(251,243,234,.75)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:24px;display:grid;gap:10px;align-content:start}
+.step .n{font-family:var(--f-display);font-weight:800;font-size:40px;line-height:1;color:#ffb79f}
+.step h3{font-size:19px;font-weight:700;color:#fff}
+.step p{font-size:15px;color:rgba(251,243,234,.75)}
+.order-cta{margin-top:36px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#fbf3e6;color:#2b1a10;border-radius:22px;padding:24px 28px}
+.order-cta b{font-family:var(--f-display);font-size:clamp(20px,2.6vw,26px);font-weight:800;letter-spacing:-.01em}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:stretch}
+.channels{display:grid;gap:12px}
+.ch{display:flex;align-items:center;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 18px;text-decoration:none;cursor:pointer;font:inherit;color:inherit;text-align:left;width:100%;transition:transform .4s var(--ease),border-color .3s,box-shadow .4s var(--ease)}
+.ch:hover{transform:translateX(4px);border-color:var(--soil);box-shadow:var(--shadow)}
+.ch .ci{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;color:#fff;flex:none;font-weight:800;font-size:12px}
+.ch .ci svg{width:24px;height:24px}
+.ch b{display:block;font-size:16px}
+.ch small{display:block;color:var(--muted);font-size:14px}
+.ch .arr{margin-left:auto;color:var(--muted);font-size:20px}
+.ci.zalo{background:var(--zalo)}.ci.mess{background:linear-gradient(135deg,#0a7cff,#a334fa)}.ci.fb{background:#1877f2}.ci.qr{background:var(--roast)}
+:root[data-theme="dark"] .ci.qr{background:#5a3a26}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ci.qr{background:#5a3a26}}
+.info{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px;display:grid;gap:16px;align-content:start}
+.info h3{font-size:22px}
+.info dl{margin:0;display:grid;gap:12px}
+.info dt{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.info dd{margin:2px 0 0;font-size:15.5px}
+.info .note{font-size:13.5px;color:var(--leaf);background:var(--leaf-soft);border-radius:12px;padding:10px 12px}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding-block:36px 110px;font-size:13.5px;color:var(--muted)}
+footer .wrap{display:grid;gap:10px}
+footer b{color:var(--ink)}
+footer a{color:var(--soil-ink);font-weight:600;text-decoration:none}
+
+/* floating contact */
+.float{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px;justify-items:end}
+.float .fbtn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;border-radius:999px;color:#fff;font:600 14px/1 var(--f-body);padding:12px 16px 12px 12px;box-shadow:0 12px 28px -12px rgba(0,0,0,.55);transform:translateY(16px) scale(.9);opacity:0;transition:transform .5s var(--ease),opacity .4s}
+.float.show .fbtn{transform:none;opacity:1}
+.float.show .fbtn:nth-child(2){transition-delay:.06s}.float.show .fbtn:nth-child(3){transition-delay:.12s}
+.fbtn svg{width:22px;height:22px}
+.fbtn .zl{width:22px;height:22px;border-radius:7px;background:#fff;color:var(--zalo);display:grid;place-items:center;font-size:8.5px;font-weight:800}
+.fbtn.z{background:var(--zalo);animation:ring 4s 2s infinite}
+.fbtn.m{background:linear-gradient(135deg,#0a7cff,#a334fa)}
+.fbtn.q{background:var(--roast)}
+@keyframes ring{0%,88%,100%{box-shadow:0 12px 28px -12px rgba(0,0,0,.55),0 0 0 0 rgba(0,104,255,.5)}94%{box-shadow:0 12px 28px -12px rgba(0,0,0,.55),0 0 0 12px rgba(0,104,255,0)}}
+
+/* toast + qr dialog */
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);z-index:70;background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:14px;font-size:14.5px;max-width:min(92vw,460px);text-align:center;opacity:0;pointer-events:none;transition:opacity .3s,transform .45s var(--ease)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.dlg[hidden]{display:none}
+.dlg{position:fixed;inset:0;z-index:80;display:grid;place-items:center;background:rgba(15,8,4,.55);padding:20px;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.dlg-card{background:var(--surface);border-radius:24px;padding:26px;width:min(360px,100%);display:grid;gap:14px;justify-items:center;text-align:center;animation:rise .45s var(--ease)}
+.dlg-card h3{font-size:22px}
+.dlg-card p{font-size:14.5px;color:var(--muted)}
+#qrBox{width:220px;height:220px;max-width:100%;border-radius:16px;background:#fff;display:grid;place-items:center;padding:12px}
+#qrBox img,#qrBox canvas{width:100%!important;height:auto!important}
+.qr-ph{width:100%;height:100%;display:grid;place-items:center;color:#6b584b;font-size:13px;line-height:1.4;border:2px dashed #d9c7b6;border-radius:10px;padding:10px}
+
+/* reveal */
+.rv{transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.pre{opacity:0;transform:translateY(26px)}
+
+/* responsive */
+@media (max-width:980px){
+  .reasons{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .menu{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .journey{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:26px}
+  .journey::before{display:none}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  .hero-grid,.intro,.contact{grid-template-columns:minmax(0,1fr)}
+  .hero{padding-block:28px 52px}
+  .hero-art{order:-1}
+  .hero-art svg{max-width:300px}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:170px 140px 140px}
+  .ph:first-child{grid-column:span 2;grid-row:auto}
+}
+@media (max-width:620px){
+  .sec{padding-block:56px}
+  .sec-head{margin-bottom:24px}
+  .sec-head h2{font-size:29px}
+  .hero h1{font-size:40px}
+  .hero-ctas{width:100%}
+  .hero-ctas .btn{flex:1 1 100%}
+  .logo small{display:none}
+  .nav .btn span{display:none}
+  .nav .btn{padding:11px}
+  .reasons{grid-template-columns:minmax(0,1fr)}
+  .reason{grid-template-columns:46px 1fr;column-gap:14px;padding:18px}
+  .reason .ic{grid-row:span 2}
+  .menu{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:82%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-left:calc(-1 * max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)));padding:4px max(16px,env(safe-area-inset-right,0px)) 12px max(16px,env(safe-area-inset-left,0px));scroll-padding-inline:16px}
+  .menu::-webkit-scrollbar{display:none}
+  .item{scroll-snap-align:start}
+  .item:hover{transform:none}
+  .journey{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:minmax(0,1fr);gap:10px}
+  .step{grid-template-columns:52px 1fr;column-gap:12px;padding:18px}
+  .step .n{grid-row:span 2;font-size:34px}
+  .order-cta{padding:20px}
+  .order-cta .btn{width:100%}
+  .float{left:calc(12px + env(safe-area-inset-left,0px));right:calc(12px + env(safe-area-inset-right,0px));bottom:calc(10px + env(safe-area-inset-bottom,0px));grid-template-columns:2fr 1.4fr 1fr;justify-items:stretch}
+  .float .fbtn{justify-content:center;padding:13px 10px}
+  .float .fbtn.q span{display:none}
+  .toast{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+  .hero-art svg{max-width:250px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .rv.pre{opacity:1;transform:none}
+  .float .fbtn{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mess" viewBox="0 0 24 24"><path d="M12 2C6.4 2 2 6.1 2 11.4c0 2.9 1.3 5.4 3.5 7.1V22l3.2-1.8c1 .3 2.1.4 3.3.4 5.6 0 10-4.1 10-9.4S17.6 2 12 2zm1 12.6-2.5-2.7-4.9 2.7 5.4-5.8 2.6 2.7 4.8-2.7-5.4 5.8z" fill="currentColor"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7H17l.5-4h-4V8.8c0-.5.3-.8.5-.8z" fill="currentColor"/></symbol>
+  <symbol id="i-qr" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 14h2v2h-2zM16 16h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M4 10h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="samplebar"><div class="wrap">Bản thiết kế mẫu: trang giới thiệu, nhận đặt hàng qua Zalo. <a href="https://tichxanh.github.io/" target="_blank" rel="noopener">Thiết kế bởi Tích Xanh →</a></div></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" aria-label="Đất Đỏ Coffee – về đầu trang">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="var(--soil)"/><path d="M20 9c-6 3-8.5 8-7 13.5 1.2 4.6 4.6 7.8 7 8.5 2.4-.7 5.8-3.9 7-8.5C28.5 17 26 12 20 9z" fill="#fbf3e6"/><path d="M20 11c1.8 4.5 1.8 10.5-.4 18" fill="none" stroke="var(--soil)" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <span>Đất Đỏ Coffee<small>KHE SANH · QUẢNG TRỊ</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Mục chính">
+      <a href="#gioi-thieu">Giới thiệu</a><a href="#san-pham">Sản phẩm</a><a href="#vung-trong">Vùng trồng</a><a href="#dat-hang">Đặt hàng</a><a href="#lien-he">Liên hệ</a>
+    </nav>
+    <button class="btn btn-zalo" type="button" data-ch="zalo" aria-label="Nhắn Zalo đặt hàng"><svg><use href="#i-chat"/></svg><span>Nhắn Zalo</span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="badge"><i></i>Mẻ rang mới mỗi tuần</span>
+      <h1>Cà phê Khe Sanh <em>rang mộc</em>, thơm đúng vị đất đỏ</h1>
+      <p class="hook">Nhắn Zalo hôm nay, mai có cà phê mới rang.</p>
+      <p class="hero-lead">Hạt Arabica, Robusta và Liberica từ vùng đất đỏ bazan Hướng Hóa. Rang mộc theo mẻ nhỏ, không tẩm hương liệu, giá sỉ cho quán và giao toàn quốc.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-soil" href="#san-pham">Xem các loại cà phê <svg><use href="#i-arrow"/></svg></a>
+        <button class="btn btn-line" type="button" data-ch="zalo"><svg><use href="#i-chat"/></svg>Nhắn Zalo đặt hàng</button>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 420">
+        <g class="steam" fill="none" stroke="var(--muted)" stroke-width="5" stroke-linecap="round">
+          <path d="M282 150c-14-18 14-30 0-50"/><path d="M308 150c-14-18 14-30 0-50"/><path d="M334 150c-14-18 14-30 0-50"/>
+        </g>
+        <!-- kraft bag -->
+        <g transform="rotate(-6 150 230)">
+          <path d="M70 120h150l14 250H56z" fill="#c9a27a"/>
+          <path d="M70 120h150l-6 26H76z" fill="#b38b62"/>
+          <path d="M70 120l-6-22h162l-6 22z" fill="#d8b892"/>
+          <rect x="88" y="190" width="114" height="120" rx="10" fill="#fbf3e6"/>
+          <circle cx="145" cy="222" r="17" fill="var(--soil)"/>
+          <path d="M145 210c-5 2.5-7 7-6 11.5 1 4 4 6.8 6 7.4 2-.6 5-3.4 6-7.4 1-4.5-1-9-6-11.5z" fill="#fbf3e6"/>
+          <text x="145" y="262" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="17" fill="#2b1a10">ĐẤT ĐỎ</text>
+          <text x="145" y="281" text-anchor="middle" font-family="Be Vietnam Pro, sans-serif" font-weight="700" font-size="9.5" letter-spacing="2" fill="#8a5a3b">KHE SANH · 500G</text>
+          <rect x="112" y="291" width="66" height="4" rx="2" fill="#e5d3c0"/>
+        </g>
+        <!-- cup -->
+        <g>
+          <ellipse cx="308" cy="330" rx="86" ry="16" fill="rgba(58,36,22,.18)"/>
+          <path d="M240 168h136l-14 140a24 24 0 0 1-24 22h-60a24 24 0 0 1-24-22z" fill="#fbf3e6" stroke="#2b1a10" stroke-width="4"/>
+          <path d="M374 196h14a22 22 0 0 1 0 44h-20" fill="none" stroke="#2b1a10" stroke-width="4"/>
+          <ellipse cx="308" cy="170" rx="68" ry="12" fill="#3a2416"/>
+          <path d="M248 228h120" stroke="var(--soil)" stroke-width="10"/>
+        </g>
+        <!-- beans -->
+        <g fill="#5a3320">
+          <g class="bean"><ellipse cx="60" cy="88" rx="18" ry="24" transform="rotate(-30 60 88)"/><path d="M52 72c10 8 6 24 16 32" stroke="#2b1a10" stroke-width="3" fill="none"/></g>
+          <g class="bean b2"><ellipse cx="384" cy="96" rx="14" ry="19" transform="rotate(25 384 96)"/><path d="M378 82c8 7 4 19 12 26" stroke="#2b1a10" stroke-width="2.6" fill="none"/></g>
+          <g class="bean b3"><ellipse cx="226" cy="388" rx="13" ry="17" transform="rotate(60 226 388)"/><path d="M216 382c9 2 14 12 22 12" stroke="#2b1a10" stroke-width="2.4" fill="none"/></g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+<section class="sec" id="gioi-thieu">
+  <div class="wrap">
+    <div class="intro rv">
+      <div class="sec-head" style="margin:0">
+        <span class="eyebrow">Về chúng tôi</span>
+        <h2>Từ rẫy đất đỏ đến ly cà phê của bạn</h2>
+      </div>
+      <p>Cơ sở rang xay nhỏ của gia đình ở Hướng Hóa. Mỗi tuần chỉ rang vài mẻ để cà phê tới tay khách lúc thơm nhất. Quán cần nguồn hạt ổn định, nhà cần cà phê sạch pha phin buổi sáng, cứ nhắn là có.</p>
+    </div>
+    <div class="reasons">
+      <article class="reason rv"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 20c3-6 6-9 9-9s6 3 9 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><h3>Hạt vùng Khe Sanh</h3><p>Thu mua trực tiếp từ nông hộ trên đất đỏ bazan Hướng Hóa, hái quả chín.</p></article>
+      <article class="reason rv"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c-4 3-6 7-5 11 .8 3.2 3.3 5.6 5 6 1.7-.4 4.2-2.8 5-6 1-4-1-8-5-11z" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><h3>Rang mộc 100%</h3><p>Không tẩm hương liệu, không pha bắp đậu. Vị đắng thật, thơm thật.</p></article>
+      <article class="reason rv"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3>Rang theo mẻ</h3><p>Rang theo đơn mỗi tuần, đóng gói van một chiều giữ mùi lâu.</p></article>
+      <article class="reason rv"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7" cy="17.5" r="1.8" fill="currentColor"/><circle cx="17" cy="17.5" r="1.8" fill="currentColor"/></svg></span><h3>Giá sỉ cho quán</h3><p>Lấy càng nhiều giá càng tốt, giá ổn định cả năm. Báo giá trong ngày.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec menu-sec" id="san-pham">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Sản phẩm</span>
+      <h2>Chọn cà phê đi nè!</h2>
+      <p>Bấm "Nhắn Zalo" ở món bạn thích, tên món sẽ được chép sẵn để dán vào khung chat. Giá sỉ, giá lẻ báo ngay trong ngày.</p>
+    </div>
+    <div class="menu" id="menu"></div>
+  </div>
+</section>
+
+<section class="sec" id="vung-trong">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Từ vườn đến ly</span>
+      <h2>Sáu bước làm nên một gói cà phê</h2>
+      <p>Mỗi bước đều làm tay ở quy mô gia đình, để biết rõ hạt đến từ đâu và được rang thế nào.</p>
+    </div>
+    <div class="journey">
+      <div class="j rv"><span class="dot">🍒</span><h3>Hái quả chín</h3><p>Chỉ hái quả đỏ, chín đều</p></div>
+      <div class="j rv"><span class="dot">💧</span><h3>Sơ chế</h3><p>Lọc quả lép, rửa sạch</p></div>
+      <div class="j rv"><span class="dot">☀️</span><h3>Phơi giàn</h3><p>Phơi nắng trên giàn cao</p></div>
+      <div class="j rv"><span class="dot">🔥</span><h3>Rang mộc</h3><p>Mẻ nhỏ, canh lửa bằng tay</p></div>
+      <div class="j rv"><span class="dot">📦</span><h3>Đóng gói</h3><p>Túi van một chiều giữ mùi</p></div>
+      <div class="j rv"><span class="dot">☕</span><h3>Tới tay bạn</h3><p>Giao trong 2–4 ngày</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Hình ảnh tại xưởng</span>
+      <h2>Ghé xưởng rang một chút</h2>
+    </div>
+    <div class="gallery rv">
+      <div class="ph" style="--g:linear-gradient(150deg,#7a3b22,#3a1d10)"><span class="emo">🔥</span><span>Lò rang mẻ nhỏ</span></div>
+      <div class="ph" style="--g:linear-gradient(150deg,#3f6b3f,#1f3a24)"><span class="emo">🌿</span><span>Rẫy cà phê Hướng Hóa</span></div>
+      <div class="ph" style="--g:linear-gradient(150deg,#b4442a,#6b2414)"><span class="emo">🍒</span><span>Quả chín mùa thu hoạch</span></div>
+      <div class="ph" style="--g:linear-gradient(150deg,#a87a52,#5a3a22)"><span class="emo">☀️</span><span>Phơi hạt trên giàn</span></div>
+      <div class="ph" style="--g:linear-gradient(150deg,#4a2c1c,#20120a)"><span class="emo">📦</span><span>Đóng gói theo đơn</span></div>
+    </div>
+    <p class="ph-note">Khung ảnh minh họa. Khi làm thật, thay bằng ảnh chụp tại xưởng và rẫy của cơ sở.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Ai hay đặt</span>
+      <h2>Phục vụ cả quán lẫn nhà</h2>
+    </div>
+    <div class="who rv">
+      <span><i>🏪</i>Quán cà phê, quán cóc</span>
+      <span><i>🏢</i>Văn phòng, công ty</span>
+      <span><i>🎁</i>Quà biếu, quà Tết</span>
+      <span><i>🏠</i>Gia đình pha phin</span>
+      <span><i>🤝</i>Đại lý, cửa hàng đặc sản</span>
+      <span><i>🏨</i>Homestay, khách sạn</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec order-sec" id="dat-hang">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Cách đặt hàng</span>
+      <h2>Bốn bước, xong trong vài phút</h2>
+      <p>Không cần tạo tài khoản hay thanh toán trên web. Chốt đơn qua Zalo, nhận hàng mới trả tiền.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><span class="n">01</span><h3>Chọn loại cà phê</h3><p>Xem mục Sản phẩm, chọn loại và khối lượng.</p></div>
+      <div class="step rv"><span class="n">02</span><h3>Nhắn Zalo</h3><p>Gửi tên món, số lượng và địa chỉ nhận hàng.</p></div>
+      <div class="step rv"><span class="n">03</span><h3>Nhận báo giá</h3><p>Cơ sở báo giá, phí giao và ngày rang trong ngày.</p></div>
+      <div class="step rv"><span class="n">04</span><h3>Nhận cà phê</h3><p>Kiểm hàng, thanh toán khi nhận hoặc chuyển khoản.</p></div>
+    </div>
+    <div class="order-cta rv">
+      <b>Nhắn Zalo hôm nay, mai có cà phê mới rang!</b>
+      <button class="btn btn-zalo" type="button" data-ch="zalo"><svg><use href="#i-chat"/></svg>Nhắn Zalo đặt hàng</button>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="lien-he">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Liên hệ</span>
+      <h2>Nhắn một tin, có người trả lời ngay</h2>
+    </div>
+    <div class="contact">
+      <div class="channels rv">
+        <button class="ch" type="button" data-ch="zalo"><span class="ci zalo">Zalo</span><span><b>Nhắn Zalo</b><small>Đặt hàng, hỏi giá sỉ</small></span><span class="arr">→</span></button>
+        <button class="ch" type="button" data-ch="messenger"><span class="ci mess"><svg><use href="#i-mess"/></svg></span><span><b>Nhắn Messenger</b><small>Trả lời trong giờ làm việc</small></span><span class="arr">→</span></button>
+        <button class="ch" type="button" data-ch="facebook"><span class="ci fb"><svg><use href="#i-fb"/></svg></span><span><b>Fanpage</b><small>Xem mẻ rang mới, chương trình ưu đãi</small></span><span class="arr">→</span></button>
+        <button class="ch" type="button" data-ch="qr"><span class="ci qr"><svg><use href="#i-qr"/></svg></span><span><b>Quét mã QR Zalo</b><small>Kết bạn nhanh bằng điện thoại</small></span><span class="arr">→</span></button>
+      </div>
+      <aside class="info rv">
+        <h3>Thông tin cơ sở</h3>
+        <dl>
+          <div><dt>Xưởng rang</dt><dd>[Địa chỉ minh họa], huyện Hướng Hóa, Quảng Trị</dd></div>
+          <div><dt>Giờ nhận đơn</dt><dd>7:00 – 20:00, tất cả các ngày</dd></div>
+          <div><dt>Giao hàng</dt><dd>Toàn quốc qua đơn vị vận chuyển; nội tỉnh giao trong ngày</dd></div>
+          <div><dt>Thanh toán</dt><dd>Khi nhận hàng hoặc chuyển khoản, thống nhất qua Zalo</dd></div>
+        </dl>
+        <p class="note">Trang chỉ giới thiệu sản phẩm và nhận liên hệ, không có giỏ hàng hay thanh toán trực tuyến.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>© 2026 Đất Đỏ Coffee Khe Sanh</b>
+    <span>Hộ kinh doanh Đất Đỏ (minh họa) · Mã số thuế: [minh họa] · Địa chỉ: [minh họa], Hướng Hóa, Quảng Trị</span>
+    <span>Bản thiết kế mẫu. Tên cơ sở, địa chỉ và hình ảnh là minh họa, sẽ được cập nhật bằng thông tin thật. <a href="https://tichxanh.github.io/" target="_blank" rel="noopener">Thiết kế bởi Tích Xanh</a></span>
+  </div>
+</footer>
+
+<div class="float" id="float">
+  <button class="fbtn z" type="button" data-ch="zalo"><span class="zl">Zalo</span><span>Nhắn Zalo</span></button>
+  <button class="fbtn m" type="button" data-ch="messenger"><svg><use href="#i-mess"/></svg><span>Messenger</span></button>
+  <button class="fbtn q" type="button" data-ch="qr" aria-label="Mã QR Zalo"><svg><use href="#i-qr"/></svg><span>QR</span></button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="dlg" id="qrDlg" hidden>
+  <div class="dlg-card" role="dialog" aria-modal="true" aria-labelledby="qrTitle">
+    <h3 id="qrTitle">Quét để nhắn Zalo</h3>
+    <div id="qrBox"></div>
+    <p>Mở Zalo trên điện thoại, chọn biểu tượng quét mã, đưa camera vào mã này.</p>
+    <button class="btn btn-line" type="button" id="qrClose">Đóng</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+(() => {
+/* ===== Kênh liên hệ của cơ sở — điền link thật khi làm website thật ===== */
+const CONTACT = {
+  zalo: '',       // ví dụ: https://zalo.me/<số Zalo của cơ sở>
+  messenger: '',  // ví dụ: https://m.me/<tên trang>
+  facebook: ''    // ví dụ: https://facebook.com/<tên trang>
+};
+const SAMPLE_MSG = 'Đây là trang mẫu. Khi làm thật, nút này mở Zalo, Messenger của cơ sở.';
+
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* ticker */
+const TICK = ['Rang mộc 100%', 'Hạt Arabica · Robusta · Liberica Khe Sanh', 'Rang theo mẻ mỗi tuần', 'Giá sỉ cho quán', 'Nhắn Zalo hôm nay, mai có cà phê mới rang', 'Giao toàn quốc'];
+$('#ticker').innerHTML = [...TICK, ...TICK].map(t => `<span>${esc(t)}</span>`).join('');
+
+/* menu */
+const MENU = [
+  {name:'Arabica Khe Sanh rang mộc', label:'Arabica', c:'#6b3a22', tag:'Bán chạy', note:['Chua thanh','Hậu ngọt','Hương trái cây'], roast:2, desc:'Hạt Arabica vùng cao, rang vừa. Hợp pha phin nhạt, pour-over hoặc cold brew.', size:'Gói 250g · 500g'},
+  {name:'Robusta Khe Sanh đậm vị', label:'Robusta', c:'#3a2016', note:['Đắng đậm','Body dày','Hợp pha sữa'], roast:4, desc:'Rang đậm cho ly cà phê sữa đá đúng kiểu, đậm đà mà không khét.', size:'Gói 500g · 1kg'},
+  {name:'Liberica (cà phê mít)', label:'Liberica', c:'#8a5a2c', tag:'Đặc sản', note:['Thơm mít chín','Chua nhẹ','Lạ miệng'], roast:3, desc:'Giống cà phê mít ít nơi có, mùi thơm đặc trưng, hợp người thích khám phá.', size:'Gói 250g'},
+  {name:'Phối trộn pha phin', label:'Phối phin', c:'#4e2a19', note:['Cân bằng','Thơm lâu','Giá tốt'], roast:3, desc:'Robusta phối Arabica theo tỉ lệ riêng, công thức quán hay dùng cho phin truyền thống.', size:'Gói 500g · 1kg'},
+  {name:'Cà phê hạt cho quán', label:'Cho quán', c:'#2f1a10', tag:'Giá sỉ', note:['Ổn định','Rang theo đơn','Giao định kỳ'], roast:3, desc:'Hạt nguyên cho máy pha, rang theo khẩu vị của quán, giao định kỳ hằng tuần.', size:'Bao 1kg · 5kg'},
+  {name:'Hộp quà cà phê 3 vị', label:'Hộp quà', c:'#a24a2c', note:['Arabica','Robusta','Liberica'], roast:0, desc:'Hộp giấy kraft kèm thiệp, làm quà biếu khách hàng, đối tác, quà Tết.', size:'Hộp 3 gói 150g'}
+];
+$('#menu').innerHTML = MENU.map((m, i) => `
+  <article class="item rv">
+    <div class="pack" style="--c:${m.c}">${m.tag ? `<span class="tag-new">${esc(m.tag)}</span>` : ''}
+      <div class="label"><small>Khe Sanh</small><b>${esc(m.label)}</b></div></div>
+    <div class="item-body">
+      <h3>${esc(m.name)}</h3>
+      <p>${esc(m.desc)}</p>
+      <div class="notes">${m.note.map(n => `<span>${esc(n)}</span>`).join('')}</div>
+      ${m.roast ? `<div class="roast">Độ rang <i>${[1,2,3,4,5].map(k => `<b class="${k <= m.roast ? 'on' : ''}"></b>`).join('')}</i></div>` : ''}
+    </div>
+    <div class="item-foot"><small>${esc(m.size)}<br>Báo giá qua Zalo</small>
+      <button class="btn btn-zalo" type="button" data-ch="zalo" data-item="${i}"><svg><use href="#i-chat"/></svg>Nhắn Zalo</button></div>
+  </article>`).join('');
+
+/* toast */
+const toast = $('#toast'); let tt;
+function say(msg) { toast.textContent = msg; toast.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('show'), 3600); }
+
+/* QR dialog */
+const dlg = $('#qrDlg');
+function openQR() {
+  const box = $('#qrBox'); box.innerHTML = '';
+  if (CONTACT.zalo && window.QRCode) {
+    new QRCode(box, {text: CONTACT.zalo, width: 196, height: 196, colorDark: '#2b1a10', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M});
+  } else {
+    box.innerHTML = '<div class="qr-ph">Mã QR Zalo của cơ sở sẽ hiện ở đây khi điền link Zalo thật.</div>';
+  }
+  dlg.hidden = false; $('#qrClose').focus();
+}
+function closeQR() { dlg.hidden = true; }
+$('#qrClose').onclick = closeQR;
+dlg.addEventListener('click', e => { if (e.target === dlg) closeQR(); });
+addEventListener('keydown', e => { if (e.key === 'Escape' && !dlg.hidden) closeQR(); });
+
+/* contact buttons */
+async function copy(text) { try { await navigator.clipboard.writeText(text); return true; } catch { return false; } }
+document.addEventListener('click', async e => {
+  const b = e.target.closest('[data-ch]'); if (!b) return;
+  const ch = b.dataset.ch;
+  if (ch === 'qr') { openQR(); return; }
+  let copied = false;
+  if (b.dataset.item != null) {
+    const m = MENU[+b.dataset.item];
+    copied = await copy(`Chào cơ sở, mình muốn hỏi giá: ${m.name} (${m.size}).`);
+  }
+  const url = CONTACT[ch];
+  if (!url) { say(copied ? 'Đã chép tên món. ' + SAMPLE_MSG : SAMPLE_MSG); return; }
+  const a = document.createElement('a'); a.href = url; a.target = '_blank'; a.rel = 'noopener'; document.body.appendChild(a); a.click(); a.remove();
+  if (copied) say('Đã chép tên món, dán vào khung chat để hỏi giá nhé.');
+});
+
+/* header + floating buttons */
+const nav = $('#nav'), fl = $('#float');
+const onScroll = () => { nav.classList.toggle('scrolled', scrollY > 8); fl.classList.toggle('show', scrollY > innerHeight * .5); };
+addEventListener('scroll', onScroll, {passive: true}); onScroll();
+
+/* reveal below-the-fold only */
+if (!reduce && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { const el = en.target; setTimeout(() => el.classList.remove('pre'), +el.dataset.d || 0); io.unobserve(el); } }), {rootMargin: '0px 0px -8% 0px'});
+  const groups = new Map();
+  $$('.rv').forEach(el => {
+    if (el.getBoundingClientRect().top > innerHeight * .95) {
+      const p = el.parentElement, i = groups.get(p) || 0; groups.set(p, i + 1);
+      el.dataset.d = Math.min(i, 5) * 80; el.classList.add('pre'); io.observe(el);
+    }
+  });
+}
+})();
+</script>
+</body>
+</html>
