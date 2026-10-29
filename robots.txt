@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tichxanh.github.io/sitemap.xml
