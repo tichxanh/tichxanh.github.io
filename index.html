@@ -519,6 +519,8 @@ footer .legal{max-width:880px;line-height:1.6}
 .skip:focus{top:calc(12px + env(safe-area-inset-top,0px))}
 .no-order{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink);background:var(--blue-soft);border-radius:12px;padding:12px 14px;margin-top:4px}
 .no-order svg{width:20px;height:20px;flex:none;color:var(--blue);margin-top:1px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#doneTitle:focus{outline:none}
 .privacy-note{font-size:12.5px;line-height:1.55;color:var(--muted);margin-top:12px}
 /* ================= REFINEMENT LAYER ================= */
 body{margin:0}
@@ -1000,6 +1002,7 @@ footer .legal{border-top:1px solid var(--line);padding-top:22px;font-size:12.5px
 
       <div class="lead">
         <form id="leadForm" novalidate>
+          <div class="hp" aria-hidden="true"><label for="fHp">Để trống ô này</label><input id="fHp" name="hp" tabindex="-1" autocomplete="off"></div>
           <h3>Đăng ký tư vấn</h3>
           <p class="lead-sub">Các mục có dấu <span class="req">*</span> là bắt buộc.</p>
           <div class="fgrid">
@@ -1040,11 +1043,11 @@ footer .legal{border-top:1px solid var(--line);padding-top:22px;font-size:12.5px
             </div>
           </div>
           <button class="btn btn-primary lead-submit" type="submit">Gửi đăng ký tư vấn <svg><use href="#i-arrow"/></svg></button>
-          <p class="privacy-note">Đăng ký tư vấn không phải đơn đặt hàng và không phát sinh nghĩa vụ thanh toán. Website không lưu thông tin của bạn trên máy chủ: nội dung chỉ được gửi đi khi bạn tự gửi qua Zalo hoặc Messenger, và chỉ dùng để liên hệ tư vấn.</p>
+          <p class="privacy-note">Đăng ký tư vấn không phải đơn đặt hàng và không phát sinh nghĩa vụ thanh toán. Thông tin bạn gửi chỉ được chuyển tới người tư vấn và chỉ dùng để liên hệ tư vấn, không chia sẻ cho bên thứ ba.</p>
         </form>
 
         <div class="lead-done" id="leadDone" hidden>
-          <div class="done-head"><span class="done-ico"><svg><use href="#i-check"/></svg></span><div><h3>Còn một bước: gửi cho người tư vấn</h3><p>Nội dung đăng ký đã soạn sẵn. Chọn kênh bên dưới, nội dung sẽ được sao chép để bạn dán vào khung chat và bấm gửi.</p></div></div>
+          <div class="done-head"><span class="done-ico"><svg><use href="#i-check"/></svg></span><div><h3 id="doneTitle" tabindex="-1">Đã gửi đăng ký tư vấn</h3><p id="doneText">Người tư vấn đã nhận thông tin và sẽ liên hệ với bạn trong giờ làm việc. Muốn trao đổi ngay, bạn gửi thêm nội dung bên dưới qua Zalo hoặc Messenger.</p></div></div>
           <pre class="lead-msg" id="leadMsg"></pre>
           <div class="send-row">
             <a class="btn send zalo" id="sendZalo" href="#" target="_blank" rel="noopener">Gửi qua Zalo</a>
@@ -1327,7 +1330,7 @@ GÓI DỊCH VỤ (giá chưa VAT):
 - Gói Website cơ bản + Thông báo: báo giá theo mẫu sau buổi tư vấn — dựng website bán hàng chuẩn di động có đủ 10 hạng mục, rồi làm trọn thủ tục.
 - Website sàn/nền tảng trung gian: báo giá riêng.
 QUY TRÌNH 6 bước: tư vấn loại hình → rà soát website → khách gửi thông tin → nộp hồ sơ trên Cổng Dịch vụ công → nhận kết quả trong 03 ngày làm việc, làm rõ nếu được yêu cầu → được xác nhận. Không cam kết thay cơ quan nhà nước.
-LIÊN HỆ: mục "Liên hệ người tư vấn" cuối trang có nút nhắn Zalo, Messenger, Fanpage Facebook, số điện thoại, và Mẫu đăng ký tư vấn (họ tên, tên công ty, ngành nghề, nhu cầu: Gói Hỗ trợ / Gói cơ bản / Theo yêu cầu, số điện thoại, website nếu có). Điền mẫu xong, trang soạn sẵn tin nhắn để gửi qua Zalo hoặc Messenger. Rà soát website miễn phí khi gửi link. Khi khách muốn được tư vấn, mời họ điền Mẫu đăng ký tư vấn.
+LIÊN HỆ: mục "Liên hệ người tư vấn" cuối trang có nút nhắn Zalo, Messenger, Fanpage Facebook, số điện thoại, và Mẫu đăng ký tư vấn (họ tên, tên công ty, ngành nghề, nhu cầu: Gói Hỗ trợ / Gói cơ bản / Theo yêu cầu, số điện thoại, website nếu có). Điền mẫu và bấm "Gửi đăng ký tư vấn", thông tin chuyển thẳng tới người tư vấn; khách có thể nhắn thêm qua Zalo hoặc Messenger. Rà soát website miễn phí khi gửi link. Khi khách muốn được tư vấn, mời họ điền Mẫu đăng ký tư vấn.
 
 Trang web tự hiển thị thẻ "Mẫu website" bên dưới câu trả lời khi khách nhắc tới một nhóm sản phẩm CNNT, nên khi phù hợp bạn có thể nói "xem mẫu gợi ý bên dưới" thay vì mô tả lại mẫu.
 
@@ -1460,7 +1463,8 @@ greet(); setState('connecting');
 const CONTACT = {
   zalo: 'https://zalo.me/0915506709',            // link Zalo: https://zalo.me/<số điện thoại>
   messenger: 'https://m.me/quynhtrangkt',        // link Messenger: https://m.me/<tên trang>
-  facebook: 'https://facebook.com/quynhtrangkt'  // link Fanpage
+  facebook: 'https://facebook.com/quynhtrangkt', // link Fanpage
+  sheet: 'https://script.google.com/macros/s/AKfycbyfmdGA7yrZorzdWo9mAFDigskIMR0jJBVfoJyGLnwij2xocamHsZveJiMIMZQpMj92/exec' // Google Apps Script nhận đăng ký
 };
 const short = u => u.replace(/^https?:\/\/(www\.)?/, '');
 $('#chZalo').href = CONTACT.zalo;
@@ -1515,13 +1519,35 @@ function buildMsg(d) {
     d.note ? '• Ghi chú: ' + d.note : null
   ].filter(Boolean).join('\n');
 }
-form.addEventListener('submit', e => {
+const submitBtn = form.querySelector('.lead-submit');
+const submitHTML = submitBtn.innerHTML;
+async function sendToSheet(d) {
+  if (!CONTACT.sheet) return false;
+  const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 12000);
+  try {
+    // text/plain avoids a CORS preflight; Apps Script reads the JSON body
+    await fetch(CONTACT.sheet, {method: 'POST', mode: 'no-cors', headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify({...d, hp: $('#fHp').value, page: location.href}), signal: ctl.signal});
+    return true;
+  } catch { return false; } finally { clearTimeout(t); }
+}
+form.addEventListener('submit', async e => {
   e.preventDefault();
   const d = validate(); if (!d) return;
+  submitBtn.disabled = true; submitBtn.textContent = 'Đang gửi…';
+  const ok = await sendToSheet(d);
+  submitBtn.disabled = false; submitBtn.innerHTML = submitHTML;
   leadMsg.textContent = buildMsg(d); leadStatus.textContent = '';
+  if (ok) {
+    $('#doneTitle').textContent = 'Đã gửi đăng ký tư vấn';
+    $('#doneText').textContent = 'Người tư vấn đã nhận thông tin và sẽ liên hệ với bạn trong giờ làm việc. Muốn trao đổi ngay, bạn gửi thêm nội dung bên dưới qua Zalo hoặc Messenger.';
+  } else {
+    $('#doneTitle').textContent = 'Còn một bước: gửi cho người tư vấn';
+    $('#doneText').textContent = 'Chưa gửi được tự động. Bạn chọn Zalo hoặc Messenger bên dưới, nội dung sẽ được sao chép để bạn dán vào khung chat và bấm gửi.';
+  }
   form.hidden = true; done.hidden = false;
   try { localStorage.setItem('tx-lead', JSON.stringify(d)); } catch {}
-  $('#leadDone h3').focus?.();
+  $('#doneTitle').focus({preventScroll: true});
   done.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'nearest'});
 });
 $('#editLead').onclick = () => { done.hidden = true; form.hidden = false; $('#fName').focus(); };
