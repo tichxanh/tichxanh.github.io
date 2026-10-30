@@ -257,6 +257,16 @@ footer .logo small{color:#c9ab8e}
 .chip[aria-pressed="true"]{border-color:var(--ac);background:var(--ac-soft);color:var(--ac-ink);font-weight:600}
 .fld input,.fld textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:11px 13px;resize:vertical}
 .fld input:focus,.fld textarea:focus{outline:none;border-color:var(--ac)}
+.fld .req{color:var(--hot)}
+.fld .err{color:var(--hot);font-size:12.5px;font-weight:600}
+.fld input.bad{border-color:var(--hot)}
+.steps-z{margin:0;padding:0;list-style:none;display:grid;gap:8px;width:100%;text-align:left;counter-reset:z}
+.steps-z li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;font-size:14.5px;line-height:1.4}
+.steps-z li::before{counter-increment:z;content:counter(z);width:26px;height:26px;border-radius:50%;background:var(--ac-ink);color:var(--bg);display:grid;place-items:center;font-weight:700;font-size:13px}
+.card-s .btn{width:100%}
+.card-s .alt{font-size:13.5px;color:var(--muted)}
+.card-s .alt a{color:var(--ac-ink);font-weight:700}
+.card-s{max-height:92vh;overflow:auto}
 .sh-f{padding:12px 20px 18px;border-top:1px solid var(--line);display:grid;gap:10px;background:var(--card)}
 .tot{display:flex;justify-content:space-between;align-items:baseline;font-weight:700}
 .tot b{font:400 28px/1 var(--f-display);color:var(--ac-ink)}
@@ -425,6 +435,7 @@ footer .logo small{color:#c9ab8e}
     <div class="sh-b">
       <div class="ol" id="ol"></div>
       <div class="fld"><span>Nhận món</span><div class="chips" id="how"><button class="chip" type="button" aria-pressed="true" data-v="Ghé quán lấy">Ghé quán lấy</button><button class="chip" type="button" aria-pressed="false" data-v="Giao tới">Giao tới</button></div></div>
+      <label class="fld"><span>Số điện thoại người nhận <b class="req">*</b></span><input id="ph" type="tel" inputmode="tel" autocomplete="tel" placeholder="VD: 0912 345 678"><small class="err" id="phErr" hidden>Nhập số điện thoại 10 số để quán gọi khi giao món.</small></label>
       <label class="fld"><span id="whLbl">Giờ ghé lấy</span><input id="wh" autocomplete="off" placeholder="VD: 15h30"></label>
       <label class="fld"><span>Ghi chú</span><textarea id="nt" rows="2" placeholder="VD: 1 ly ít đường, 1 ly nhiều đá"></textarea></label>
     </div>
@@ -438,10 +449,13 @@ footer .logo small{color:#c9ab8e}
 
 <div class="dlg" id="msgDlg" hidden>
   <div class="card-s" role="dialog" aria-modal="true" aria-labelledby="mTitle">
-    <h3 id="mTitle">Tin nhắn gửi quán</h3>
-    <p id="mSub">Bản xem thử: khi quán duyệt, nút này mở thẳng Zalo của quán với nội dung dưới đây.</p>
+    <h3 id="mTitle">Đơn đã soạn xong</h3>
+    <ol class="steps-z" id="mSteps"><li><span id="mS1">Đơn đã được chép sẵn.</span></li><li><span>Bấm <b>Mở Zalo của quán</b> bên dưới.</span></li><li><span>Trong khung chat: <b>nhấn giữ</b> ô nhập tin → <b>Dán</b> → bấm <b>Gửi</b>.</span></li></ol>
+    <p id="mSub" hidden></p>
     <div class="msgbox" id="msgTxt" style="width:100%;text-align:left"></div>
-    <button class="btn btn-p" type="button" id="mCopy">Chép tin nhắn</button>
+    <a class="btn btn-z" id="mGo" href="#" rel="noopener"><span class="zl">Zalo</span>Mở Zalo của quán</a>
+    <button class="btn btn-o" type="button" id="mCopy">Chép lại tin nhắn</button>
+    <p class="alt" id="mAlt">Không mở được Zalo? <a id="mSms" href="#">Gửi đơn bằng tin nhắn SMS</a></p>
     <button class="btn btn-o" type="button" data-close>Đóng</button>
   </div>
 </div>
@@ -696,22 +710,39 @@ $('#sendBar').onclick = () => open($('#orderDlg'));
 /* compose + send */
 function compose() {
   const lines = [...order].map(([n, q]) => { const m = find(n); return `• ${q} ${n} – ${k(m.price * q)}`; });
-  const wh = $('#wh').value.trim(), nt = $('#nt').value.trim();
-  return [`Chào ${SHOP}, mình đặt món:`, ...lines, `Tạm tính: ${k(total())}`, `${mode}${wh ? ': ' + wh : ''}`, nt ? `Ghi chú: ${nt}` : ''].filter(Boolean).join('\n');
+  const wh = $('#wh').value.trim(), nt = $('#nt').value.trim(), ph = $('#ph').value.trim();
+  return [`Chào ${SHOP}, mình đặt món:`, ...lines, `Tạm tính: ${k(total())}`, `${mode}${wh ? ': ' + wh : ''}`, `SĐT người nhận: ${ph}`, nt ? `Ghi chú: ${nt}` : ''].filter(Boolean).join('\n');
 }
-async function copyText(t) {
-  try { await navigator.clipboard.writeText(t); return true; } catch {}
+function copySync(t) {
   try { const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length); const ok = document.execCommand('copy'); ta.remove(); return ok; } catch { return false; }
 }
-function goZalo() { const a = document.createElement('a'); a.href = CONTACT.zalo; a.target = '_blank'; a.rel = 'noopener'; document.body.appendChild(a); a.click(); a.remove(); }
-function preview(txt, sub) { $('#msgTxt').textContent = txt; $('#mSub').textContent = sub; close($('#orderDlg')); open($('#msgDlg')); }
-$('#mCopy').onclick = async () => say(await copyText($('#msgTxt').textContent) ? 'Đã chép tin nhắn' : 'Bấm giữ vào tin nhắn để chép');
+async function copyText(t) {
+  if (copySync(t)) return true;
+  try { await navigator.clipboard.writeText(t); return true; } catch { return false; }
+}
+/* Trên điện thoại (kể cả trình duyệt trong Zalo) mở ngay trong cửa sổ hiện tại để Zalo bắt link và mở khung chat; máy tính mở tab mới. */
+const MOBILE = /Android|iPhone|iPad|iPod|Zalo/i.test(navigator.userAgent);
+const SHOP_PHONE = (CONTACT.zalo.match(/zalo\.me\/(\d+)/) || [])[1] || '';
+function goZalo() { if (MOBILE) { location.href = CONTACT.zalo; return; } window.open(CONTACT.zalo, '_blank', 'noopener'); }
+function preview(txt, sub, ok) {
+  $('#msgTxt').textContent = txt; $('#mSub').textContent = sub || ''; $('#mSub').hidden = !sub;
+  $('#mS1').textContent = ok ? 'Đơn đã được chép sẵn.' : 'Chép đơn: bấm "Chép lại tin nhắn" (hoặc nhấn giữ vào khung đơn).';
+  const go = $('#mGo'); go.hidden = !CONTACT.zalo; go.href = CONTACT.zalo || '#'; if (MOBILE) go.removeAttribute('target'); else go.target = '_blank';
+  const sms = $('#mSms'); $('#mAlt').hidden = !(SHOP_PHONE && MOBILE); sms.href = `sms:${SHOP_PHONE}${/iPhone|iPad|iPod/i.test(navigator.userAgent) ? '&' : '?'}body=${encodeURIComponent(txt)}`;
+  $('#mSteps').hidden = !CONTACT.zalo;
+  close($('#orderDlg')); open($('#msgDlg'));
+}
+$('#mGo').addEventListener('click', () => { copySync($('#msgTxt').textContent); });
+$('#mCopy').onclick = async () => say(await copyText($('#msgTxt').textContent) ? 'Đã chép tin nhắn' : 'Nhấn giữ vào khung đơn để chép');
+const phOk = () => /^(0|\+?84)\d{9}$/.test($('#ph').value.replace(/[\s.\-]/g, ''));
+try { $('#ph').value = localStorage.getItem(STORE_KEY + '-ph') || ''; } catch {}
+$('#ph').addEventListener('input', () => { try { localStorage.setItem(STORE_KEY + '-ph', $('#ph').value); } catch {} if (phOk()) { $('#ph').classList.remove('bad'); $('#phErr').hidden = true; } });
 $('#send').onclick = async () => {
   if (!count()) { say('Bấm + ở menu để chọn món trước nhé'); return; }
+  if (!phOk()) { $('#ph').classList.add('bad'); $('#phErr').hidden = false; $('#ph').focus(); return; }
   const txt = compose(); const ok = await copyText(txt);
-  if (!CONTACT.zalo) { preview(txt, 'Bản xem thử: khi quán duyệt, nút này mở thẳng Zalo của ' + SHOP + '. Tin nhắn dưới đây ' + (ok ? 'đã được chép sẵn.' : 'sẽ được chép sẵn.')); return; }
-  goZalo(); say(ok ? 'Đã chép đơn – dán vào chat Zalo rồi gửi nha!' : 'Mở Zalo… nếu chưa có nội dung, quay lại chép tin nhắn');
-  if (!ok) preview(txt, 'Chép tin nhắn này rồi dán vào chat Zalo với quán.');
+  if (!CONTACT.zalo) { preview(txt, 'Bản xem thử: khi quán duyệt, nút này mở Zalo của ' + SHOP + '.', ok); return; }
+  preview(txt, '', ok);
 };
 document.addEventListener('click', e => {
   const b = e.target.closest('[data-ch]'); if (!b) return;
