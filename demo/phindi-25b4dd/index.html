@@ -264,6 +264,8 @@ footer .logo small{color:#c9ab8e}
 .steps-z li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;font-size:14.5px;line-height:1.4}
 .steps-z li::before{counter-increment:z;content:counter(z);width:26px;height:26px;border-radius:50%;background:var(--ac-ink);color:var(--bg);display:grid;place-items:center;font-weight:700;font-size:13px}
 .card-s .btn{width:100%}
+.card-s .btn .n1{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.25);display:grid;place-items:center;font-size:12px;flex:none}
+#mCopy.done{background:var(--ac-ink)}
 .card-s .alt{font-size:13.5px;color:var(--muted)}
 .card-s .alt a{color:var(--ac-ink);font-weight:700}
 .card-s{max-height:92vh;overflow:auto}
@@ -450,11 +452,11 @@ footer .logo small{color:#c9ab8e}
 <div class="dlg" id="msgDlg" hidden>
   <div class="card-s" role="dialog" aria-modal="true" aria-labelledby="mTitle">
     <h3 id="mTitle">Đơn đã soạn xong</h3>
-    <ol class="steps-z" id="mSteps"><li><span id="mS1">Đơn đã được chép sẵn.</span></li><li><span>Bấm <b>Mở Zalo của quán</b> bên dưới.</span></li><li><span>Trong khung chat: <b>nhấn giữ</b> ô nhập tin → <b>Dán</b> → bấm <b>Gửi</b>.</span></li></ol>
+    <ol class="steps-z" id="mSteps"><li><span id="mS1">Bấm <b>Chép tin nhắn</b>.</span></li><li><span>Bấm <b>Mở Zalo của quán</b>.</span></li><li><span>Trong khung chat: <b>nhấn giữ</b> ô nhập tin → <b>Dán</b> → bấm <b>Gửi</b>.</span></li></ol>
     <p id="mSub" hidden></p>
     <div class="msgbox" id="msgTxt" style="width:100%;text-align:left"></div>
-    <a class="btn btn-z" id="mGo" href="#" rel="noopener"><span class="zl">Zalo</span>Mở Zalo của quán</a>
-    <button class="btn btn-o" type="button" id="mCopy">Chép lại tin nhắn</button>
+    <button class="btn btn-p" type="button" id="mCopy"><b class="n1">1</b><span id="mCopyT">Chép tin nhắn</span></button>
+    <a class="btn btn-z" id="mGo" href="#" rel="noopener"><b class="n1">2</b><span class="zl">Zalo</span>Mở Zalo của quán</a>
     <p class="alt" id="mAlt">Không mở được Zalo? <a id="mSms" href="#">Gửi đơn bằng tin nhắn SMS</a></p>
     <button class="btn btn-o" type="button" data-close>Đóng</button>
   </div>
@@ -726,14 +728,14 @@ const SHOP_PHONE = (CONTACT.zalo.match(/zalo\.me\/(\d+)/) || [])[1] || '';
 function goZalo() { if (MOBILE) { location.href = CONTACT.zalo; return; } window.open(CONTACT.zalo, '_blank', 'noopener'); }
 function preview(txt, sub, ok) {
   $('#msgTxt').textContent = txt; $('#mSub').textContent = sub || ''; $('#mSub').hidden = !sub;
-  $('#mS1').textContent = ok ? 'Đơn đã được chép sẵn.' : 'Chép đơn: bấm "Chép lại tin nhắn" (hoặc nhấn giữ vào khung đơn).';
+  $('#mCopy').classList.remove('done'); $('#mCopyT').textContent = 'Chép tin nhắn';
   const go = $('#mGo'); go.hidden = !CONTACT.zalo; go.href = CONTACT.zalo || '#'; if (MOBILE) go.removeAttribute('target'); else go.target = '_blank';
   const sms = $('#mSms'); $('#mAlt').hidden = !(SHOP_PHONE && MOBILE); sms.href = `sms:${SHOP_PHONE}${/iPhone|iPad|iPod/i.test(navigator.userAgent) ? '&' : '?'}body=${encodeURIComponent(txt)}`;
   $('#mSteps').hidden = !CONTACT.zalo;
   close($('#orderDlg')); open($('#msgDlg'));
 }
 $('#mGo').addEventListener('click', () => { copySync($('#msgTxt').textContent); });
-$('#mCopy').onclick = async () => say(await copyText($('#msgTxt').textContent) ? 'Đã chép tin nhắn' : 'Nhấn giữ vào khung đơn để chép');
+$('#mCopy').onclick = async () => { const ok = await copyText($('#msgTxt').textContent); if (ok) { $('#mCopy').classList.add('done'); $('#mCopyT').textContent = 'Đã chép ✓'; say('Đã chép, giờ bấm Mở Zalo của quán'); } else say('Nhấn giữ vào khung đơn để chép'); };
 const phOk = () => /^(0|\+?84)\d{9}$/.test($('#ph').value.replace(/[\s.\-]/g, ''));
 try { $('#ph').value = localStorage.getItem(STORE_KEY + '-ph') || ''; } catch {}
 $('#ph').addEventListener('input', () => { try { localStorage.setItem(STORE_KEY + '-ph', $('#ph').value); } catch {} if (phOk()) { $('#ph').classList.remove('bad'); $('#phErr').hidden = true; } });
