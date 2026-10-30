@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Allow: /demo/*/og.jpg
-Disallow: /demo/
 
 Sitemap: https://tichxanh.github.io/sitemap.xml
