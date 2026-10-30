@@ -1,15 +1,16 @@
 <!doctype html>
+<!-- Mẫu "Cafe" – Tích Xanh. Không sửa trực tiếp: dựng bằng build_cafe.py + file cấu hình quán. -->
 <html lang="vi">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Phindi Café – Menu & đặt món qua Zalo</title>
-<meta name="description" content="52 món cà phê phin, trà, trà sữa, sinh tố, đá xay. Bấm chọn món, gửi cả đơn qua Zalo trong 30 giây.">
+<meta name="description" content="47 món cà phê phin, trà, trà sữa, sinh tố, đá xay. Bấm chọn món, gửi cả đơn qua Zalo trong 30 giây.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#6e3d1f">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Phindi Café – Menu & đặt món qua Zalo">
-<meta property="og:description" content="Phindi khoai môn, kem sữa, cà phê muối và 49 món khác. Chọn món, gửi Zalo, ghé lấy liền.">
+<meta property="og:description" content="Phindi kem sữa, cà phê muối, matcha latte và 44 món khác. Chọn món, gửi Zalo, ghé lấy liền.">
 <meta property="og:image" content="https://tichxanh.github.io/demo/phindi-25b4dd/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -327,7 +328,7 @@ footer .logo small{color:#c9ab8e}
   <symbol id="leaf" viewBox="0 0 40 40"><path d="M6 34C8 16 20 6 36 6 34 22 24 34 6 34z" fill="#5f9e4c"/><path d="M8 32 30 10" stroke="#3f7a35" stroke-width="2"/></symbol>
 </svg>
 
-<div class="demobar"><div class="wrap">Bản xem thử gửi quán Phindi duyệt. <a href="https://tichxanh.github.io/" target="_blank" rel="noopener">Thiết kế bởi Tích Xanh →</a></div></div>
+<div class="demobar"><div class="wrap">Bản chạy thử: đặt món đã kết nối Zalo của quán. <a href="https://tichxanh.github.io/" target="_blank" rel="noopener">Thiết kế bởi Tích Xanh →</a></div></div>
 
 <header class="nav" id="nav">
   <div class="wrap nav-in">
@@ -342,7 +343,7 @@ footer .logo small{color:#c9ab8e}
   <div class="wrap">
     <div class="hero-copy">
       <h1><span class="stk">Good mood</span><span class="l1">Thèm ly nào</span><span class="box">nhắn Zalo</span><span class="sm">Phindi pha liền tay</span></h1>
-      <p class="hero-lead"><b>52 món</b> cà phê phin, trà, trà sữa, sinh tố, đá xay. Bấm <b>+</b> chọn món, gửi cả đơn qua Zalo <b>trong 30 giây</b>.</p>
+      <p class="hero-lead"><b>47 món</b> cà phê phin, trà, trà sữa, sinh tố, đá xay. Bấm <b>+</b> chọn món, gửi cả đơn qua Zalo <b>trong 30 giây</b>.</p>
       <div class="hero-ctas">
         <a class="btn btn-p" href="#menu">Xem menu &amp; chọn món</a>
         <button class="btn btn-o" type="button" data-ch="zalo"><span class="zl">Zalo</span>Nhắn quán ngay</button>
@@ -356,7 +357,7 @@ footer .logo small{color:#c9ab8e}
       <svg class="bean" style="left:10%;top:18%;transform:rotate(-30deg)"><use href="#bean"/></svg>
       <svg class="bean" style="left:26%;top:6%;width:24px;transform:rotate(40deg)"><use href="#bean"/></svg>
       <svg class="bean" style="right:24%;bottom:6%;width:28px;transform:rotate(70deg)"><use href="#bean"/></svg>
-      <span class="price"><b>30k</b><small>Phindi<br>khoai môn</small></span>
+      <span class="price"><b>30k</b><small>Phindi<br>kem sữa</small></span>
     </div>
   </div>
 </section>
@@ -438,7 +439,7 @@ footer .logo small{color:#c9ab8e}
 <div class="dlg" id="msgDlg" hidden>
   <div class="card-s" role="dialog" aria-modal="true" aria-labelledby="mTitle">
     <h3 id="mTitle">Tin nhắn gửi quán</h3>
-    <p id="mSub">Bản xem thử: khi quán duyệt, nút này mở thẳng Zalo của Phindi với nội dung dưới đây.</p>
+    <p id="mSub">Bản xem thử: khi quán duyệt, nút này mở thẳng Zalo của quán với nội dung dưới đây.</p>
     <div class="msgbox" id="msgTxt" style="width:100%;text-align:left"></div>
     <button class="btn btn-p" type="button" id="mCopy">Chép tin nhắn</button>
     <button class="btn btn-o" type="button" data-close>Đóng</button>
@@ -458,13 +459,87 @@ footer .logo small{color:#c9ab8e}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
 (() => {
-/* ===== Cấu hình — điền khi quán duyệt =====
-   Hotline Zalo in trên menu: 0393 315 295 → zalo: 'https://zalo.me/0393315295'
-   PHOTOS: ảnh thật của quán, đặt file vào thư mục img/ rồi ghi 'Tên món': 'img/ten-file.jpg' */
-const CONTACT = { zalo: '' };
+/* ===== CẤU HÌNH QUÁN – mẫu "Cafe" (Tích Xanh) =====
+   SHOP: tên quán trong tin nhắn Zalo. CONTACT.zalo: 'https://zalo.me/<số>' (để trống = chế độ xem thử, không gửi tới số thật).
+   PHOTOS: ảnh thật của quán, 'Tên món': 'img/ten-file.jpg' (không dùng ảnh mạng của quán khác).
+   Ly vẽ: {L:[[màu,tỉ lệ],...] từ đáy lên, f: màu kem/bọt, dome:1 kem chóp, ice:1 đá, pearl:1 trân châu,
+           hot:1 khói, straw:'#màu' ống hút, g:'lemon'|'peach'|'mint'|'bean' trang trí} */
+const SHOP = 'Phindi';
+const STORE_KEY = 'phindi-order';
+const CONTACT = { zalo: 'https://zalo.me/0393315295' }; // Hotline Zalo in trên menu: 0393 315 295
 const PHOTOS = {
-  // 'Phindi khoai môn': 'img/phindi-khoai-mon.jpg',
+  // 'Phindi kem sữa': 'img/phindi-kem-sua.jpg',
 };
+const HERO = ['Phindi kem sữa', 'Trà đào cam sả', 'Matcha latte'];   // [ly giữa, trái, phải] – tên đúng như trong CATS
+const CTA_CUPS = ['Trà chanh', 'Cà phê muối', 'Trà sữa socola'];
+const RIBBON = ['Phindi kem sữa','Cà phê muối','Matcha latte','Bạc xỉu','Trà đào cam sả','Trà sữa','Sinh tố bơ','Matcha đá xay'];
+const BEST = [ // 4 món bán chạy: [tên món, nhãn, mô tả ngắn]
+  ['Phindi kem sữa', 'Món tên quán', 'Lớp kem sữa béo mịn phủ trên ly phin đá.'],
+  ['Cà phê muối', 'Đậm vị', 'Kem muối mằn mặn, cà phê thơm đậm.'],
+  ['Trà đào cam sả', 'Mát lạnh', 'Trà đào thơm cam sả, uống nóng hoặc đá.'],
+  ['Matcha latte', 'Món mới', 'Matcha xanh thơm hòa cùng sữa béo, uống đá mát lạnh.']];
+/* MENU: C = bảng màu; CATS = nhóm {id, name, items:[[tên, giá (nghìn), ly, ghi chú]], topping?:[[tên, giá]]}
+   (các trường b, bc, card, n, note của nhóm là tùy chọn, mẫu Cafe không dùng) */
+const C = {coffee:'#4a2a18', coffeeL:'#8a5634', milk:'#f2e6d4', cream:'#f6e7c8', taro:'#9b7bc6', taroL:'#c9b3e6', blue:'#7b5aa6', peach:'#f4a261', lemon:'#f3d36b', mango:'#f7b733', avo:'#b5c96b', soursop:'#eef1d8', yog:'#f7f3ea', orange:'#f7941d', carrot:'#f26b21', passion:'#f2c14e', pine:'#f7d038', guava:'#f6a6a0', matcha:'#8fb46a', choco:'#6b3a22'};
+const CATS = [
+  {id:'phin', n:'01', name:'Cà phê phin', note:'Phin truyền thống pha tay, đậm đà kiểu Việt.', b:'#8f5236', bc:'#fbefd9', card:'rgba(251,239,217,.10)', card2:'rgba(251,239,217,.18)', items:[
+    ['Phindi kem sữa',30,{L:[[C.coffee,.6]],f:C.cream,ice:1,dome:1},'Món tên quán'],
+    ['Cà phê muối',25,{L:[[C.coffee,.55]],f:'#efe0c2',ice:1}],
+    ['Sữa chua cà phê',35,{L:[[C.yog,.45],[C.coffee,.3]]}],
+    ['Bạc xỉu',25,{L:[[C.milk,.5],['#a87650',.25]],ice:1}],
+    ['Nâu phin',20,{L:[[C.coffeeL,.75]],ice:1}],
+    ['Đen phin',18,{L:[['#2b1a10',.75]],ice:1}],
+    ['Nâu xóc',22,{L:[['#9a6440',.6]],f:'#d9b48c'}],
+    ['Đen xóc',20,{L:[['#3a2416',.6]],f:'#8a5e3c'}]]},
+  {id:'may', n:'02', name:'Cà phê máy', note:'Espresso xay mới, uống liền hay mang đi đều hợp.', b:'#5a3220', bc:'#fbefd9', card:'rgba(251,239,217,.09)', card2:'rgba(251,239,217,.16)', items:[
+    ['Nâu xay',20,{L:[[C.coffeeL,.75]],ice:1}],
+    ['Đen xay',18,{L:[['#2b1a10',.75]],ice:1}],
+    ['Nâu xay xóc',22,{L:[['#9a6440',.6]],f:'#d9b48c'}],
+    ['Đen xay xóc',20,{L:[['#3a2416',.6]],f:'#8a5e3c'}],
+    ['Americano',25,{L:[['#3d2414',.75]],ice:1}]]},
+  {id:'tra', n:'03', name:'Trà', note:'Trà trái cây mát lạnh, có món uống nóng cho ngày se lạnh.', b:'#c4572f', bc:'#fff3e4', card:'rgba(255,243,228,.13)', card2:'rgba(255,243,228,.22)', items:[
+    ['Trà gừng mật ong','25',{L:[['#d9a441',.7]],hot:1},'Nóng'],
+    ['Trà tắc xí muội',25,{L:[['#e8a33a',.72]],ice:1,g:'lemon'}],
+    ['Trà đào cam sả',30,{L:[['#f08a3c',.72]],ice:1,g:'peach'},'Nóng / đá'],
+    ['Trà đào',25,{L:[[C.peach,.72]],ice:1,g:'peach'},'Nóng / đá'],
+    ['Trà chanh',25,{L:[[C.lemon,.72]],ice:1,g:'lemon'},'Nóng / đá'],
+    ['Trà chanh việt quất',25,{L:[[C.blue,.35],[C.lemon,.38]],ice:1,g:'lemon'}]]},
+  {id:'trasua', n:'04', name:'Trà sữa', note:'Trà sữa nhà làm, thêm trân châu hay kem tùy thích.', b:'#eaa8b6', bc:'#24402f', card:'rgba(36,64,47,.08)', card2:'rgba(36,64,47,.14)', items:[
+    ['Trà sữa truyền thống',25,{L:[['#c89f73',.78]],pearl:1,straw:'#2f4a3a'}],
+    ['Trà sữa việt quất',25,{L:[['#9d7fc4',.78]],pearl:1,straw:'#2f4a3a'}],
+    ['Trà sữa socola',25,{L:[['#7a4a32',.78]],pearl:1,straw:'#2f4a3a'}],
+    ['Trà sữa matcha',25,{L:[[C.matcha,.78]],pearl:1,straw:'#2f4a3a'}]], topping:[['Trân châu trắng',5],['Kem muối',5],['Kem sữa',5]]},
+  {id:'sinhto', n:'05', name:'Sinh tố', note:'Trái cây xay mịn, sánh và thơm.', b:'#efc14a', bc:'#4a2a18', card:'rgba(74,42,24,.08)', card2:'rgba(74,42,24,.14)', items:[
+    ['Sinh tố mãng cầu',30,{L:[[C.soursop,.8]],straw:'#8f5236'}],
+    ['Sinh tố bơ',30,{L:[[C.avo,.8]],straw:'#8f5236'},'(theo mùa)'],
+    ['Sinh tố bơ mãng cầu',35,{L:[[C.avo,.4],[C.soursop,.4]],straw:'#8f5236'},'(theo mùa)'],
+    ['Sinh tố xoài',30,{L:[[C.mango,.8]],straw:'#8f5236'}],
+    ['Sinh tố xoài dứa',35,{L:[[C.mango,.4],[C.pine,.4]],straw:'#8f5236'}],
+    ['Sinh tố việt quất',30,{L:[[C.blue,.8]],straw:'#8f5236'}]]},
+  {id:'suachua', n:'06', name:'Sữa chua', note:'Sữa chua dẻo chua nhẹ, trộn trái cây.', b:'#f3ead9', bc:'#4a2a18', card:'rgba(74,42,24,.06)', card2:'rgba(74,42,24,.11)', items:[
+    ['Sữa chua việt quất',30,{L:[[C.yog,.42],[C.blue,.36]]}],
+    ['Sữa chua chanh dây',30,{L:[[C.yog,.42],[C.passion,.36]]}],
+    ['Sữa chua đánh đá',27,{L:[[C.yog,.8]],ice:1}]]},
+  {id:'nuocep', n:'07', name:'Nước ép', note:'Ép tươi tại quán, chọn thêm sữa hoặc đường.', b:'#e07b2c', bc:'#fff3e4', card:'rgba(255,243,228,.13)', card2:'rgba(255,243,228,.22)', items:[
+    ['Ép cam',35,{L:[[C.orange,.8]],g:'lemon'}],
+    ['Ép cam cà rốt',35,{L:[[C.carrot,.4],[C.orange,.4]]}],
+    ['Ép cà rốt',25,{L:[['#f47c2c',.8]]},'Sữa / đường'],
+    ['Ép chanh leo',25,{L:[[C.passion,.8]],g:'mint'},'Sữa / đường'],
+    ['Ép chanh',25,{L:[['#f4e27a',.8]],g:'lemon'},'Nóng / đá'],
+    ['Ép dứa',25,{L:[[C.pine,.8]]}],
+    ['Ép ổi',25,{L:[[C.guava,.8]]}]]},
+  {id:'daxay', n:'08', name:'Đá xay', note:'Mát lạnh, phủ kem, hợp trời nắng.', b:'#4f8a3c', bc:'#fbefd9', card:'rgba(251,239,217,.12)', card2:'rgba(251,239,217,.2)', items:[
+    ['Cà phê đá xay',30,{L:[['#8a5a3c',.62]],f:C.cream,straw:'#efc14a',g:'bean'}],
+    ['Chanh leo tuyết',28,{L:[['#f2d46b',.62]],f:'#fffbe8',straw:'#efc14a'}],
+    ['Chanh tuyết',28,{L:[['#eef2b8',.62]],f:'#ffffff',straw:'#efc14a',g:'lemon'}],
+    ['Matcha đá xay',30,{L:[[C.matcha,.62]],f:C.cream,straw:'#efc14a',g:'mint'}]]},
+  {id:'khac', n:'09', name:'Món khác', note:'Cacao, sữa, matcha latte và nước giải khát.', b:'#2f4a3a', bc:'#fbefd9', card:'rgba(251,239,217,.08)', card2:'rgba(251,239,217,.15)', items:[
+    ['Cacao',30,{L:[[C.choco,.75]],f:'#d9b48c'},'Nóng / đá'],
+    ['Sữa',25,{L:[['#f6f1e6',.78]]},'Nóng / đá'],
+    ['Bò húc',19,{L:[['#f2c230',.78]],ice:1}],
+    ['Matcha latte',30,{L:[[C.matcha,.36],['#f4efe2',.36]],ice:1}]]}
+];
+
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -544,70 +619,6 @@ function cup(o) {
 }
 const media = (m) => PHOTOS[m.name] ? `<img src="${esc(PHOTOS[m.name])}" alt="${esc(m.name)}" loading="lazy">` + cup(m.cupo) : cup(m.cupo);
 
-const C = {coffee:'#4a2a18', coffeeL:'#8a5634', milk:'#f2e6d4', cream:'#f6e7c8', taro:'#9b7bc6', taroL:'#c9b3e6', blue:'#7b5aa6', peach:'#f4a261', lemon:'#f3d36b', mango:'#f7b733', avo:'#b5c96b', soursop:'#eef1d8', yog:'#f7f3ea', orange:'#f7941d', carrot:'#f26b21', passion:'#f2c14e', pine:'#f7d038', guava:'#f6a6a0', matcha:'#8fb46a', choco:'#6b3a22'};
-const CATS = [
-  {id:'phin', n:'01', name:'Cà phê phin', note:'Phin truyền thống pha tay, đậm đà kiểu Việt.', b:'#8f5236', bc:'#fbefd9', card:'rgba(251,239,217,.10)', card2:'rgba(251,239,217,.18)', items:[
-    ['Phindi khoai môn',30,{L:[[C.taro,.4],[C.coffee,.32]],f:C.cream,ice:1},'Món tên quán'],
-    ['Phindi kem sữa',30,{L:[[C.coffee,.6]],f:C.cream,ice:1,dome:1},'Món tên quán'],
-    ['Cà phê muối',25,{L:[[C.coffee,.55]],f:'#efe0c2',ice:1}],
-    ['Sữa chua cà phê',35,{L:[[C.yog,.45],[C.coffee,.3]]}],
-    ['Bạc xỉu',25,{L:[[C.milk,.5],['#a87650',.25]],ice:1}],
-    ['Nâu phin',20,{L:[[C.coffeeL,.75]],ice:1}],
-    ['Đen phin',18,{L:[['#2b1a10',.75]],ice:1}],
-    ['Nâu xóc',22,{L:[['#9a6440',.6]],f:'#d9b48c'}],
-    ['Đen xóc',20,{L:[['#3a2416',.6]],f:'#8a5e3c'}]]},
-  {id:'may', n:'02', name:'Cà phê máy', note:'Espresso xay mới, uống liền hay mang đi đều hợp.', b:'#5a3220', bc:'#fbefd9', card:'rgba(251,239,217,.09)', card2:'rgba(251,239,217,.16)', items:[
-    ['Nâu xay',20,{L:[[C.coffeeL,.75]],ice:1}],
-    ['Đen xay',18,{L:[['#2b1a10',.75]],ice:1}],
-    ['Nâu xay xóc',22,{L:[['#9a6440',.6]],f:'#d9b48c'}],
-    ['Đen xay xóc',20,{L:[['#3a2416',.6]],f:'#8a5e3c'}],
-    ['Americano',25,{L:[['#3d2414',.75]],ice:1}]]},
-  {id:'tra', n:'03', name:'Trà', note:'Trà trái cây mát lạnh, có món uống nóng cho ngày se lạnh.', b:'#c4572f', bc:'#fff3e4', card:'rgba(255,243,228,.13)', card2:'rgba(255,243,228,.22)', items:[
-    ['Trà gừng mật ong','25',{L:[['#d9a441',.7]],hot:1},'Nóng'],
-    ['Trà tắc xí muội',25,{L:[['#e8a33a',.72]],ice:1,g:'lemon'}],
-    ['Trà đào cam sả',30,{L:[['#f08a3c',.72]],ice:1,g:'peach'},'Nóng / đá'],
-    ['Trà đào',25,{L:[[C.peach,.72]],ice:1,g:'peach'},'Nóng / đá'],
-    ['Trà chanh',25,{L:[[C.lemon,.72]],ice:1,g:'lemon'},'Nóng / đá'],
-    ['Trà chanh việt quất',25,{L:[[C.blue,.35],[C.lemon,.38]],ice:1,g:'lemon'}]]},
-  {id:'trasua', n:'04', name:'Trà sữa', note:'Trà sữa nhà làm, thêm trân châu hay kem tùy thích.', b:'#eaa8b6', bc:'#24402f', card:'rgba(36,64,47,.08)', card2:'rgba(36,64,47,.14)', items:[
-    ['Trà sữa truyền thống',25,{L:[['#c89f73',.78]],pearl:1,straw:'#2f4a3a'}],
-    ['Trà sữa khoai môn',25,{L:[['#b9a0d8',.78]],pearl:1,straw:'#2f4a3a'}],
-    ['Trà sữa việt quất',25,{L:[['#9d7fc4',.78]],pearl:1,straw:'#2f4a3a'}],
-    ['Trà sữa socola',25,{L:[['#7a4a32',.78]],pearl:1,straw:'#2f4a3a'}],
-    ['Trà sữa matcha',25,{L:[[C.matcha,.78]],pearl:1,straw:'#2f4a3a'}]], topping:[['Trân châu trắng',5],['Kem muối',5],['Kem sữa',5]]},
-  {id:'sinhto', n:'05', name:'Sinh tố', note:'Trái cây xay mịn, sánh và thơm.', b:'#efc14a', bc:'#4a2a18', card:'rgba(74,42,24,.08)', card2:'rgba(74,42,24,.14)', items:[
-    ['Sinh tố mãng cầu',30,{L:[[C.soursop,.8]],straw:'#8f5236'}],
-    ['Sinh tố bơ',30,{L:[[C.avo,.8]],straw:'#8f5236'}],
-    ['Sinh tố bơ mãng cầu',35,{L:[[C.avo,.4],[C.soursop,.4]],straw:'#8f5236'}],
-    ['Sinh tố xoài',30,{L:[[C.mango,.8]],straw:'#8f5236'}],
-    ['Sinh tố xoài dứa',35,{L:[[C.mango,.4],[C.pine,.4]],straw:'#8f5236'}],
-    ['Sinh tố việt quất',30,{L:[[C.blue,.8]],straw:'#8f5236'}]]},
-  {id:'suachua', n:'06', name:'Sữa chua', note:'Sữa chua dẻo chua nhẹ, trộn trái cây.', b:'#f3ead9', bc:'#4a2a18', card:'rgba(74,42,24,.06)', card2:'rgba(74,42,24,.11)', items:[
-    ['Sữa chua khoai môn',30,{L:[[C.yog,.42],[C.taroL,.36]]}],
-    ['Sữa chua việt quất',30,{L:[[C.yog,.42],[C.blue,.36]]}],
-    ['Sữa chua chanh dây',30,{L:[[C.yog,.42],[C.passion,.36]]}],
-    ['Sữa chua đánh đá',27,{L:[[C.yog,.8]],ice:1}]]},
-  {id:'nuocep', n:'07', name:'Nước ép', note:'Ép tươi tại quán, chọn thêm sữa hoặc đường.', b:'#e07b2c', bc:'#fff3e4', card:'rgba(255,243,228,.13)', card2:'rgba(255,243,228,.22)', items:[
-    ['Ép cam',35,{L:[[C.orange,.8]],g:'lemon'}],
-    ['Ép cam cà rốt',35,{L:[[C.carrot,.4],[C.orange,.4]]}],
-    ['Ép cà rốt',25,{L:[['#f47c2c',.8]]},'Sữa / đường'],
-    ['Ép chanh leo',25,{L:[[C.passion,.8]],g:'mint'},'Sữa / đường'],
-    ['Ép chanh',25,{L:[['#f4e27a',.8]],g:'lemon'},'Nóng / đá'],
-    ['Ép dứa',25,{L:[[C.pine,.8]]}],
-    ['Ép ổi',25,{L:[[C.guava,.8]]}]]},
-  {id:'daxay', n:'08', name:'Đá xay', note:'Mát lạnh, phủ kem, hợp trời nắng.', b:'#4f8a3c', bc:'#fbefd9', card:'rgba(251,239,217,.12)', card2:'rgba(251,239,217,.2)', items:[
-    ['Cà phê đá xay',30,{L:[['#8a5a3c',.62]],f:C.cream,straw:'#efc14a',g:'bean'}],
-    ['Chanh leo tuyết',28,{L:[['#f2d46b',.62]],f:'#fffbe8',straw:'#efc14a'}],
-    ['Chanh tuyết',28,{L:[['#eef2b8',.62]],f:'#ffffff',straw:'#efc14a',g:'lemon'}],
-    ['Matcha đá xay',30,{L:[[C.matcha,.62]],f:C.cream,straw:'#efc14a',g:'mint'}]]},
-  {id:'khac', n:'09', name:'Món khác', note:'Cacao, sữa và nước giải khát.', b:'#2f4a3a', bc:'#fbefd9', card:'rgba(251,239,217,.08)', card2:'rgba(251,239,217,.15)', items:[
-    ['Cacao',30,{L:[[C.choco,.75]],f:'#d9b48c'},'Nóng / đá'],
-    ['Sữa',25,{L:[['#f6f1e6',.78]]},'Nóng / đá'],
-    ['Khoáng mặn',15,{L:[['#e3f1f3',.78]],ice:1}],
-    ['Khoáng chanh',25,{L:[['#eaf4c8',.78]],ice:1,g:'lemon'}],
-    ['Coca',15,{L:[['#3a1410',.78]],ice:1}],
-    ['Bò húc',19,{L:[['#f2c230',.78]],ice:1}]]}
-];
 const ALL = []; CATS.forEach(c => c.items.forEach(it => ALL.push({cat: c.id, name: it[0], price: +it[1], cupo: it[2], note: it[3] || ''})));
 const k = n => n + 'k';
 
@@ -615,18 +626,13 @@ const find = n => ALL.find(x => x.name === n);
 const C0 = n => cup(find(n).cupo);
 
 /* hero, ribbon, cta */
-$('#art0').innerHTML = media(find('Phindi khoai môn'));
-$('#art1').innerHTML = C0('Trà đào cam sả');
-$('#art2').innerHTML = C0('Matcha đá xay');
-$('#ctaCups').innerHTML = C0('Trà chanh') + C0('Phindi kem sữa') + C0('Trà sữa socola');
-$('#rt').innerHTML = (['Phindi khoai môn','Kem sữa','Cà phê muối','Bạc xỉu','Trà đào cam sả','Trà sữa','Sinh tố bơ','Matcha đá xay'].map(w => `<span>${w}</span><i></i>`).join('')).repeat(2);
+$('#art0').innerHTML = media(find(HERO[0]));
+$('#art1').innerHTML = C0(HERO[1]);
+$('#art2').innerHTML = C0(HERO[2]);
+$('#ctaCups').innerHTML = CTA_CUPS.map(C0).join('');
+$('#rt').innerHTML = (RIBBON.map(w => `<span>${w}</span><i></i>`).join('')).repeat(2);
 
 /* bestsellers */
-const BEST = [
-  ['Phindi khoai môn', 'Món tên quán', 'Khoai môn tím bùi béo trên nền cà phê phin đậm.'],
-  ['Phindi kem sữa', 'Món tên quán', 'Lớp kem sữa béo mịn phủ trên ly phin đá.'],
-  ['Cà phê muối', 'Đậm vị', 'Kem muối mằn mặn, cà phê thơm đậm.'],
-  ['Trà đào cam sả', 'Mát lạnh', 'Trà đào thơm cam sả, uống nóng hoặc đá.']];
 $('#best').innerHTML = BEST.map(([n, badge, d]) => { const m = find(n); return `
   <article class="prod rv"><div class="stage">${media(m)}<span class="badge">${esc(badge)}</span></div>
     <div class="body"><h3>${esc(m.name)}</h3><p>${esc(d)}</p>
@@ -653,8 +659,8 @@ $('#cats').addEventListener('click', e => { const b = e.target.closest('.cat'); 
 /* order */
 const order = new Map();
 let mode = 'Ghé quán lấy';
-try { const s = JSON.parse(localStorage.getItem('phindi-order') || '[]'); s.forEach(([n, q]) => find(n) && order.set(n, q)); } catch {}
-const save = () => { try { localStorage.setItem('phindi-order', JSON.stringify([...order])); } catch {} };
+try { const s = JSON.parse(localStorage.getItem(STORE_KEY) || '[]'); s.forEach(([n, q]) => find(n) && order.set(n, q)); } catch {}
+const save = () => { try { localStorage.setItem(STORE_KEY, JSON.stringify([...order])); } catch {} };
 const count = () => [...order.values()].reduce((a, b) => a + b, 0);
 const total = () => [...order].reduce((a, [n, q]) => a + find(n).price * q, 0);
 const obar = $('#obar'), fz = $('#fz');
@@ -691,7 +697,7 @@ $('#sendBar').onclick = () => open($('#orderDlg'));
 function compose() {
   const lines = [...order].map(([n, q]) => { const m = find(n); return `• ${q} ${n} – ${k(m.price * q)}`; });
   const wh = $('#wh').value.trim(), nt = $('#nt').value.trim();
-  return ['Chào Phindi, mình đặt món:', ...lines, `Tạm tính: ${k(total())}`, `${mode}${wh ? ': ' + wh : ''}`, nt ? `Ghi chú: ${nt}` : ''].filter(Boolean).join('\n');
+  return [`Chào ${SHOP}, mình đặt món:`, ...lines, `Tạm tính: ${k(total())}`, `${mode}${wh ? ': ' + wh : ''}`, nt ? `Ghi chú: ${nt}` : ''].filter(Boolean).join('\n');
 }
 async function copyText(t) {
   try { await navigator.clipboard.writeText(t); return true; } catch {}
@@ -703,7 +709,7 @@ $('#mCopy').onclick = async () => say(await copyText($('#msgTxt').textContent) ?
 $('#send').onclick = async () => {
   if (!count()) { say('Bấm + ở menu để chọn món trước nhé'); return; }
   const txt = compose(); const ok = await copyText(txt);
-  if (!CONTACT.zalo) { preview(txt, 'Bản xem thử: khi quán duyệt, nút này mở thẳng Zalo của Phindi. Tin nhắn dưới đây ' + (ok ? 'đã được chép sẵn.' : 'sẽ được chép sẵn.')); return; }
+  if (!CONTACT.zalo) { preview(txt, 'Bản xem thử: khi quán duyệt, nút này mở thẳng Zalo của ' + SHOP + '. Tin nhắn dưới đây ' + (ok ? 'đã được chép sẵn.' : 'sẽ được chép sẵn.')); return; }
   goZalo(); say(ok ? 'Đã chép đơn – dán vào chat Zalo rồi gửi nha!' : 'Mở Zalo… nếu chưa có nội dung, quay lại chép tin nhắn');
   if (!ok) preview(txt, 'Chép tin nhắn này rồi dán vào chat Zalo với quán.');
 };
@@ -711,7 +717,7 @@ document.addEventListener('click', e => {
   const b = e.target.closest('[data-ch]'); if (!b) return;
   if (b.dataset.ch === 'qr') { const box = $('#qrBox'); box.innerHTML = ''; if (CONTACT.zalo && window.QRCode) new QRCode(box, {text: CONTACT.zalo, width: 196, height: 196, colorDark: '#3a2112', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M}); else box.innerHTML = '<div class="qr-ph">Mã QR Zalo của quán hiện ở đây khi quán duyệt.</div>'; open($('#qrDlg')); return; }
   if (count()) { open($('#orderDlg')); return; }
-  if (CONTACT.zalo) goZalo(); else say('Bản xem thử: khi quán duyệt, nút này mở Zalo của Phindi. Thử bấm + chọn món nhé!');
+  if (CONTACT.zalo) goZalo(); else say('Bản xem thử: khi quán duyệt, nút này mở Zalo của ' + SHOP + '. Thử bấm + chọn món nhé!');
 });
 
 /* header + floating */
