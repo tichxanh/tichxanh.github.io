@@ -643,6 +643,9 @@ footer .legal{border-top:1px solid var(--line);padding-top:22px;font-size:12.5px
 .cm-txt em{font-style:normal;font-size:14.5px;color:var(--muted)}
 .cm-go{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--blue);flex:none}
 .cm-go svg{width:18px;height:18px}
+.cm-real{border-color:color-mix(in srgb,#a4673b 40%,var(--line))}
+.cm-live{display:inline-flex;align-items:center;gap:5px;font-style:normal;margin-right:8px;color:#1a7f4b}
+.cm-live::before{content:"";width:7px;height:7px;border-radius:50%;background:#22a35a;box-shadow:0 0 0 3px rgba(34,163,90,.18)}
 @media (max-width:640px){.case-mini{flex-wrap:wrap;gap:12px;padding:16px}.cm-go{width:100%}}
 /* ================= MOBILE LAYER ================= */
 html,body{max-width:100%;overflow-x:clip}
@@ -963,8 +966,8 @@ html,body{max-width:100%;overflow-x:clip}
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Dự án đã thực hiện</span>
-      <h2>Website thật, đang bán hàng và đã được xác nhận</h2>
-      <p>Không chỉ là mẫu. Đây là website tôi thiết kế cho doanh nghiệp tại Quảng Trị, có giỏ hàng, tài khoản khách và đủ bộ chính sách theo quy định.</p>
+      <h2>Website thật, đang chạy cho khách hàng</h2>
+      <p>Không chỉ là mẫu. Từ website bán hàng đã được xác nhận cho doanh nghiệp, đến trang menu đặt món qua Zalo cho quán nhỏ.</p>
     </div>
     <article class="case rv">
       <div class="case-shot">
@@ -1001,6 +1004,11 @@ html,body{max-width:100%;overflow-x:clip}
         </div>
       </div>
     </article>
+    <a class="case-mini cm-real rv" href="https://phindicafe.github.io/" target="_blank" rel="noopener">
+      <span class="cm-ic" style="background:#f1e3d3">🧋</span>
+      <span class="cm-txt"><small><i class="cm-live">Đang hoạt động</i>Trang menu, đặt món qua Zalo</small><b>Phindi Café</b><em>Menu 47 món trên một trang. Khách bấm + chọn món, ghi nóng/đá, giờ lấy, số điện thoại, rồi gửi cả đơn qua Zalo của quán. Không giỏ hàng, không thanh toán trực tuyến.</em></span>
+      <span class="cm-go">Xem website thật <svg><use href="#i-arrow"/></svg></span>
+    </a>
     <a class="case-mini rv" href="https://tichxanh.github.io/mau/caphe-khe-sanh/" target="_blank" rel="noopener">
       <span class="cm-ic">☕</span>
       <span class="cm-txt"><small>Mẫu trang giới thiệu, đặt hàng qua Zalo</small><b>Đất Đỏ Coffee Khe Sanh</b><em>Một trang gọn cho cơ sở sản xuất nhỏ: giới thiệu sản phẩm, nút Zalo trên từng món, không cần giỏ hàng.</em></span>
@@ -1461,7 +1469,7 @@ MẪU WEBSITE CHO SẢN PHẨM CÔNG NGHIỆP NÔNG THÔN (CNNT) QUẢNG TRỊ: 
 
 VỀ CHÍNH WEBSITE TÍCH XANH: đây là website giới thiệu dịch vụ và tư vấn, KHÔNG có chức năng đặt hàng hay thanh toán trực tuyến (nên không thuộc diện thông báo theo Điều 23). Khách không mua hay trả tiền trên trang; họ điền Mẫu đăng ký tư vấn hoặc nhắn Zalo/Messenger. Phạm vi và chi phí được thống nhất trực tiếp sau buổi tư vấn, thanh toán theo thỏa thuận. Không mời khách "đặt mua", "thanh toán" hay "chốt đơn" trên trang.
 
-DỰ ÁN ĐÃ THỰC HIỆN (minh chứng năng lực): website Công ty TNHH TM Hiếu Tâm (https://hieutam.net/) — nhà phân phối vật liệu xây dựng, thiết bị vệ sinh tại Đồng Hới, Quảng Trị; có giỏ hàng, tài khoản khách, yêu cầu báo giá, kết nối ERP, đủ 11 trang chính sách và đã có huy hiệu xác nhận. Khi khách hỏi về năng lực, dự án mẫu hoặc website vật liệu xây dựng, giới thiệu dự án này và mời xem ở mục "Dự án" trên trang.
+DỰ ÁN ĐÃ THỰC HIỆN (minh chứng năng lực): website Công ty TNHH TM Hiếu Tâm (https://hieutam.net/) — nhà phân phối vật liệu xây dựng, thiết bị vệ sinh tại Đồng Hới, Quảng Trị; có giỏ hàng, tài khoản khách, yêu cầu báo giá, kết nối ERP, đủ 11 trang chính sách và đã có huy hiệu xác nhận. Khi khách hỏi về năng lực, dự án mẫu hoặc website vật liệu xây dựng, giới thiệu dự án này và mời xem ở mục "Dự án" trên trang. Dự án thứ hai: Phindi Café (https://phindicafe.github.io/) — trang menu 47 món, khách chọn món và gửi đơn qua Zalo của quán; là trang giới thiệu, không giỏ hàng/thanh toán nên chưa thuộc diện thông báo. Giới thiệu khi khách hỏi về quán cà phê, quán nước, cửa hàng nhỏ muốn nhận đơn qua Zalo.
 
 GIẤY TỜ THƯỜNG CẦN: Tờ khai Mẫu số 01 (khai trực tuyến), mã số thuế (doanh nghiệp, hộ kinh doanh hoặc cá nhân), tên miền, danh mục hàng hóa, giấy phép/chứng nhận nếu ngành nghề có điều kiện (ATTP, mỹ phẩm…).
 
