@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bếp Bông – Món Việt nhà nấu, đặt qua Zalo / Messenger</title>
+<meta name="description" content="Bún cá ngừ, gỏi cuốn tôm thịt, bánh ướt thịt luộc, cháo, cơm sườn. Chạy thử đồng giá 25k/món, free ship Bệnh viện Cuba. Đặt qua Zalo hoặc Messenger.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#b22a17">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bếp Bông – Món Việt nhà nấu · đồng giá 25k">
+<meta property="og:description" content="Bún cá ngừ, gỏi cuốn tôm thịt, bánh ướt thịt luộc… Free ship BV Cuba. Chọn món, gửi đơn qua Zalo / Messenger.">
+<meta property="og:image" content="https://tichxanh.github.io/demo/bb-648eaa/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://tichxanh.github.io/demo/bb-648eaa/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Crect width=%2240%22 height=%2240%22 rx=%2212%22 fill=%22%23b22a17%22/%3E%3Cpath d=%22M8 19h24a12 12 0 0 1-24 0z%22 fill=%22%23ffcf5a%22/%3E%3Cpath d=%22M15 9c-2 3 2 4 0 7M20 8c-2 3 2 4 0 7M25 9c-2 3 2 4 0 7%22 stroke=%22%23fff7ec%22 stroke-width=%222%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Lobster&display=swap">
+<style>
+/* Tone nóng: đỏ ớt – cam nghệ – vàng mù tạt trên nền kem giấy; ảnh món thật làm chủ đạo; giao diện gọn như app đặt món */
+:root{
+  --bg:#fff7ec; --paper:#fffdf8; --ink:#3b1408; --muted:#7d4a35; --line:#f2dcc4;
+  --red:#c8321e; --red-d:#8f1d10; --orange:#ec6a1c; --gold:#f2a91c; --sun:#ffcf5a; --soft:#fde9d2;
+  --zalo:#0068ff; --ms:#0a7cff; --ok:#21924a;
+  --f:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --brand:"Lobster","Be Vietnam Pro",cursive;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --shadow:0 1px 2px rgba(59,20,8,.06),0 20px 40px -22px rgba(143,29,16,.5);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1b0f0a; --paper:#26150e; --ink:#fdeee0; --muted:#e2b99c; --line:#3f2518; --soft:#3a2014;
+  --red:#ff6a4d; --red-d:#ff8a6b; --orange:#ff8c42; --gold:#ffbf47; --sun:#ffd97a; --ok:#3ccf74;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 20px 40px -22px rgba(0,0,0,.8); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1b0f0a; --paper:#26150e; --ink:#fdeee0; --muted:#e2b99c; --line:#3f2518; --soft:#3a2014;
+  --red:#ff6a4d; --red-d:#ff8a6b; --orange:#ff8c42; --gold:#ffbf47; --sun:#ffd97a; --ok:#3ccf74;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 20px 40px -22px rgba(0,0,0,.8); color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
+h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0}
+button{font-family:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.sec{padding-block:44px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:14px 20px;font:800 15px/1 var(--f);cursor:pointer;text-decoration:none;white-space:nowrap;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .2s}
+.btn:active{transform:scale(.96)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-red{background:linear-gradient(135deg,var(--red),var(--orange));color:#fff;box-shadow:0 14px 26px -14px rgba(200,50,30,.9)}
+.btn-red:hover{transform:translateY(-2px)}
+.btn-z{background:var(--zalo);color:#fff}
+.btn-m{background:var(--ms);color:#fff}
+.btn-line{background:var(--paper);color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+.btn-line:hover{box-shadow:inset 0 0 0 2px var(--orange)}
+.zl{display:inline-grid;place-items:center;width:28px;height:20px;border-radius:6px;background:#fff;color:var(--zalo);font:800 8.5px/1 var(--f);flex:none}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:800 12px/1 var(--f);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.eyebrow::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--gold)}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px}
+.sh h2{font-size:clamp(30px,4vw,44px);font-weight:900;margin-top:8px}
+.sh h2 em{font:400 1.08em/1 var(--brand);color:var(--red);font-style:normal}
+.sh p{color:var(--muted);max-width:44ch}
+
+.demobar{background:#2b0d06;color:#ffd9bf;font-size:13px}
+.demobar .wrap{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding-block:7px;text-align:center}
+.demobar a{color:var(--sun);font-weight:700;text-decoration:none}
+.promo{background:linear-gradient(90deg,var(--red-d),var(--red) 40%,var(--orange));color:#fff;font-weight:700;font-size:14px}
+:root[data-theme="dark"] .promo{background:linear-gradient(90deg,#6e1608,#a52714 40%,#c4520f)}
+.promo .wrap{display:flex;gap:8px 22px;justify-content:center;flex-wrap:wrap;padding-block:9px;text-align:center}
+.promo b{color:var(--sun)}
+
+.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav-in{display:flex;align-items:center;gap:16px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo i{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,var(--red),var(--orange));display:grid;place-items:center;box-shadow:0 8px 16px -10px rgba(200,50,30,.9);flex:none}
+.logo i svg{width:24px;height:24px}
+.logo b{font:400 27px/1 var(--brand);color:var(--red-d);display:block}
+.logo small{display:block;font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.04em;margin-top:2px}
+.nav .links{display:flex;gap:2px;margin-left:auto}
+.nav .links a{text-decoration:none;color:var(--ink);font-weight:700;font-size:14.5px;padding:9px 13px;border-radius:999px}
+.nav .links a:hover{background:var(--soft);color:var(--red)}
+.nav .btn{padding:11px 16px;font-size:14px}
+@media (max-width:880px){.nav .links{display:none}.nav .btn{margin-left:auto}}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:36px;align-items:center;padding-block:40px 30px}
+.hero-copy{display:grid;gap:18px;justify-items:start}
+.hero h1{font-size:clamp(42px,5.6vw,70px);font-weight:900}
+.hero h1 em{display:block;font:400 1.02em/1.05 var(--brand);color:var(--red);font-style:normal;margin-top:4px}
+.hero .lead{font-size:17px;color:var(--muted);max-width:44ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:7px;background:var(--paper);border-radius:999px;padding:8px 13px;font-size:13.5px;font-weight:700;box-shadow:inset 0 0 0 1.5px var(--line)}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.hero-art{position:relative;justify-self:end;width:100%;max-width:520px;aspect-ratio:1/1.05}
+.hero-art::before{content:"";position:absolute;inset:6% 2% 0 8%;border-radius:44% 56% 52% 48%/48% 42% 58% 52%;background:radial-gradient(circle at 30% 30%,var(--sun),var(--gold) 45%,var(--orange));opacity:.9}
+.hero-art .main{position:absolute;inset:4% 10% 10% 6%;border-radius:32px;overflow:hidden;box-shadow:var(--shadow);border:6px solid var(--paper);transform:rotate(-3deg)}
+.hero-art .main img,.hero-art .mini img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-art .mini{position:absolute;right:0;bottom:2%;width:42%;aspect-ratio:1;border-radius:26px;overflow:hidden;border:6px solid var(--paper);box-shadow:var(--shadow);transform:rotate(5deg)}
+.stamp{position:absolute;left:-2%;bottom:6%;width:118px;height:118px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;text-align:center;line-height:1;box-shadow:0 0 0 6px var(--bg),var(--shadow);transform:rotate(-10deg);z-index:2}
+.stamp b{display:block;font:400 38px/1 var(--brand)}
+.stamp small{display:block;font-size:11.5px;font-weight:800;letter-spacing:.06em;margin-top:4px;text-transform:uppercase}
+.hero-copy > *{animation:rise .9s var(--ease) both}
+.hero-copy > *:nth-child(2){animation-delay:.07s}.hero-copy > *:nth-child(3){animation-delay:.14s}.hero-copy > *:nth-child(4){animation-delay:.2s}.hero-copy > *:nth-child(5){animation-delay:.26s}
+.hero-art{animation:pop 1s .1s var(--ease) both}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;scale:.95}to{opacity:1;scale:1}}
+
+/* today */
+.today{background:linear-gradient(135deg,var(--red-d),var(--red) 55%,var(--orange));color:#fff;border-radius:32px;padding:30px;position:relative;overflow:hidden}
+:root[data-theme="dark"] .today{background:linear-gradient(135deg,#5c1206,#9e2412 55%,#b9500e)}
+.today::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(255,207,90,.45),transparent 70%)}
+.today .sh p{color:#ffe2cc}
+.today .sh h2{color:#fff}
+.today .sh h2 em{color:var(--sun)}
+.today .eyebrow{color:var(--sun)}
+.today .eyebrow::before{background:#fff}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px;position:relative;z-index:1}
+.tcard{background:var(--paper);color:var(--ink);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:44% minmax(0,1fr);box-shadow:0 18px 30px -20px rgba(0,0,0,.6)}
+.tcard .ph{min-height:200px}
+.tcard .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.tcard .tx{padding:16px 16px 16px 18px;display:grid;gap:8px;align-content:center;justify-items:start}
+.tcard h3{font-size:21px;font-weight:900}
+.tcard p{font-size:13.5px;color:var(--muted);line-height:1.45}
+.live{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:var(--ok);text-transform:uppercase;letter-spacing:.06em}
+.live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 22%,transparent);animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{50%{opacity:.35}}
+.today-note{position:relative;z-index:1;margin-top:16px;font-size:14px;color:#ffe2cc}
+
+/* menu grid */
+.filters{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:18px;padding-bottom:2px}
+.filters::-webkit-scrollbar{display:none}
+.fb{flex:none;border:0;border-radius:999px;padding:10px 16px;font:700 14px/1 var(--f);background:var(--paper);color:var(--muted);box-shadow:inset 0 0 0 1.5px var(--line);cursor:pointer;transition:all .25s var(--ease)}
+.fb[aria-pressed="true"]{background:var(--ink);color:var(--bg);box-shadow:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:16px}
+.item{background:var(--paper);border-radius:22px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);display:grid;grid-template-rows:auto 1fr;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.item:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px var(--line),var(--shadow)}
+.item .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--soft)}
+.item .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease)}
+.item:hover .ph img{transform:scale(1.05)}
+.item .ill{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(circle at 50% 60%,var(--sun),var(--gold) 55%,var(--orange));}
+.item .ill span{font-size:64px;filter:drop-shadow(0 10px 12px rgba(143,29,16,.35))}
+.item .ill small{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-size:11.5px;font-weight:700;color:#7a2a0f;opacity:.8}
+.tag{position:absolute;top:10px;left:10px;font:800 11.5px/1 var(--f);padding:6px 10px;border-radius:999px;background:var(--ok);color:#fff;letter-spacing:.02em}
+.item .tx{padding:14px 16px 16px;display:grid;gap:6px;align-content:start}
+.item h3{font-size:18px;font-weight:800}
+.item p{font-size:13.5px;color:var(--muted);line-height:1.45}
+.prow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px}
+.pr{font-weight:900;font-size:22px;color:var(--red)}
+.pr small{display:block;font-size:11.5px;font-weight:600;color:var(--muted);line-height:1.2}
+.add{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:999px;background:linear-gradient(135deg,var(--red),var(--orange));color:#fff;font:800 14px/1 var(--f);padding:11px 15px 11px 12px;cursor:pointer;transition:transform .3s var(--ease)}
+.add svg{width:16px;height:16px}
+.add:active{transform:scale(.93)}
+.add .q{display:none;min-width:20px;height:20px;border-radius:999px;background:#fff;color:var(--red);place-items:center;font-size:12px;padding:0 5px}
+.add.on{background:var(--red-d)}
+.add.on .q{display:inline-grid}
+
+/* gallery + info */
+.gal{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:12px;height:440px}
+.gal button{border:0;padding:0;border-radius:22px;overflow:hidden;cursor:zoom-in;background:var(--soft);position:relative}
+.gal button:first-child{grid-row:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s var(--ease)}
+.gal button:hover img{transform:scale(1.05)}
+.gal span{position:absolute;left:10px;bottom:10px;background:rgba(43,13,6,.75);color:#fff;font-size:12.5px;font-weight:700;padding:6px 10px;border-radius:999px}
+.lb{position:fixed;inset:0;z-index:95;background:rgba(20,6,2,.9);display:grid;place-items:center;padding:16px}
+.lb img{max-width:100%;max-height:86vh;border-radius:18px}
+.lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:16px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;font-size:24px;cursor:pointer}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.how div{background:var(--paper);border-radius:22px;padding:20px;box-shadow:inset 0 0 0 1px var(--line)}
+.how b{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--soft);color:var(--red);font-weight:900;font-size:18px;margin-bottom:10px}
+.how h3{font-size:18px;font-weight:800}
+.how p{font-size:14px;color:var(--muted);margin-top:4px}
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;margin-top:18px}
+.cbox{background:var(--paper);border-radius:24px;padding:22px;box-shadow:inset 0 0 0 1px var(--line);display:grid;gap:12px;align-content:start}
+.cbox h3{font-size:22px;font-weight:900}
+.cbox .btn{width:100%;justify-content:flex-start}
+.cbox dl{margin:0;display:grid;gap:12px}
+.cbox dl div{display:grid;grid-template-columns:30px 1fr;gap:10px}
+.cbox dt{font-size:20px}
+.cbox dd{margin:0;font-weight:700}
+.cbox dd small{display:block;font-weight:500;color:var(--muted);font-size:13px}
+.cbox a{color:var(--red);font-weight:800}
+.todo{color:var(--orange);font-weight:800}
+
+footer{background:#2b0d06;color:#f1c9ad;margin-top:30px}
+.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-block:24px calc(110px + env(safe-area-inset-bottom,0px));font-size:13.5px}
+.foot b{font:400 26px/1 var(--brand);color:#fff;display:block;margin-bottom:6px}
+.foot a{color:var(--sun);font-weight:700;text-decoration:none}
+
+/* order bar & dialogs */
+.obar{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translate(-50%,0);z-index:60;width:min(620px,calc(100% - 24px));background:#2b0d06;color:#fff;border-radius:22px;padding:9px 9px 9px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 22px 44px -14px rgba(0,0,0,.65);transition:transform .5s var(--ease),opacity .35s}
+.obar.off{transform:translate(-50%,130%);opacity:0;pointer-events:none}
+.obar .sum{flex:1;min-width:0;background:none;border:0;color:inherit;text-align:left;cursor:pointer;display:flex;align-items:center;gap:10px;padding:0}
+.obar .cnt{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--red),var(--orange));display:grid;place-items:center;font-weight:900;font-size:18px;flex:none}
+.obar .sum > span:last-child{min-width:0}
+.obar .sum > span:last-child b{display:block;font-size:15px;line-height:1.2}
+.obar .sum > span:last-child span{display:block;font-size:12.5px;color:#f1c9ad;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.obar .btn{padding:13px 16px}
+.obar.bump .cnt{animation:bump .5s var(--ease)}
+@keyframes bump{40%{scale:1.25}}
+.fab{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:55;display:flex;gap:8px;transition:transform .5s var(--ease),opacity .35s}
+.fab.off{transform:translateY(140%);opacity:0;pointer-events:none}
+.fab .btn{box-shadow:0 14px 30px -12px rgba(0,0,0,.55);padding:13px 16px}
+.dlg{position:fixed;inset:0;z-index:90;background:rgba(30,8,2,.55);display:grid;place-items:center;padding:16px;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.sheet{background:var(--paper);color:var(--ink);border-radius:26px;width:min(520px,100%);max-height:min(90vh,780px);display:grid;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden;animation:pop .35s var(--ease)}
+.sh-h{display:flex;align-items:center;justify-content:space-between;padding:18px 20px 8px}
+.sh-h h3{font-size:24px;font-weight:900}
+.x{width:40px;height:40px;border-radius:50%;border:0;background:var(--soft);color:var(--ink);font-size:22px;cursor:pointer}
+.sh-b{overflow:auto;padding:4px 20px 12px;display:grid;gap:14px;align-content:start}
+.oi{display:grid;grid-template-columns:46px minmax(0,1fr) auto;gap:10px;align-items:center;border-bottom:1.5px dashed var(--line);padding-bottom:9px}
+.oi .th{width:46px;height:46px;border-radius:12px;overflow:hidden;background:radial-gradient(circle,var(--sun),var(--orange));display:grid;place-items:center;font-size:24px}
+.oi .th img{width:100%;height:100%;object-fit:cover}
+.oi b{display:block;font-size:14.5px;line-height:1.25}
+.oi span{font-size:13px;color:var(--muted)}
+.qty{display:flex;align-items:center;gap:4px;background:var(--soft);border-radius:999px;padding:3px}
+.qty button{width:32px;height:32px;border-radius:50%;border:0;background:var(--paper);color:var(--ink);font-size:18px;cursor:pointer}
+.qty output{min-width:22px;text-align:center;font-weight:800}
+.fld{display:grid;gap:6px}
+.fld > span{font-size:13.5px;font-weight:800}
+.req{color:var(--red)}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg button{border:0;box-shadow:inset 0 0 0 1.5px var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:9px 14px;font-size:14px;font-weight:600;cursor:pointer}
+.seg button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--red);background:var(--soft);color:var(--red);font-weight:800}
+.fld input,.fld textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:11px 13px;resize:vertical}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--orange)}
+.fld input.bad{border-color:var(--red)}
+.err{color:var(--red);font-size:12.5px;font-weight:700}
+.sh-f{padding:12px 20px calc(16px + env(safe-area-inset-bottom,0px));border-top:1.5px solid var(--line);display:grid;gap:9px}
+.tot{display:flex;justify-content:space-between;align-items:baseline;font-weight:800}
+.tot b{font-size:26px;color:var(--red)}
+.tot small{display:block;font-weight:600;color:var(--muted);font-size:12.5px}
+.sh-f .btn{width:100%}
+.empty{color:var(--muted);text-align:center;padding:16px 0}
+.card-s{background:var(--paper);border-radius:24px;padding:22px;width:min(420px,100%);max-height:92vh;overflow:auto;display:grid;gap:10px;text-align:center;animation:pop .35s var(--ease)}
+.card-s h3{font-size:23px;font-weight:900}
+.card-s p{font-size:13.5px;color:var(--muted)}
+.card-s .btn{width:100%}
+.msgbox{white-space:pre-wrap;text-align:left;background:var(--bg);border-radius:14px;padding:12px 14px;font-size:14px;line-height:1.5;box-shadow:inset 0 0 0 1.5px var(--line)}
+.or{font-size:12.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.toast{position:fixed;left:50%;top:calc(80px + env(safe-area-inset-top,0px));transform:translate(-50%,-20px);z-index:96;background:#2b0d06;color:#fff;padding:11px 16px;border-radius:14px;font-size:14px;font-weight:600;max-width:min(92vw,440px);text-align:center;opacity:0;pointer-events:none;transition:opacity .3s,transform .45s var(--ease)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.rv{transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.pre{opacity:0;transform:translateY(24px)}
+
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr);gap:8px;padding-block:18px 20px}
+  .hero-art{order:-1;justify-self:center;max-width:420px}
+  .how{grid-template-columns:minmax(0,1fr)}
+  .how div{display:grid;grid-template-columns:40px 1fr;column-gap:12px}
+  .how b{grid-row:span 2;margin:0}
+  .contact{grid-template-columns:minmax(0,1fr)}
+  .gal{grid-template-columns:1fr 1fr;grid-template-rows:auto;height:auto}
+  .gal button{aspect-ratio:1}
+  .gal button:first-child{grid-row:auto;grid-column:span 2;aspect-ratio:16/10}
+}
+@media (max-width:560px){
+  .sec{padding-block:30px}
+  .nav .btn .t{display:none}.nav .btn{padding:11px 13px}
+  .logo b{font-size:24px}
+  .hero h1{font-size:42px}
+  .ctas{display:grid;grid-template-columns:1fr 1fr;width:100%}
+  .ctas .btn:first-child{grid-column:span 2}
+  .sh{flex-direction:column;align-items:flex-start}
+  .today{padding:20px;border-radius:26px}
+  .tcard{grid-template-columns:40% minmax(0,1fr)}
+  .tcard .ph{min-height:170px}
+  .grid{grid-template-columns:1fr 1fr;gap:10px}
+  .item .tx{padding:10px 11px 12px}
+  .item h3{font-size:15px}
+  .item p{display:none}
+  .pr{font-size:19px}
+  .add .t{display:none}.add{padding:10px}
+  .stamp{width:96px;height:96px}.stamp b{font-size:30px}
+  .dlg{align-items:end;padding:0}
+  .sheet{border-radius:24px 24px 0 0;width:100%;max-height:92vh}
+  .fab .btn .t{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .rv.pre{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ms" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.4 2 2 6.1 2 11.5c0 2.9 1.3 5.4 3.5 7.1V22l3.2-1.8c1 .3 2.1.4 3.3.4 5.6 0 10-4.1 10-9.5S17.6 2 12 2zm1 12.7-2.5-2.7-5 2.7 5.5-5.8 2.6 2.7 4.9-2.7z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 20 20"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
+  <symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 11h18a9 9 0 0 1-18 0z" fill="#ffcf5a"/><path d="M8 3.5c-1.4 2 1.4 2.8 0 4.8M12 3c-1.4 2 1.4 2.8 0 4.8M16 3.5c-1.4 2 1.4 2.8 0 4.8" stroke="#fff7ec" stroke-width="1.6" fill="none" stroke-linecap="round"/></symbol>
+</svg>
+
+<div class="demobar"><div class="wrap">Bản xem thử gửi chủ quán duyệt. <a href="https://tichxanh.github.io/" target="_blank" rel="noopener">Thiết kế bởi Tích Xanh →</a></div></div>
+<div class="promo"><div class="wrap"><span>🎉 Chạy thử: <b>đồng giá 25k/món</b></span><span>🚚 Ship từ 16h chiều</span><span>🏥 <b>Free ship</b> Bệnh viện Cuba</span></div></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" aria-label="Bếp Bông – về đầu trang"><i><svg><use href="#i-bowl"/></svg></i><span><b>Bếp Bông</b><small>MÓN VIỆT NHÀ NẤU</small></span></a>
+    <nav class="links" aria-label="Mục chính"><a href="#hom-nay">Hôm nay</a><a href="#menu">Menu</a><a href="#cach-dat">Cách đặt</a><a href="#lien-he">Liên hệ</a></nav>
+    <button class="btn btn-red" type="button" data-open><svg><use href="#i-ms"/></svg><span class="t">Đặt món</span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Soft opening · Đồng Hới</span>
+      <h1>Món Việt nhà nấu<em>nóng hổi mỗi chiều</em></h1>
+      <p class="lead">Bún cá ngừ, gỏi cuốn tôm thịt, bánh ướt thịt luộc, cháo, cơm sườn. Bấm <b>+</b> chọn món, gửi đơn qua <b>Zalo</b> hoặc <b>Messenger</b> chỉ trong 30 giây.</p>
+      <div class="chips"><span class="chip">📍 23 Xuân Bồ</span><span class="chip">🕓 Ship từ 16h</span><span class="chip">🏥 Free ship BV Cuba</span></div>
+      <div class="ctas"><a class="btn btn-red" href="#hom-nay">Xem món hôm nay</a><button class="btn btn-z" type="button" data-ch="zalo"><span class="zl">Zalo</span>Nhắn Zalo</button><button class="btn btn-m" type="button" data-ch="messenger"><svg><use href="#i-ms"/></svg>Messenger</button></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="main"><img data-img="bun-ca-ngu" alt=""></div>
+      <div class="mini"><img data-img="goi-cuon" alt=""></div>
+      <span class="stamp"><span><b>25k</b><small>đồng giá</small></span></span>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="hom-nay" style="padding-top:10px">
+  <div class="wrap"><div class="today rv">
+    <div class="sh"><div><span class="eyebrow">Thứ Ba · 03/11</span><h2>Hôm nay bếp <em>có món gì?</em></h2></div><p>Trong thời gian chạy thử, mỗi ngày bếp nấu 1–2 món, khoảng 30 suất. Đặt sớm để giữ phần nhé!</p></div>
+    <div class="tgrid" id="tgrid"></div>
+    <p class="today-note">⏰ Bún cá ngừ chỉ có buổi chiều, từ 16h30. Hết chạy thử bún cá ngừ về giá 30k/tô.</p>
+  </div></div>
+</section>
+
+<section class="sec" id="menu" style="padding-top:8px">
+  <div class="wrap">
+    <div class="sh rv"><div><span class="eyebrow">Thực đơn</span><h2>Menu <em>của bếp</em></h2></div><p>Giá chạy thử 25k/món. Món chưa có ảnh sẽ được cập nhật ảnh thật.</p></div>
+    <div class="filters" id="filters" role="group" aria-label="Lọc món"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:8px">
+  <div class="wrap">
+    <div class="sh rv"><div><span class="eyebrow">Ảnh thật</span><h2>Từ bếp <em>nhà Bông</em></h2></div></div>
+    <div class="gal rv" id="gal"></div>
+  </div>
+</section>
+
+<section class="sec" id="cach-dat" style="padding-top:8px">
+  <div class="wrap">
+    <div class="sh rv"><div><span class="eyebrow">Đặt trong 30 giây</span><h2>Đặt món <em>thật dễ</em></h2></div></div>
+    <div class="how">
+      <div class="rv"><b>1</b><h3>Bấm + chọn món</h3><p>Chọn món và số phần, đơn hiện ở thanh dưới màn hình.</p></div>
+      <div class="rv"><b>2</b><h3>Gửi qua Zalo hoặc Messenger</h3><p>Ghi số điện thoại, địa chỉ, giờ nhận. Tin nhắn đơn được soạn sẵn.</p></div>
+      <div class="rv"><b>3</b><h3>Bếp xác nhận &amp; giao</h3><p>Bếp trả lời tin nhắn, giao từ 16h chiều. Free ship Bệnh viện Cuba.</p></div>
+    </div>
+    <div class="contact" id="lien-he">
+      <div class="cbox rv"><h3>Nhắn bếp đặt món</h3>
+        <button class="btn btn-z" type="button" data-ch="zalo"><span class="zl">Zalo</span>Nhắn Zalo</button>
+        <button class="btn btn-m" type="button" data-ch="messenger"><svg><use href="#i-ms"/></svg>Nhắn Messenger</button>
+        <a class="btn btn-line" id="callBtn" href="#"><svg><use href="#i-phone"/></svg><span id="callTxt">Gọi đặt món</span></a>
+      </div>
+      <div class="cbox rv"><h3>Thông tin quán</h3>
+        <dl>
+          <div><dt>📍</dt><dd>23 Xuân Bồ, Đồng Hới<small>Sau lưng khách sạn SAM · <a href="https://www.google.com/maps/search/?api=1&amp;query=23%20Xu%C3%A2n%20B%E1%BB%93%2C%20%C4%90%E1%BB%93ng%20H%E1%BB%9Bi%2C%20Qu%E1%BA%A3ng%20Tr%E1%BB%8B" target="_blank" rel="noopener">Chỉ đường</a></small></dd></div>
+          <div><dt>🚚</dt><dd>Giao hàng từ 16h chiều<small>Free ship Bệnh viện Cuba trong thời gian chạy thử. Nơi khác: bếp báo phí ship.</small></dd></div>
+          <div><dt>🕓</dt><dd>Giờ bán<small><span class="todo">[Cập nhật giờ bán]</span></small></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><b>Bếp Bông</b>© 2026 Bếp Bông. Trang giới thiệu menu, nhận đặt món qua Zalo / Messenger; không đặt hàng hay thanh toán trực tuyến.</div>
+    <span>Thiết kế bởi <a href="https://tichxanh.github.io/" target="_blank" rel="noopener">Tích Xanh</a></span>
+  </div>
+</footer>
+
+<div class="fab off" id="fab"><button class="btn btn-red" type="button" data-open><svg><use href="#i-ms"/></svg><span class="t">Đặt món</span></button></div>
+<div class="obar off" id="obar" role="region" aria-label="Đơn đang chọn">
+  <button class="sum" type="button" data-open><span class="cnt" id="oc">0</span><span><b id="ot">0k</b><span id="on"></span></span></button>
+  <button class="btn btn-red" type="button" data-open>Gửi đơn ›</button>
+</div>
+
+<div class="dlg" id="orderDlg" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="oTitle">
+    <div class="sh-h"><h3 id="oTitle">Đơn của bạn</h3><button class="x" type="button" data-close aria-label="Đóng">×</button></div>
+    <div class="sh-b">
+      <div id="ol"></div>
+      <div class="fld"><span>Nhận món</span><div class="seg" id="mode"><button type="button" aria-pressed="true" data-v="Giao tới">Giao tới</button><button type="button" aria-pressed="false" data-v="Giao BV Cuba (free ship)">BV Cuba – free ship</button><button type="button" aria-pressed="false" data-v="Tự đến lấy">Tự đến lấy</button></div></div>
+      <label class="fld"><span>Số điện thoại người nhận <b class="req">*</b></span><input id="ph" type="tel" inputmode="tel" autocomplete="tel" placeholder="VD: 0912 345 678"><small class="err" id="phErr" hidden>Nhập số điện thoại 10 số để bếp gọi khi giao.</small></label>
+      <label class="fld"><span id="whLbl">Địa chỉ &amp; giờ nhận</span><input id="wh" autocomplete="street-address" placeholder="VD: 12 Lê Lợi, 16h30"></label>
+      <label class="fld"><span>Ghi chú</span><textarea id="nt" rows="2" placeholder="VD: ít cay, không hành"></textarea></label>
+    </div>
+    <div class="sh-f">
+      <div class="tot"><span>Tạm tính<small id="tnote">Chưa gồm phí ship</small></span><b id="tt">0k</b></div>
+      <button class="btn btn-red" type="button" id="next">Tiếp tục gửi đơn ›</button>
+    </div>
+  </div>
+</div>
+
+<div class="dlg" id="sendDlg" hidden>
+  <div class="card-s" role="dialog" aria-modal="true" aria-labelledby="sTitle">
+    <h3 id="sTitle">Gửi đơn cho bếp</h3>
+    <p id="sSub" hidden></p>
+    <div class="msgbox" id="msgTxt"></div>
+    <a class="btn btn-m" id="goMs" href="#" rel="noopener"><svg><use href="#i-ms"/></svg>Gửi qua Messenger</a>
+    <p id="msNote">Đơn được điền sẵn trong Messenger, bạn chỉ cần bấm Gửi.</p>
+    <span class="or">hoặc</span>
+    <button class="btn btn-line" type="button" id="copyZ"><b>1</b>&nbsp;Chép tin nhắn</button>
+    <a class="btn btn-z" id="goZl" href="#" rel="noopener"><b>2</b>&nbsp;<span class="zl">Zalo</span>Mở Zalo của bếp</a>
+    <p>Với Zalo: chép tin nhắn → mở Zalo → nhấn giữ ô chat → Dán → Gửi.</p>
+    <button class="btn btn-line" type="button" data-close>Đóng</button>
+  </div>
+</div>
+<div class="lb" id="lb" hidden><img alt="" id="lbImg"><button type="button" data-close aria-label="Đóng ảnh">×</button></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+/* ===== CẤU HÌNH – điền khi chủ quán duyệt =====
+   zalo: 'https://zalo.me/<số>'   messenger: 'https://m.me/<tên Trang Facebook>' (Trang mới điền sẵn được đơn)   phone: số gọi đặt món
+   Để trống = chế độ xem thử. TODAY: tên các món bếp nấu hôm nay (đúng tên trong MENU). */
+const SHOP = 'Bông';
+const CONTACT = { zalo: '', messenger: '', phone: '' };
+const TODAY = ["Gỏi cuốn tôm thịt", "Bánh ướt thịt luộc", "Bún cá ngừ"];
+const IMG = {"banh-uot": "img/banh-uot.jpg", "bep-chuan-bi": "img/bep-chuan-bi.jpg", "bun-ca-ngu": "img/bun-ca-ngu.jpg", "goi-cuon": "img/goi-cuon.jpg"};
+const MENU = [
+  {name:'Bún cá ngừ', cat:'bun', price:25, after:'Sau chạy thử 30k/tô', img:'bun-ca-ngu', note:'Cá ngừ kho cà chua ớt, bún tươi, rau sống. Bán buổi chiều từ 16h30.'},
+  {name:'Gỏi cuốn tôm thịt', cat:'cuon', price:25, img:'goi-cuon', note:'Tôm, thịt luộc hoặc thịt nướng, rau xanh, kèm nước chấm.'},
+  {name:'Bánh ướt thịt luộc', cat:'cuon', price:25, img:'banh-uot', note:'Bánh ướt, thịt heo luộc, chả, giá, cà rốt, rau thơm, nước mắm tỏi ớt.'},
+  {name:'Bún ốc', cat:'bun', price:25, emoji:'🐌', note:''},
+  {name:'Bún chả cá', cat:'bun', price:25, emoji:'🍜', note:''},
+  {name:'Cháo trắng cá bống, thịt kho', cat:'chao', price:25, emoji:'🍚', note:''},
+  {name:'Cháo canh', cat:'chao', price:25, emoji:'🥣', note:''},
+  {name:'Cháo cá trắm', cat:'chao', price:25, emoji:'🐟', note:''},
+  {name:'Bánh bèo', cat:'cuon', price:25, emoji:'🥟', note:''},
+  {name:'Cơm sườn', cat:'com', price:25, emoji:'🍛', note:''}
+];
+const CATS = [['all','Tất cả'],['bun','Bún'],['chao','Cháo'],['cuon','Cuốn & bánh'],['com','Cơm']];
+const GAL = [['bep-chuan-bi','Bếp chuẩn bị 30 suất bún cá ngừ'],['bun-ca-ngu','Bún cá ngừ'],['goi-cuon','Gỏi cuốn tôm thịt'],['banh-uot','Bánh ướt thịt luộc'],['bun-ca-ngu','Cá ngừ kho cà chua']];
+
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const k = n => n + 'k';
+const find = n => MENU.find(m => m.name === n);
+const pic = (m, cls = '') => m.img ? `<img src="${IMG[m.img]}" alt="${esc(m.name)}" loading="lazy">` : `<span class="ill ${cls}"><span>${m.emoji || '🍲'}</span><small>Ảnh thật sắp cập nhật</small></span>`;
+const addBtn = n => `<button class="add" type="button" data-add="${esc(n)}" aria-label="Thêm ${esc(n)} vào đơn"><svg><use href="#i-plus"/></svg><span class="t">Chọn</span><span class="q">0</span></button>`;
+$$('img[data-img]').forEach(i => i.src = IMG[i.dataset.img]);
+
+/* hôm nay */
+const today = TODAY.map(find).filter(Boolean);
+$('#tgrid').innerHTML = today.map(m => `<article class="tcard"><div class="ph">${m.img ? `<img src="${IMG[m.img]}" alt="${esc(m.name)}">` : pic(m)}</div>
+  <div class="tx"><span class="live">Hôm nay có</span><h3>${esc(m.name)}</h3><p>${esc(m.note)}</p><div class="prow" style="width:100%"><span class="pr">${k(m.price)}<small>${esc(m.after || 'Giá chạy thử')}</small></span>${addBtn(m.name)}</div></div></article>`).join('');
+$('#hom-nay').hidden = !today.length;
+
+/* menu */
+$('#filters').innerHTML = CATS.map(([id, t], i) => `<button class="fb" type="button" data-cat="${id}" aria-pressed="${!i}">${t}</button>`).join('');
+function render(cat) {
+  $('#grid').innerHTML = MENU.filter(m => cat === 'all' || m.cat === cat).map(m => `<article class="item"><div class="ph">${pic(m)}${TODAY.includes(m.name) ? '<span class="tag">Hôm nay có</span>' : ''}</div>
+    <div class="tx"><h3>${esc(m.name)}</h3>${m.note ? `<p>${esc(m.note)}</p>` : ''}<div class="prow"><span class="pr">${k(m.price)}<small>${esc(m.after || 'Giá chạy thử')}</small></span>${addBtn(m.name)}</div></div></article>`).join('');
+  paint();
+}
+$('#filters').addEventListener('click', e => { const b = e.target.closest('.fb'); if (!b) return; $$('#filters .fb').forEach(x => x.setAttribute('aria-pressed', x === b)); render(b.dataset.cat); });
+$('#gal').innerHTML = GAL.map(([i, a]) => `<button type="button" data-full="${i}"><img src="${IMG[i]}" alt="${esc(a)}" loading="lazy"><span>${esc(a)}</span></button>`).join('');
+
+/* order */
+const order = new Map(); let mode = 'Giao tới';
+try { JSON.parse(localStorage.getItem('bb-order') || '[]').forEach(([n, q]) => find(n) && order.set(n, q)); $('#ph').value = localStorage.getItem('bb-ph') || ''; } catch {}
+const save = () => { try { localStorage.setItem('bb-order', JSON.stringify([...order])); } catch {} };
+const count = () => [...order.values()].reduce((a, b) => a + b, 0);
+const total = () => [...order].reduce((a, [n, q]) => a + find(n).price * q, 0);
+const obar = $('#obar'), fab = $('#fab');
+function paint() {
+  $$('[data-add]').forEach(b => { const q = order.get(b.dataset.add) || 0; b.classList.toggle('on', q > 0); b.querySelector('.q').textContent = q; });
+  const c = count();
+  obar.classList.toggle('off', !c); fab.classList.toggle('off', c > 0 || scrollY < innerHeight * .5);
+  $('#oc').textContent = c; $('#ot').textContent = k(total()); $('#tt').textContent = k(total());
+  $('#on').textContent = [...order].map(([n, q]) => `${q} ${n}`).join(', ');
+  $('#tnote').textContent = mode.includes('Cuba') ? 'Free ship Bệnh viện Cuba' : mode === 'Tự đến lấy' ? 'Đến lấy tại 23 Xuân Bồ' : 'Chưa gồm phí ship';
+  $('#ol').innerHTML = c ? [...order].map(([n, q]) => { const m = find(n); return `<div class="oi"><span class="th">${m.img ? `<img src="${IMG[m.img]}" alt="">` : (m.emoji || '🍲')}</span><span><b>${esc(n)}</b><span>${k(m.price)}</span></span><span class="qty"><button type="button" data-dec="${esc(n)}" aria-label="Bớt">−</button><output>${q}</output><button type="button" data-inc="${esc(n)}" aria-label="Thêm">+</button></span></div>`; }).join('') : '<p class="empty">Chưa có món nào. Bấm + ở menu để chọn.</p>';
+}
+const toast = $('#toast'); let tt;
+const say = m => { toast.textContent = m; toast.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('show'), 2600); };
+let last = null;
+const open = d => { last = document.activeElement; d.hidden = false; d.querySelector('[data-close]')?.focus(); };
+const close = d => { d.hidden = true; last?.focus?.(); };
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-add]'); if (a) { const n = a.dataset.add; order.set(n, (order.get(n) || 0) + 1); save(); paint(); obar.classList.remove('bump'); void obar.offsetWidth; obar.classList.add('bump'); say('Đã thêm ' + n); return; }
+  const i = e.target.closest('[data-inc]'); if (i) { order.set(i.dataset.inc, order.get(i.dataset.inc) + 1); save(); paint(); return; }
+  const d = e.target.closest('[data-dec]'); if (d) { const n = d.dataset.dec, q = order.get(n) - 1; q > 0 ? order.set(n, q) : order.delete(n); save(); paint(); return; }
+  const g = e.target.closest('[data-full]'); if (g) { $('#lbImg').src = IMG[g.dataset.full]; $('#lbImg').alt = g.querySelector('img').alt; open($('#lb')); return; }
+  if (e.target.closest('[data-open]')) { if (!count()) { $('#menu').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'}); say('Bấm + để chọn món trước nhé'); return; } open($('#orderDlg')); return; }
+  const ch = e.target.closest('[data-ch]'); if (ch) { if (count()) { open($('#orderDlg')); return; } const u = CONTACT[ch.dataset.ch]; if (!u) { say('Bản xem thử: khi duyệt, nút này mở ' + (ch.dataset.ch === 'zalo' ? 'Zalo' : 'Messenger') + ' của bếp.'); return; } goto(u); }
+});
+$$('.dlg,.lb').forEach(dl => dl.addEventListener('click', e => { if (e.target === dl || e.target.closest('[data-close]')) close(dl); }));
+addEventListener('keydown', e => { if (e.key === 'Escape') $$('.dlg,.lb').forEach(dl => dl.hidden || close(dl)); });
+$('#mode').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; mode = b.dataset.v; $$('#mode button').forEach(x => x.setAttribute('aria-pressed', x === b)); const pick = mode === 'Tự đến lấy'; $('#whLbl').textContent = pick ? 'Giờ đến lấy' : mode.includes('Cuba') ? 'Khoa / phòng & giờ nhận' : 'Địa chỉ & giờ nhận'; $('#wh').placeholder = pick ? 'VD: 16h30' : mode.includes('Cuba') ? 'VD: Khoa Nội, phòng 204, 16h30' : 'VD: 12 Lê Lợi, 16h30'; paint(); });
+
+/* gửi: Messenger (điền sẵn) hoặc Zalo (chép + dán) */
+const MOBILE = /android|iphone|ipad|ipod|zalo|fban|fbav/i.test(navigator.userAgent);
+function goto(u) { if (MOBILE) location.href = u; else window.open(u, '_blank', 'noopener'); }
+const msUrl = t => CONTACT.messenger ? CONTACT.messenger + (CONTACT.messenger.includes('?') ? '&' : '?') + 'text=' + encodeURIComponent(t) : '';
+function compose() {
+  const lines = [...order].map(([n, q]) => `• ${q} ${n} – ${k(find(n).price * q)}`);
+  const wh = $('#wh').value.trim(), nt = $('#nt').value.trim();
+  return [`Chào ${SHOP}, mình đặt món:`, ...lines, `Tạm tính: ${k(total())}`, `${mode}${wh ? ': ' + wh : ''}`, `SĐT: ${$('#ph').value.trim()}`, nt ? `Ghi chú: ${nt}` : ''].filter(Boolean).join('\n');
+}
+function copySync(t) { try { const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length); const ok = document.execCommand('copy'); ta.remove(); return ok; } catch { return false; } }
+async function copyText(t) { if (copySync(t)) return true; try { await navigator.clipboard.writeText(t); return true; } catch { return false; } }
+const phOk = () => /^(0|\+?84)\d{9}$/.test($('#ph').value.replace(/[\s.\-]/g, ''));
+$('#ph').addEventListener('input', () => { try { localStorage.setItem('bb-ph', $('#ph').value); } catch {} if (phOk()) { $('#ph').classList.remove('bad'); $('#phErr').hidden = true; } });
+$('#next').onclick = () => {
+  if (!count()) { say('Bấm + ở menu để chọn món trước nhé'); return; }
+  if (!phOk()) { $('#ph').classList.add('bad'); $('#phErr').hidden = false; $('#ph').focus(); return; }
+  const t = compose(); copySync(t);
+  $('#msgTxt').textContent = t;
+  const demo = !CONTACT.messenger && !CONTACT.zalo;
+  $('#sSub').hidden = !demo; $('#sSub').textContent = 'Bản xem thử: khi chủ quán duyệt, các nút dưới đây mở Messenger / Zalo của bếp với đơn như sau.';
+  const gm = $('#goMs'), gz = $('#goZl');
+  gm.href = msUrl(t) || '#'; gz.href = CONTACT.zalo || '#';
+  [gm, gz].forEach(a => MOBILE ? a.removeAttribute('target') : a.target = '_blank');
+  gm.dataset.demo = !CONTACT.messenger; gz.dataset.demo = !CONTACT.zalo;
+  close($('#orderDlg')); open($('#sendDlg'));
+};
+['#goMs', '#goZl'].forEach(s => $(s).addEventListener('click', e => { copySync($('#msgTxt').textContent); if ($(s).dataset.demo === 'true') { e.preventDefault(); say('Bản xem thử: nút này sẽ mở ' + (s === '#goMs' ? 'Messenger' : 'Zalo') + ' của bếp khi quán duyệt.'); } }));
+$('#copyZ').onclick = async () => say(await copyText($('#msgTxt').textContent) ? 'Đã chép, giờ bấm Mở Zalo của bếp' : 'Nhấn giữ vào khung đơn để chép');
+if (CONTACT.phone) { $('#callBtn').href = 'tel:' + CONTACT.phone.replace(/\D/g, ''); $('#callTxt').textContent = 'Gọi ' + CONTACT.phone; } else $('#callBtn').addEventListener('click', e => { e.preventDefault(); say('Bản xem thử: nút này gọi số của bếp khi quán duyệt.'); });
+
+const nav = $('#nav');
+const onScroll = () => { nav.classList.toggle('scrolled', scrollY > 8); fab.classList.toggle('off', count() > 0 || scrollY < innerHeight * .5); };
+addEventListener('scroll', onScroll, {passive: true});
+render('all'); onScroll();
+if (!reduce && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.remove('pre'); io.unobserve(en.target); } }), {rootMargin: '0px 0px -8% 0px'});
+  $$('.rv').forEach(el => { if (el.getBoundingClientRect().top > innerHeight * .95) { el.classList.add('pre'); io.observe(el); } });
+}
+})();
+</script>
+</body>
+</html>
