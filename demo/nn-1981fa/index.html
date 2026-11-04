@@ -146,6 +146,26 @@ button{font-family:inherit}
 .add .q{position:absolute;top:-5px;right:-5px;min-width:20px;height:20px;border-radius:999px;background:var(--coral);color:#fff;font:800 11px/20px var(--f);text-align:center;padding:0 5px;display:none}
 .add.on .q{display:block}
 
+/* trạng thái bánh */
+.notice{margin-top:14px;border-radius:20px;padding:14px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--paper);box-shadow:inset 0 0 0 1.5px var(--line)}
+.notice .dot{display:block;width:12px;height:12px;border-radius:50%;flex:none;background:#2f9e5b;box-shadow:0 0 0 5px rgba(47,158,91,.18);animation:blink 1.8s ease-in-out infinite}
+.notice.pre .dot{background:#e0a21b;box-shadow:0 0 0 5px rgba(224,162,27,.2)}
+.notice.off .dot{background:#9a8f86;box-shadow:0 0 0 5px rgba(154,143,134,.2);animation:none}
+.notice b{font:700 18px/1.25 var(--serif)}
+.notice #nText{color:var(--muted);font-size:14px;flex:1;min-width:220px}
+.notice + *{}
+.hero:has(.notice) + #menu .menu-card{margin-top:22px}
+.notice .btn{padding:11px 16px;font-size:14px}
+@keyframes blink{50%{opacity:.4}}
+.st{position:absolute;left:10px;bottom:10px;font:800 11.5px/1 var(--f);padding:6px 10px;border-radius:999px;background:#2f9e5b;color:#fff}
+.st.pre{background:#e0a21b;color:#3a2600}
+.st.het{background:#8c827a;color:#fff}
+.card.het .ph img{filter:grayscale(.85) opacity(.7)}
+.card.het .add{background:#b9b0a8;cursor:not-allowed}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:-8px 0 16px}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.oi .badge{display:inline-block;font-size:11px;font-weight:800;padding:2px 7px;border-radius:999px;margin-left:6px;background:#fbecc8;color:#7a5200}
+.oi .badge.co{background:#dff1e5;color:#1f6b3d}
 /* promise */
 .promise{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:stretch}
 .pbox{background:var(--sage-l);border-radius:28px;padding:28px;display:grid;gap:18px;align-content:start}
@@ -315,7 +335,7 @@ footer{background:var(--sage-d);color:#dfe8dc}
       <div class="cp">
         <span class="kick">Bánh ngọt · Bánh healthy · Đồng Hới</span>
         <h1>Bánh lành mỗi ngày<span class="script">nướng tại bếp nhà Như</span></h1>
-        <p class="lead">Bánh mì nguyên cám, mì đen, bánh khoai lang yến mạch, bánh bao ức gà và tiramisu. Gom đơn trong ngày, <b>chiều giao một lượt</b>.</p>
+        <p class="lead">Bánh mì nguyên cám, mì đen, bánh khoai lang yến mạch, bánh bao ức gà và tiramisu. Có bánh ngày nào, Như báo ngay ở đây. Bánh chưa có thì <b>đặt trước</b>, chiều giao một lượt.</p>
         <div class="ctas"><a class="btn btn-coral" href="#menu">Chọn bánh &amp; đặt</a><button class="btn btn-w" type="button" data-ch="zalo"><span class="zl">Zalo</span>Nhắn Zalo cho Như</button></div>
       </div>
       <div class="circles" aria-hidden="true">
@@ -326,6 +346,7 @@ footer{background:var(--sage-d);color:#dfe8dc}
         <i class="petal" style="left:58%;top:8%"></i><i class="petal" style="left:44%;bottom:6%;animation-delay:-3s"></i>
       </div>
     </div>
+    <div class="notice" id="notice"><span class="dot" aria-hidden="true"></span><div><b id="nTitle"></b></div><span id="nText"></span><a class="btn btn-coral" href="#menu" id="nBtn">Xem bánh</a></div>
   </div>
 </section>
 
@@ -333,6 +354,7 @@ footer{background:var(--sage-d);color:#dfe8dc}
   <div class="wrap">
     <div class="menu-card">
       <div class="menu-top"><div><span class="kick">Menu</span><h2>Hôm nay ăn bánh gì?</h2><p>Bấm <b>+</b> để thêm vào đơn, gửi qua Zalo cho Như.</p></div><div class="cats" id="cats" role="group" aria-label="Lọc theo loại bánh"></div></div>
+      <p class="legend"><span><i style="background:#2f9e5b"></i>Có hôm nay</span><span><i style="background:#e0a21b"></i>Nhận đặt trước – Như báo ngày giao</span><span><i style="background:#8c827a"></i>Tạm hết</span></p>
       <div class="grid" id="grid"></div>
     </div>
   </div>
@@ -397,6 +419,7 @@ footer{background:var(--sage-d);color:#dfe8dc}
     <div class="sh-b">
       <div id="ol"></div>
       <div class="fld"><span>Nhận bánh</span><div class="seg" id="mode"><button type="button" aria-pressed="true" data-v="Giao tới (chiều)">Giao tới (chiều)</button><button type="button" aria-pressed="false" data-v="Tự đến lấy">Tự đến lấy</button></div></div>
+      <div class="fld" id="whenF"><span>Muốn nhận bánh</span><div class="seg" id="when"></div><input id="whenOther" hidden placeholder="VD: sáng Chủ nhật 08/11" style="margin-top:4px"><small class="err" id="whenNote" hidden style="color:var(--muted);font-weight:600"></small></div>
       <label class="fld"><span>Số điện thoại người nhận <b class="req">*</b></span><input id="ph" type="tel" inputmode="tel" autocomplete="tel" placeholder="VD: 0912 345 678"><small class="err" id="phErr" hidden>Nhập số điện thoại 10 số để Như gọi khi giao.</small></label>
       <label class="fld"><span id="whLbl">Địa chỉ nhận</span><input id="wh" autocomplete="street-address" placeholder="VD: 12 Lê Lợi, Đồng Hới"></label>
       <label class="fld"><span>Ghi chú</span><textarea id="nt" rows="2" placeholder="VD: lấy bánh mì cắt lát sẵn"></textarea></label>
@@ -429,16 +452,22 @@ footer{background:var(--sage-d);color:#dfe8dc}
    CONTACT.zalo: 'https://zalo.me/<số Zalo>'  (để trống = chế độ xem thử)
    MENU: price (nghìn), old: giá cũ khi sale, unit: '/hộp', '/cái'... */
 const SHOP = 'Như';
+/* Thông báo đợt bánh: state 'open' (hôm nay có bánh) | 'preorder' (nghỉ, nhận đặt trước) | 'off' (tạm nghỉ, chưa nhận đơn)
+   next: đợt bánh gần nhất (hiện khi nghỉ). Mỗi món có status: 'co' | 'dat-truoc' | 'het'.
+   SHEET_CSV: link Google Sheet "Xuất bản lên web" dạng CSV, cột: ten | trang_thai | gia | ghi_chu
+   (dòng ten = _thongbao: trang_thai = open/preorder/off, gia = đợt tiếp theo, ghi_chu = lời nhắn). Có link này thì Như tự sửa trên Sheet, web tự cập nhật. */
+const SHEET_CSV = '';
+const NOTICE = { state: 'open', next: '', note: 'Gom đơn trong ngày, chiều giao một lượt.' };
 const CONTACT = { zalo: '' };
 const IMG = {"banh-bao": "img/banh-bao.jpg", "bo-da-lon": "img/bo-da-lon.jpg", "khoai-lang-yen-mach": "img/khoai-lang-yen-mach.jpg", "mi-den": "img/mi-den.jpg", "mi-khoai-tay": "img/mi-khoai-tay.jpg", "mi-me-den-tui": "img/mi-me-den-tui.jpg", "tiramisu": "img/tiramisu.jpg"};
 const MENU = [
-  {name:'Tiramisu', cat:'ngot', price:45, old:55, unit:'/hộp', img:'tiramisu', tag:'Sale', hot:1, note:'Phủ lớp bột cacao dày, đựng hộp vuông tiện mang đi.'},
-  {name:'Bánh bò, da lợn', cat:'ngot', price:40, unit:'/hộp', img:'bo-da-lon', tag:'Bánh Việt', note:'Hộp bánh da lợn xanh và bánh bò nướng rỗ tổ ong, kèm chén sốt.'},
-  {name:'Bánh khoai lang yến mạch sữa chua', cat:'healthy', price:50, unit:'', img:'khoai-lang-yen-mach', tag:'Healthy', note:'Bánh nướng từ khoai lang, yến mạch, sữa chua, phủ hạnh nhân lát.'},
-  {name:'Bánh mì nguyên cám mè đen', cat:'mi', price:60, unit:'', img:'mi-me-den-tui', tag:'Nguyên cám', note:'Bánh mì nguyên cám mè đen, cắt lát, đóng túi.'},
-  {name:'Mì đen', cat:'mi', price:90, unit:'', img:'mi-den', tag:'Healthy', note:'Ổ bánh mì đen cắt lát sẵn.'},
-  {name:'Bánh mì khoai tây', cat:'mi', price:45, unit:'', img:'mi-khoai-tay', tag:'Mềm thơm', note:'Bánh mì khoai tây tròn, vỏ bóng, mềm.'},
-  {name:'Bánh bao nguyên cám ức gà', cat:'healthy', price:20, unit:'/cái', img:'banh-bao', tag:'Healthy', note:'Vỏ bột nguyên cám, nhân ức gà.'}
+  {name:'Tiramisu', status:'co', cat:'ngot', price:45, old:55, unit:'/hộp', img:'tiramisu', tag:'Sale', hot:1, note:'Phủ lớp bột cacao dày, đựng hộp vuông tiện mang đi.'},
+  {name:'Bánh bò, da lợn', status:'co', cat:'ngot', price:40, unit:'/hộp', img:'bo-da-lon', tag:'Bánh Việt', note:'Hộp bánh da lợn xanh và bánh bò nướng rỗ tổ ong, kèm chén sốt.'},
+  {name:'Bánh khoai lang yến mạch sữa chua', status:'dat-truoc', cat:'healthy', price:50, unit:'', img:'khoai-lang-yen-mach', tag:'Healthy', note:'Bánh nướng từ khoai lang, yến mạch, sữa chua, phủ hạnh nhân lát.'},
+  {name:'Bánh mì nguyên cám mè đen', status:'dat-truoc', cat:'mi', price:60, unit:'', img:'mi-me-den-tui', tag:'Nguyên cám', note:'Bánh mì nguyên cám mè đen, cắt lát, đóng túi.'},
+  {name:'Mì đen', status:'dat-truoc', cat:'mi', price:90, unit:'', img:'mi-den', tag:'Healthy', note:'Ổ bánh mì đen cắt lát sẵn.'},
+  {name:'Bánh mì khoai tây', status:'dat-truoc', cat:'mi', price:45, unit:'', img:'mi-khoai-tay', tag:'Mềm thơm', note:'Bánh mì khoai tây tròn, vỏ bóng, mềm.'},
+  {name:'Bánh bao nguyên cám ức gà', status:'dat-truoc', cat:'healthy', price:20, unit:'/cái', img:'banh-bao', tag:'Healthy', note:'Vỏ bột nguyên cám, nhân ức gà.'}
 ];
 const CATS = [['all','Tất cả','🧺'],['healthy','Healthy','🌾'],['mi','Bánh mì','🍞'],['ngot','Bánh ngọt','🍰']];
 const GAL = [['mi-khoai-tay','Bánh mì khoai tây mới ra lò'],['banh-bao','Bánh bao nguyên cám'],['mi-me-den-tui','Bánh mì mè đen đóng túi'],['khoai-lang-yen-mach','Bánh khoai lang yến mạch']];
@@ -450,11 +479,37 @@ const k = n => n + 'k';
 const find = n => MENU.find(m => m.name === n);
 $$('img[data-img]').forEach(i => i.src = IMG[i.dataset.img]);
 
+const RANK = {co: 0, 'dat-truoc': 1, het: 2};
+const STL = {co: 'Có hôm nay', 'dat-truoc': 'Đặt trước', het: 'Tạm hết'};
+function paintNotice() {
+  if (NOTICE.state === 'preorder') MENU.forEach(m => { if (m.status === 'co') m.status = 'dat-truoc'; });
+  if (NOTICE.state === 'off') MENU.forEach(m => { m.status = 'het'; });
+  const today = MENU.filter(m => m.status === 'co').map(m => m.name);
+  const n = $('#notice'); n.className = 'notice' + (NOTICE.state === 'open' && today.length ? '' : NOTICE.state === 'off' ? ' off' : ' pre');
+  if (NOTICE.state === 'open' && today.length) { $('#nTitle').textContent = 'Hôm nay có bánh!'; $('#nText').textContent = today.join(' · ') + '. ' + (NOTICE.note || '') + ' Bánh khác nhận đặt trước.'; $('#nBtn').textContent = 'Đặt bánh hôm nay'; }
+  else if (NOTICE.state === 'off') { $('#nTitle').textContent = 'Như đang tạm nghỉ làm bánh'; $('#nText').textContent = (NOTICE.note || '') + (NOTICE.next ? ' Đợt bánh tới: ' + NOTICE.next + '.' : ' Nhắn Zalo để được báo khi có bánh.'); $('#nBtn').textContent = 'Nhắn Zalo cho Như'; $('#nBtn').dataset.ch = 'zalo'; }
+  else { $('#nTitle').textContent = 'Hôm nay Như nghỉ – vẫn nhận đặt trước'; $('#nText').textContent = (NOTICE.next ? 'Đợt bánh gần nhất: ' + NOTICE.next + '. ' : 'Như sẽ báo ngày giao khi xác nhận đơn. ') + (NOTICE.note || ''); $('#nBtn').textContent = 'Đặt trước'; }
+}
+async function loadSheet() {
+  if (!SHEET_CSV) return;
+  try {
+    const t = await (await fetch(SHEET_CSV, {cache: 'no-store'})).text();
+    const rows = t.trim().split(/\r?\n/).slice(1).map(l => (l.match(/("([^"]|"")*"|[^,]*)(,|$)/g) || []).map(c => c.replace(/,$/, '').replace(/^"|"$/g, '').replace(/""/g, '"').trim()));
+    rows.forEach(([ten, tt, gia, gc]) => {
+      if (!ten) return;
+      if (ten === '_thongbao') { if (tt) NOTICE.state = tt; NOTICE.next = gia || ''; if (gc) NOTICE.note = gc; return; }
+      const m = MENU.find(x => x.name.toLowerCase() === ten.toLowerCase()); if (!m) return;
+      if (['co', 'dat-truoc', 'het'].includes(tt)) m.status = tt;
+      if (+gia) m.price = +gia; if (gc) m.note = gc;
+    });
+    paintNotice(); render($('#cats [aria-pressed="true"]')?.dataset.cat || 'all');
+  } catch {}
+}
 $('#cats').innerHTML = CATS.map(([id, t, e], i) => `<button class="cat" type="button" data-cat="${id}" aria-pressed="${!i}"><span>${e}</span>${t}</button>`).join('');
 function render(cat) {
-  $('#grid').innerHTML = MENU.filter(m => cat === 'all' || m.cat === cat).map(m => `<article class="card"><div class="ph"><img src="${IMG[m.img]}" alt="${esc(m.name)}" loading="lazy">${m.tag ? `<span class="tag${m.hot ? ' hot' : ''}">${esc(m.tag)}</span>` : ''}<span class="heart" aria-hidden="true">♥</span></div>
+  $('#grid').innerHTML = MENU.filter(m => cat === 'all' || m.cat === cat).sort((x, y) => RANK[x.status] - RANK[y.status]).map(m => `<article class="card${m.status === 'het' ? ' het' : ''}"><div class="ph"><img src="${IMG[m.img]}" alt="${esc(m.name)}" loading="lazy">${m.tag ? `<span class="tag${m.hot ? ' hot' : ''}">${esc(m.tag)}</span>` : ''}<span class="heart" aria-hidden="true">♥</span><span class="st ${m.status === 'co' ? '' : m.status === 'het' ? 'het' : 'pre'}">${STL[m.status]}</span></div>
     <div class="tx"><h3>${esc(m.name)}</h3><p>${esc(m.note)}</p><div class="prow"><span class="pr">${m.old ? `<s>${k(m.old)}</s>` : ''}${k(m.price)}<small>${esc(m.unit)}</small></span>
-    <button class="add" type="button" data-add="${esc(m.name)}" aria-label="Thêm ${esc(m.name)} vào đơn"><svg><use href="#i-plus"/></svg><span class="q">0</span></button></div></div></article>`).join('');
+    <button class="add" type="button" data-add="${esc(m.name)}" ${m.status === 'het' ? 'disabled aria-label="' + esc(m.name) + ' tạm hết"' : 'aria-label="Thêm ' + esc(m.name) + ' vào đơn"'}><svg><use href="#i-plus"/></svg><span class="q">0</span></button></div></div></article>`).join('');
   paint();
 }
 const pick = c => { $$('#cats .cat').forEach(b => b.setAttribute('aria-pressed', b.dataset.cat === c)); render(c); };
@@ -463,8 +518,8 @@ $$('[data-jump]').forEach(a => a.addEventListener('click', () => pick(a.dataset.
 $('#pgrid').innerHTML = GAL.map(([i, a]) => `<button type="button" data-full="${i}"><img src="${IMG[i]}" alt="${esc(a)}" loading="lazy"><span>${esc(a)}</span></button>`).join('');
 
 /* đơn */
-const order = new Map(); let mode = 'Giao tới (chiều)';
-try { JSON.parse(localStorage.getItem('nhu-order') || '[]').forEach(([n, q]) => find(n) && order.set(n, q)); $('#ph').value = localStorage.getItem('nhu-ph') || ''; } catch {}
+const order = new Map(); let mode = 'Giao tới (chiều)', when = '', whenOther = '';
+try { JSON.parse(localStorage.getItem('nhu-order') || '[]').forEach(([n, q]) => find(n) && find(n).status !== 'het' && order.set(n, q)); $('#ph').value = localStorage.getItem('nhu-ph') || ''; } catch {}
 const save = () => { try { localStorage.setItem('nhu-order', JSON.stringify([...order])); } catch {} };
 const count = () => [...order.values()].reduce((a, b) => a + b, 0);
 const total = () => [...order].reduce((a, [n, q]) => a + find(n).price * q, 0);
@@ -475,7 +530,12 @@ function paint() {
   obar.classList.toggle('off', !c); fab.classList.toggle('off', c > 0 || scrollY < innerHeight * .5);
   $('#oc').textContent = c; $('#ot').textContent = k(total()); $('#tt').textContent = k(total());
   $('#on').textContent = [...order].map(([n, q]) => `${q} ${n}`).join(', ');
-  $('#ol').innerHTML = c ? [...order].map(([n, q]) => { const m = find(n); return `<div class="oi"><img src="${IMG[m.img]}" alt=""><span><b>${esc(n)}</b><span>${k(m.price)}${esc(m.unit)}</span></span><span class="qty"><button type="button" data-dec="${esc(n)}" aria-label="Bớt">−</button><output>${q}</output><button type="button" data-inc="${esc(n)}" aria-label="Thêm">+</button></span></div>`; }).join('') : '<p class="empty">Chưa có bánh nào. Bấm + ở menu để chọn.</p>';
+  const allToday = c && [...order.keys()].every(n => find(n).status === 'co') && NOTICE.state === 'open';
+  const opts = allToday ? ['Chiều nay', 'Đợt bánh sau', 'Ngày khác'] : [NOTICE.next ? 'Đợt ' + NOTICE.next : 'Đợt bánh gần nhất', 'Ngày khác'];
+  if (!opts.includes(when)) when = opts[0];
+  $('#when').innerHTML = opts.map(o => `<button type="button" data-w="${esc(o)}" aria-pressed="${o === when}">${esc(o)}</button>`).join('');
+  $('#whenNote').hidden = allToday || !c; $('#whenNote').textContent = 'Đơn có bánh đặt trước: Như sẽ báo ngày giao khi xác nhận.';
+  $('#ol').innerHTML = c ? [...order].map(([n, q]) => { const m = find(n); return `<div class="oi"><img src="${IMG[m.img]}" alt=""><span><b>${esc(n)}<i class="badge${m.status === 'co' ? ' co' : ''}" style="font-style:normal">${m.status === 'co' ? 'có hôm nay' : 'đặt trước'}</i></b><span>${k(m.price)}${esc(m.unit)}</span></span><span class="qty"><button type="button" data-dec="${esc(n)}" aria-label="Bớt">−</button><output>${q}</output><button type="button" data-inc="${esc(n)}" aria-label="Thêm">+</button></span></div>`; }).join('') : '<p class="empty">Chưa có bánh nào. Bấm + ở menu để chọn.</p>';
 }
 const toast = $('#toast'); let tt;
 const say = m => { toast.textContent = m; toast.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('show'), 2600); };
@@ -485,7 +545,7 @@ const close = d => { d.hidden = true; last?.focus?.(); };
 const MOBILE = /android|iphone|ipad|ipod|zalo/i.test(navigator.userAgent);
 const goto = u => MOBILE ? (location.href = u) : window.open(u, '_blank', 'noopener');
 document.addEventListener('click', e => {
-  const a = e.target.closest('[data-add]'); if (a) { const n = a.dataset.add; order.set(n, (order.get(n) || 0) + 1); save(); paint(); obar.classList.remove('bump'); void obar.offsetWidth; obar.classList.add('bump'); say('Đã thêm ' + n); return; }
+  const a = e.target.closest('[data-add]'); if (a) { if (a.disabled) return; const n = a.dataset.add; order.set(n, (order.get(n) || 0) + 1); save(); paint(); obar.classList.remove('bump'); void obar.offsetWidth; obar.classList.add('bump'); say('Đã thêm ' + n); return; }
   const i = e.target.closest('[data-inc]'); if (i) { order.set(i.dataset.inc, order.get(i.dataset.inc) + 1); save(); paint(); return; }
   const d = e.target.closest('[data-dec]'); if (d) { const n = d.dataset.dec, q = order.get(n) - 1; q > 0 ? order.set(n, q) : order.delete(n); save(); paint(); return; }
   const g = e.target.closest('[data-full]'); if (g) { $('#lbImg').src = IMG[g.dataset.full]; $('#lbImg').alt = g.querySelector('img').alt; open($('#lb')); return; }
@@ -494,12 +554,14 @@ document.addEventListener('click', e => {
 });
 $$('.dlg,.lb').forEach(dl => dl.addEventListener('click', e => { if (e.target === dl || e.target.closest('[data-close]')) close(dl); }));
 addEventListener('keydown', e => { if (e.key === 'Escape') $$('.dlg,.lb').forEach(dl => dl.hidden || close(dl)); });
+$('#when').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; when = b.dataset.w; $$('#when button').forEach(x => x.setAttribute('aria-pressed', x === b)); $('#whenOther').hidden = when !== 'Ngày khác'; if (when === 'Ngày khác') $('#whenOther').focus(); });
 $('#mode').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; mode = b.dataset.v; $$('#mode button').forEach(x => x.setAttribute('aria-pressed', x === b)); const p = mode === 'Tự đến lấy'; $('#whLbl').textContent = p ? 'Giờ đến lấy' : 'Địa chỉ nhận'; $('#wh').placeholder = p ? 'VD: 17h' : 'VD: 12 Lê Lợi, Đồng Hới'; });
 
 function compose() {
-  const lines = [...order].map(([n, q]) => `• ${q} ${n} – ${k(find(n).price * q)}`);
+  const lines = [...order].map(([n, q]) => `• ${q} ${n} – ${k(find(n).price * q)}${find(n).status === 'co' ? '' : ' (đặt trước)'}`);
   const wh = $('#wh').value.trim(), nt = $('#nt').value.trim();
-  return [`Chào ${SHOP}, mình đặt bánh:`, ...lines, `Tạm tính: ${k(total())}`, `${mode}${wh ? ': ' + wh : ''}`, `SĐT: ${$('#ph').value.trim()}`, nt ? `Ghi chú: ${nt}` : ''].filter(Boolean).join('\n');
+  const w = when === 'Ngày khác' ? ($('#whenOther').value.trim() || 'ngày khác (hẹn qua Zalo)') : when;
+  return [`Chào ${SHOP}, mình đặt bánh:`, ...lines, `Tạm tính: ${k(total())}`, `Muốn nhận: ${w}`, `${mode}${wh ? ': ' + wh : ''}`, `SĐT: ${$('#ph').value.trim()}`, nt ? `Ghi chú: ${nt}` : ''].filter(Boolean).join('\n');
 }
 function copySync(t) { try { const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length); const ok = document.execCommand('copy'); ta.remove(); return ok; } catch { return false; } }
 async function copyText(t) { if (copySync(t)) return true; try { await navigator.clipboard.writeText(t); return true; } catch { return false; } }
@@ -520,7 +582,7 @@ $('#go').addEventListener('click', e => { copySync($('#msgTxt').textContent); if
 const nav = $('#nav');
 const onScroll = () => { nav.classList.toggle('scrolled', scrollY > 8); fab.classList.toggle('off', count() > 0 || scrollY < innerHeight * .5); };
 addEventListener('scroll', onScroll, {passive: true});
-render('all'); onScroll();
+paintNotice(); render('all'); onScroll(); loadSheet();
 if (!reduce && 'IntersectionObserver' in window) {
   const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.remove('pre'); io.unobserve(en.target); } }), {rootMargin: '0px 0px -8% 0px'});
   $$('.rv').forEach(el => { if (el.getBoundingClientRect().top > innerHeight * .95) { el.classList.add('pre'); io.observe(el); } });
