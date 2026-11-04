@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Quà của Bà – Mứt dừa bà cháu cùng làm</title>
-<meta name="description" content="Mứt dừa Quà của Bà: bà cùng các cháu làm từng mẻ, ngon – lành – sạch. Có thêm dừa quả, nước dừa chai 1L. Đặt trước, nhận sau 1–2 ngày.">
+<meta name="description" content="Mứt dừa Quà của Bà (64 Lý Thường Kiệt, Đồng Hới): bà cùng các cháu làm từng mẻ, ngon – lành – sạch. Có thêm dừa quả, nước dừa chai 1L. Đặt trước, nhận sau 1–2 ngày.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#7a4a2b">
 <meta property="og:type" content="website">
@@ -192,6 +192,11 @@ footer{background:#3d2516;color:#e6d6c2}
 .foot b{display:block;font:700 22px/1.2 var(--serif);color:#fffaf0;margin-bottom:6px}
 .foot b .script{color:#f0c58e;font-size:.9em}
 .foot a{color:#f0c58e;font-weight:700;text-decoration:none}
+.foot .addr{display:block;margin-bottom:8px;color:#fffaf0;font-weight:600}
+.home{max-width:880px;margin:14px auto 0;display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--paper);border-radius:22px;padding:16px 20px;box-shadow:inset 0 0 0 1px var(--line)}
+.home b{display:block;font:700 18px/1.3 var(--serif)}
+.home span{flex:1;min-width:220px;font-size:14px;color:var(--muted)}
+.home .btn{padding:11px 16px;font-size:14px}
 
 /* order */
 .obar{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translate(-50%,0);z-index:60;width:min(600px,calc(100% - 24px));background:#3d2516;color:#fff;border-radius:22px;padding:9px 9px 9px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 22px 44px -14px rgba(0,0,0,.6);transition:transform .5s var(--ease),opacity .35s}
@@ -402,6 +407,7 @@ footer{background:#3d2516;color:#e6d6c2}
   <div class="wrap">
     <div class="sh rv"><span class="kick">Đặt mứt</span><h2>Chọn quà <span class="script">cho cả nhà</span></h2><p>Mứt dừa bà làm theo đơn nên cần đặt trước 1–2 ngày. Dừa quả và nước dừa có sẵn, ship ngay trong ngày.</p></div>
     <div class="prods" id="prods"></div>
+    <div class="home rv"><span style="font-size:30px;flex:none;min-width:0">🏡</span><span><b>Nhà bà: 64 Lý Thường Kiệt</b>Phường Đồng Hới, tỉnh Quảng Trị. Ghé lấy tại nhà hoặc nhờ bà ship tận nơi.</span><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=64%20L%C3%BD%20Th%C6%B0%E1%BB%9Dng%20Ki%E1%BB%87t%2C%20%C4%90%E1%BB%93ng%20H%E1%BB%9Bi%2C%20Qu%E1%BA%A3ng%20Tr%E1%BB%8B" target="_blank" rel="noopener">📍 Chỉ đường</a></div>
     <div class="pre-box rv"><svg><use href="#i-cal"/></svg><span><b>Mứt chờ 1–2 ngày · Dừa & nước dừa ship ngay</b>Đơn có cả hai, bạn chọn ship dừa ngay rồi giao mứt sau, hoặc gom giao chung một lần. Bà nhắn xác nhận qua Zalo.</span></div>
   </div>
 </section>
@@ -423,7 +429,7 @@ footer{background:#3d2516;color:#e6d6c2}
 
 <footer>
   <div class="wrap foot">
-    <div><b>Quà của Bà <span class="script">mứt dừa bà cháu cùng làm</span></b>© 2026 Quà của Bà. Trang giới thiệu sản phẩm, nhận đặt trước qua Zalo; không đặt hàng hay thanh toán trực tuyến.</div>
+    <div><b>Quà của Bà <span class="script">mứt dừa bà cháu cùng làm</span></b><span class="addr">📍 Nhà bà: 64 Lý Thường Kiệt, phường Đồng Hới, tỉnh Quảng Trị · <a href="https://www.google.com/maps/search/?api=1&amp;query=64%20L%C3%BD%20Th%C6%B0%E1%BB%9Dng%20Ki%E1%BB%87t%2C%20%C4%90%E1%BB%93ng%20H%E1%BB%9Bi%2C%20Qu%E1%BA%A3ng%20Tr%E1%BB%8B" target="_blank" rel="noopener">Chỉ đường</a></span>© 2026 Quà của Bà. Trang giới thiệu sản phẩm, nhận đặt trước qua Zalo; không đặt hàng hay thanh toán trực tuyến.</div>
     <span>Thiết kế bởi <a href="https://tichxanh.github.io/" target="_blank" rel="noopener">Tích Xanh</a></span>
   </div>
 </footer>
@@ -440,7 +446,7 @@ footer{background:#3d2516;color:#e6d6c2}
     <div class="sh-b">
       <div id="ol"></div>
       <div id="whenBox" class="fld" style="gap:12px"></div>
-      <div class="fld"><span>Nhận hàng</span><div class="seg" id="mode"><button type="button" aria-pressed="true" data-v="Giao tận nơi">Giao tận nơi</button><button type="button" aria-pressed="false" data-v="Tự đến lấy">Tự đến lấy</button></div></div>
+      <div class="fld"><span>Nhận hàng</span><small class="hint" id="pickHint" hidden>Ghé lấy tại nhà bà: 64 Lý Thường Kiệt, phường Đồng Hới.</small><div class="seg" id="mode"><button type="button" aria-pressed="true" data-v="Giao tận nơi">Giao tận nơi</button><button type="button" aria-pressed="false" data-v="Tự đến lấy">Tự đến lấy</button></div></div>
       <label class="fld"><span>Tên người nhận</span><input id="nm" autocomplete="name" placeholder="VD: Chị Lan"></label>
       <label class="fld"><span>Số điện thoại <b class="req">*</b></span><input id="ph" type="tel" inputmode="tel" autocomplete="tel" placeholder="VD: 0912 345 678"><small class="err" id="phErr" hidden>Nhập số điện thoại 10 số để bà gọi khi giao.</small></label>
       <label class="fld"><span id="adLbl">Địa chỉ nhận</span><input id="ad" autocomplete="street-address" placeholder="VD: 12 Lê Lợi, Đồng Hới"></label>
@@ -540,14 +546,14 @@ document.addEventListener('click', e => {
 });
 $$('.dlg').forEach(dl => dl.addEventListener('click', e => { if (e.target === dl || e.target.closest('[data-close]')) close(dl); }));
 addEventListener('keydown', e => { if (e.key === 'Escape') $$('.dlg').forEach(dl => dl.hidden || close(dl)); });
-$('#mode').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; mode = b.dataset.v; $$('#mode button').forEach(x => x.setAttribute('aria-pressed', x === b)); const p = mode === 'Tự đến lấy'; $('#adLbl').textContent = p ? 'Giờ đến lấy' : 'Địa chỉ nhận'; $('#ad').placeholder = p ? 'VD: 17h' : 'VD: 12 Lê Lợi, Đồng Hới'; });
+$('#mode').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; mode = b.dataset.v; $$('#mode button').forEach(x => x.setAttribute('aria-pressed', x === b)); const p = mode === 'Tự đến lấy'; $('#pickHint').hidden = !p; $('#adLbl').textContent = p ? 'Giờ đến lấy' : 'Địa chỉ nhận'; $('#ad').placeholder = p ? 'VD: 17h' : 'VD: 12 Lê Lợi, Đồng Hới'; });
 
 function compose() {
   const lines = [...order].map(([n, q]) => `• ${q} ${find(n).unit.slice(1)} ${n.startsWith('Mứt dừa túi ') ? 'mứt dừa ' + n.replace('Mứt dừa túi ', '') : n.replace('Dừa quả', 'dừa tươi').replace('Nước dừa chai 1L', 'nước dừa 1L')} – ${k(find(n).price * q)}${find(n).wait ? ' (đặt trước)' : ''}`);
   const nm = $('#nm').value.trim(), ad = $('#ad').value.trim(), nt = $('#nt').value.trim();
   const hasMut = [...order.keys()].some(n => find(n).wait), hasFresh = [...order.keys()].some(n => !find(n).wait);
   const when = [hasMut ? `Mứt dừa nhận: ${mutDay}` : '', hasFresh ? (hasMut ? (split ? 'Dừa/nước dừa: ship ngay hôm nay, mứt giao sau' : `Dừa/nước dừa: giao chung với mứt (${mutDay})`) : `Dừa/nước dừa nhận: ${freshDay}`) : ''];
-  return [hasMut ? 'Chào Quà của Bà, mình đặt hàng:' : 'Chào Quà của Bà, mình đặt dừa:', ...lines, `Tạm tính: ${k(total())}`, ...when, `${mode}${ad ? ': ' + ad : ''}`, `Người nhận: ${nm ? nm + ' – ' : ''}${$('#ph').value.trim()}`, nt ? `Ghi chú: ${nt}` : ''].filter(Boolean).join('\n');
+  return [hasMut ? 'Chào Quà của Bà, mình đặt hàng:' : 'Chào Quà của Bà, mình đặt dừa:', ...lines, `Tạm tính: ${k(total())}`, ...when, `${mode === 'Tự đến lấy' ? 'Tự đến lấy tại 64 Lý Thường Kiệt' : mode}${ad ? ': ' + ad : ''}`, `Người nhận: ${nm ? nm + ' – ' : ''}${$('#ph').value.trim()}`, nt ? `Ghi chú: ${nt}` : ''].filter(Boolean).join('\n');
 }
 function copySync(t) { try { const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length); const ok = document.execCommand('copy'); ta.remove(); return ok; } catch { return false; } }
 async function copyText(t) { if (copySync(t)) return true; try { await navigator.clipboard.writeText(t); return true; } catch { return false; } }
