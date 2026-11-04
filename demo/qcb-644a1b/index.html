@@ -149,6 +149,12 @@ button{font-family:inherit}
 .prod .ph{position:relative;aspect-ratio:4/3.3;overflow:hidden}
 .prod .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease)}
 .prod:hover .ph img{transform:scale(1.04)}
+.avail{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;padding:5px 10px;border-radius:999px;justify-self:start}
+.avail.wait{background:#f6e7cf;color:#8a5a1c}
+.avail.now{background:var(--leaf-l);color:#3f6b31}
+:root[data-theme="dark"] .avail.wait{background:#3a2a17;color:#f0c58e}
+:root[data-theme="dark"] .avail.now{color:#a9d498}
+.prod .tag.now{background:var(--clay)}
 .prod .tag{position:absolute;left:14px;top:14px;background:var(--leaf);color:#fff;font:800 12px/1 var(--f);padding:7px 12px;border-radius:999px}
 .prod .tx{padding:20px 22px 22px;display:grid;gap:8px;align-content:start}
 .prod h3{font:700 21px/1.2 var(--serif)}
@@ -266,6 +272,7 @@ footer{background:#3d2516;color:#e6d6c2}
   .ctas{display:grid;grid-template-columns:minmax(0,1fr);width:100%}
   .prods{grid-template-columns:minmax(0,1fr)}
   .prod .ph{aspect-ratio:4/3}
+  .grp-t{flex-wrap:wrap;gap:4px 10px}.grp-t::after{display:none}.grp-t small{flex-basis:100%}
   .step .ic{width:104px;height:104px}.step .ic svg{width:76px;height:76px}
   .dlg{align-items:end;padding:0}
   .sheet{border-radius:24px 24px 0 0;width:100%;max-height:92vh}
@@ -301,7 +308,7 @@ footer{background:#3d2516;color:#e6d6c2}
       <p class="lead">Bà cùng các cháu ngồi bên chảo, nạo từng miếng cơm dừa, sên lửa liu riu cho đến khi trắng giòn, ngọt dịu. Món ăn vặt bà làm cho cháu, giờ gửi đến nhà mình.</p>
       <div class="trio"><span><i></i>Ngon</span><span><i></i>Lành</span><span><i></i>Sạch</span></div>
       <div class="ctas"><a class="btn btn-main" href="#dat-hang">Đặt mứt trước</a><a class="btn btn-line" href="#cong-doan">Xem bà làm mứt</a></div>
-      <p class="pre-note"><svg><use href="#i-cal"/></svg><span>Bà làm theo đơn: <b>đặt trước, nhận sau 1–2 ngày</b> để mứt luôn mới.</span></p>
+      <p class="pre-note"><svg><use href="#i-cal"/></svg><span>Mứt bà làm theo đơn: <b>đặt trước 1–2 ngày</b>. Dừa quả, nước dừa: <b>ship ngay</b>.</span></p>
     </div>
     <div class="scene" aria-hidden="true">
       <span class="sun"></span>
@@ -393,9 +400,9 @@ footer{background:#3d2516;color:#e6d6c2}
 
 <section class="sec" id="dat-hang">
   <div class="wrap">
-    <div class="sh rv"><span class="kick">Đặt mứt</span><h2>Chọn quà <span class="script">cho cả nhà</span></h2><p>Mứt dừa bà làm, dừa tươi và nước dừa cùng vườn. Chọn số lượng, giao sau 1–2 ngày.</p></div>
+    <div class="sh rv"><span class="kick">Đặt mứt</span><h2>Chọn quà <span class="script">cho cả nhà</span></h2><p>Mứt dừa bà làm theo đơn nên cần đặt trước 1–2 ngày. Dừa quả và nước dừa có sẵn, ship ngay trong ngày.</p></div>
     <div class="prods" id="prods"></div>
-    <div class="pre-box rv"><svg><use href="#i-cal"/></svg><span><b>Đặt trước – nhận sau 1–2 ngày</b>Bà làm mứt và chuẩn bị dừa, nước dừa theo số đơn để luôn tươi mới. Chọn ngày nhận khi gửi đơn, bà nhắn xác nhận qua Zalo.</span></div>
+    <div class="pre-box rv"><svg><use href="#i-cal"/></svg><span><b>Mứt chờ 1–2 ngày · Dừa & nước dừa ship ngay</b>Đơn có cả hai, bạn chọn ship dừa ngay rồi giao mứt sau, hoặc gom giao chung một lần. Bà nhắn xác nhận qua Zalo.</span></div>
   </div>
 </section>
 
@@ -403,7 +410,7 @@ footer{background:#3d2516;color:#e6d6c2}
   <div class="wrap">
     <div class="how">
       <div class="rv"><b>1</b><h3>Chọn sản phẩm</h3><p>Mứt dừa, dừa quả, nước dừa: bấm + chọn số lượng, đơn hiện ở thanh dưới.</p></div>
-      <div class="rv"><b>2</b><h3>Chọn ngày nhận</h3><p>Ngày sớm nhất là 1–2 ngày sau khi đặt. Ghi số điện thoại, địa chỉ.</p></div>
+      <div class="rv"><b>2</b><h3>Chọn lúc nhận</h3><p>Dừa, nước dừa ship ngay; mứt chọn ngày nhận sau 1–2 ngày. Ghi số điện thoại, địa chỉ.</p></div>
       <div class="rv"><b>3</b><h3>Gửi đơn qua Zalo</h3><p>Tin nhắn đơn soạn sẵn. Bà xác nhận, làm mẻ mới và giao đúng hẹn.</p></div>
     </div>
     <div class="gift rv">
@@ -424,15 +431,15 @@ footer{background:#3d2516;color:#e6d6c2}
 <div class="fab off" id="fab"><a class="btn btn-main" href="#dat-hang"><svg><use href="#i-cal"/></svg>Đặt mứt</a></div>
 <div class="obar off" id="obar" role="region" aria-label="Đơn đang chọn">
   <button class="sum" type="button" data-open><span class="cnt" id="oc">0</span><span><b id="ot">0k</b><span id="on"></span></span></button>
-  <button class="btn btn-z" type="button" data-open><span class="zl">Zalo</span>Đặt trước</button>
+  <button class="btn btn-z" type="button" data-open><span class="zl">Zalo</span>Gửi đơn</button>
 </div>
 
 <div class="dlg" id="orderDlg" hidden>
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="oTitle">
-    <div class="sh-h"><h3 id="oTitle">Đơn đặt trước</h3><button class="x" type="button" data-close aria-label="Đóng">×</button></div>
+    <div class="sh-h"><h3 id="oTitle">Đơn của bạn</h3><button class="x" type="button" data-close aria-label="Đóng">×</button></div>
     <div class="sh-b">
       <div id="ol"></div>
-      <div class="fld"><span>Ngày muốn nhận <b class="req">*</b></span><div class="seg" id="days"></div><small class="hint">Bà làm theo đơn nên cần 1–2 ngày. Bà sẽ nhắn xác nhận ngày giao.</small></div>
+      <div id="whenBox" class="fld" style="gap:12px"></div>
       <div class="fld"><span>Nhận hàng</span><div class="seg" id="mode"><button type="button" aria-pressed="true" data-v="Giao tận nơi">Giao tận nơi</button><button type="button" aria-pressed="false" data-v="Tự đến lấy">Tự đến lấy</button></div></div>
       <label class="fld"><span>Tên người nhận</span><input id="nm" autocomplete="name" placeholder="VD: Chị Lan"></label>
       <label class="fld"><span>Số điện thoại <b class="req">*</b></span><input id="ph" type="tel" inputmode="tel" autocomplete="tel" placeholder="VD: 0912 345 678"><small class="err" id="phErr" hidden>Nhập số điện thoại 10 số để bà gọi khi giao.</small></label>
@@ -441,7 +448,7 @@ footer{background:#3d2516;color:#e6d6c2}
     </div>
     <div class="sh-f">
       <div class="tot"><span>Tạm tính<small>Chưa gồm phí ship</small></span><b id="tt">0k</b></div>
-      <button class="btn btn-z" type="button" id="next"><span class="zl">Zalo</span>Gửi đơn đặt trước</button>
+      <button class="btn btn-z" type="button" id="next"><span class="zl">Zalo</span>Gửi đơn qua Zalo</button>
     </div>
   </div>
 </div>
@@ -469,12 +476,12 @@ const CONTACT = { zalo: '' };
 const LEAD_DAYS = 1, DAYS_SHOWN = 6;
 const IMG = {"dia": "img/dia.jpg", "dua-qua": "img/dua-qua.jpg", "nuoc-dua": "img/nuoc-dua.jpg", "say-kho": "img/say-kho.jpg", "tui": "img/tui.jpg"};
 const PRODUCTS = [
-  {name:'Mứt dừa túi 300g', price:40, unit:'/túi', img:'tui', tag:'Ăn vặt', note:'Túi zip nhỏ, vừa nhâm nhi cả tuần, tiện làm quà.'},
-  {name:'Mứt dừa túi 1kg', price:120, unit:'/túi', img:'say-kho', tag:'Tiết kiệm', note:'Cho cả nhà cùng ăn, đãi khách ngày Tết, chia quà nhiều phần.'},
-  {name:'Dừa quả', price:25, unit:'/quả', img:'dua-qua', tag:'Tươi', grp:'dua', note:'Dừa tươi nguyên quả, nước ngọt thanh, cơm non.'},
-  {name:'Nước dừa chai 1L', price:40, unit:'/chai', img:'nuoc-dua', tag:'Để mát uống', grp:'dua', note:'Nước dừa nguyên chất, ngọt thanh, mặn nhẹ. Để tủ lạnh uống mát.'}
+  {name:'Mứt dừa túi 300g', wait:1, price:40, unit:'/túi', img:'tui', tag:'Ăn vặt', note:'Túi zip nhỏ, vừa nhâm nhi cả tuần, tiện làm quà.'},
+  {name:'Mứt dừa túi 1kg', wait:1, price:120, unit:'/túi', img:'say-kho', tag:'Tiết kiệm', note:'Cho cả nhà cùng ăn, đãi khách ngày Tết, chia quà nhiều phần.'},
+  {name:'Dừa quả', price:25, unit:'/quả', img:'dua-qua', tag:'Ship ngay', grp:'dua', note:'Dừa tươi nguyên quả, nước ngọt thanh, cơm non.'},
+  {name:'Nước dừa chai 1L', price:40, unit:'/chai', img:'nuoc-dua', tag:'Ship ngay', grp:'dua', note:'Nước dừa nguyên chất, ngọt thanh, mặn nhẹ. Để tủ lạnh uống mát.'}
 ];
-const GROUPS = [['mut','Mứt dừa','bà cháu cùng làm'],['dua','Dừa tươi & nước dừa','cùng vườn dừa nhà mình']];
+const GROUPS = [['mut','Mứt dừa','đặt trước 1–2 ngày · bà làm theo đơn'],['dua','Dừa tươi & nước dừa','có sẵn · ship ngay trong ngày']];
 
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -483,18 +490,26 @@ const k = n => n + 'k';
 const find = n => PRODUCTS.find(p => p.name === n);
 $$('img[data-img]').forEach(i => i.src = IMG[i.dataset.img]);
 
-$('#prods').innerHTML = GROUPS.map(([g, t, sub]) => `<h3 class="grp-t">${t}<small>${sub}</small></h3>` + PRODUCTS.filter(p => (p.grp || 'mut') === g).map(p => `<article class="prod rv"><div class="ph"><img src="${IMG[p.img]}" alt="${esc(p.name)}" loading="lazy"><span class="tag">${esc(p.tag)}</span></div>
-  <div class="tx"><h3>${esc(p.name)}</h3><p>${esc(p.note)}</p><div class="row"><span class="pr">${k(p.price)}<small>${esc(p.unit)}</small></span>
+$('#prods').innerHTML = GROUPS.map(([g, t, sub]) => `<h3 class="grp-t">${t}<small>${sub}</small></h3>` + PRODUCTS.filter(p => (p.grp || 'mut') === g).map(p => `<article class="prod rv"><div class="ph"><img src="${IMG[p.img]}" alt="${esc(p.name)}" loading="lazy"><span class="tag${p.wait ? '' : ' now'}">${esc(p.tag)}</span></div>
+  <div class="tx">${p.wait ? '<span class="avail wait">⏳ Đặt trước 1–2 ngày</span>' : '<span class="avail now">⚡ Ship ngay trong ngày</span>'}<h3>${esc(p.name)}</h3><p>${esc(p.note)}</p><div class="row"><span class="pr">${k(p.price)}<small>${esc(p.unit)}</small></span>
   <span class="qty"><button type="button" data-dec="${esc(p.name)}" aria-label="Bớt ${esc(p.name)}">−</button><output data-q="${esc(p.name)}">0</output><button type="button" class="plus" data-inc="${esc(p.name)}" aria-label="Thêm ${esc(p.name)}">+</button></span></div></div></article>`).join('')).join('');
 
-/* ngày nhận */
+/* lúc nhận: mứt chờ LEAD_DAYS, dừa & nước dừa ship ngay */
 const WD = ['Chủ nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];
 const fmt = d => `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}`;
-const days = []; const t0 = new Date(); t0.setHours(0,0,0,0);
-for (let i = LEAD_DAYS; i < LEAD_DAYS + DAYS_SHOWN; i++) { const d = new Date(t0); d.setDate(d.getDate() + i); days.push(`${WD[d.getDay()]} ${fmt(d)}`); }
-let day = days[Math.min(1, days.length - 1)];
-$('#days').innerHTML = days.map((d, i) => `<button type="button" data-d="${d}" aria-pressed="${d === day}">${d.split(' ').slice(0, -1).join(' ')}<small>${d.split(' ').pop()}${i === 0 ? ' · sớm nhất' : ''}</small></button>`).join('');
-$('#days').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; day = b.dataset.d; $$('#days button').forEach(x => x.setAttribute('aria-pressed', x === b)); });
+const t0 = new Date(); t0.setHours(0,0,0,0);
+const dayList = (from, n) => Array.from({length: n}, (_, i) => { const d = new Date(t0); d.setDate(d.getDate() + from + i); return [`${WD[d.getDay()]} ${fmt(d)}`, from + i]; });
+const MUT_DAYS = dayList(LEAD_DAYS, DAYS_SHOWN), FRESH_DAYS = dayList(0, 5);
+let mutDay = MUT_DAYS[Math.min(1, MUT_DAYS.length - 1)][0], freshDay = 'Ship ngay hôm nay', split = true;
+const chip = (k, v, label, sub, on) => `<button type="button" data-k="${k}" data-v="${v}" aria-pressed="${on}">${label}${sub ? `<small>${sub}</small>` : ''}</button>`;
+function paintWhen(hasMut, hasFresh) {
+  let h = '';
+  if (hasMut) h += `<div class="fld"><span>⏳ Ngày nhận mứt dừa <b class="req">*</b></span><div class="seg">${MUT_DAYS.map(([d], i) => chip('mut', d, d.split(' ').slice(0, -1).join(' '), d.split(' ').pop() + (i === 0 ? ' · sớm nhất' : ''), d === mutDay)).join('')}</div><small class="hint">Bà làm mứt theo đơn nên cần 1–2 ngày.</small></div>`;
+  if (hasFresh && hasMut) h += `<div class="fld"><span>⚡ Dừa quả &amp; nước dừa</span><div class="seg">${chip('split', '1', 'Ship ngay hôm nay', 'mứt giao sau', split)}${chip('split', '0', 'Giao chung với mứt', 'một lần ship', !split)}</div></div>`;
+  if (hasFresh && !hasMut) h += `<div class="fld"><span>⚡ Nhận dừa quả &amp; nước dừa</span><div class="seg">${FRESH_DAYS.map(([d, o]) => { const v = o === 0 ? 'Ship ngay hôm nay' : d; return chip('fresh', v, o === 0 ? 'Ship ngay' : d.split(' ').slice(0, -1).join(' '), o === 0 ? 'hôm nay' : d.split(' ').pop(), v === freshDay); }).join('')}</div></div>`;
+  $('#whenBox').innerHTML = h; $('#whenBox').hidden = !h;
+}
+$('#whenBox').addEventListener('click', e => { const b = e.target.closest('[data-k]'); if (!b) return; const k = b.dataset.k, v = b.dataset.v; if (k === 'mut') mutDay = v; if (k === 'fresh') freshDay = v; if (k === 'split') split = v === '1'; paint(); });
 
 const order = new Map(); let mode = 'Giao tận nơi';
 try { JSON.parse(localStorage.getItem('qcb-order') || '[]').forEach(([n, q]) => find(n) && order.set(n, q)); $('#ph').value = localStorage.getItem('qcb-ph') || ''; } catch {}
@@ -508,6 +523,8 @@ function paint() {
   obar.classList.toggle('off', !c); fab.classList.toggle('off', c > 0 || scrollY < innerHeight * .6);
   $('#oc').textContent = c; $('#ot').textContent = k(total()); $('#tt').textContent = k(total());
   $('#on').textContent = [...order].map(([n, q]) => `${q} × ${n.replace('Mứt dừa ', 'mứt ')}`).join(', ');
+  const hasMut = [...order.keys()].some(n => find(n).wait), hasFresh = [...order.keys()].some(n => !find(n).wait);
+  paintWhen(hasMut, hasFresh);
   $('#ol').innerHTML = c ? [...order].map(([n, q]) => { const p = find(n); return `<div class="oi"><img src="${IMG[p.img]}" alt=""><span><b>${esc(n)}</b><span>${k(p.price)}${esc(p.unit)}</span></span><span class="qty"><button type="button" data-dec="${esc(n)}" aria-label="Bớt">−</button><output>${q}</output><button type="button" class="plus" data-inc="${esc(n)}" aria-label="Thêm">+</button></span></div>`; }).join('') : '<p class="empty">Chưa chọn sản phẩm nào.</p>';
 }
 const toast = $('#toast'); let tt;
@@ -526,9 +543,11 @@ addEventListener('keydown', e => { if (e.key === 'Escape') $$('.dlg').forEach(dl
 $('#mode').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; mode = b.dataset.v; $$('#mode button').forEach(x => x.setAttribute('aria-pressed', x === b)); const p = mode === 'Tự đến lấy'; $('#adLbl').textContent = p ? 'Giờ đến lấy' : 'Địa chỉ nhận'; $('#ad').placeholder = p ? 'VD: 17h' : 'VD: 12 Lê Lợi, Đồng Hới'; });
 
 function compose() {
-  const lines = [...order].map(([n, q]) => `• ${q} ${find(n).unit.slice(1)} ${n.startsWith('Mứt dừa túi ') ? 'mứt dừa ' + n.replace('Mứt dừa túi ', '') : n.replace('Dừa quả', 'dừa tươi').replace('Nước dừa chai 1L', 'nước dừa 1L')} – ${k(find(n).price * q)}`);
+  const lines = [...order].map(([n, q]) => `• ${q} ${find(n).unit.slice(1)} ${n.startsWith('Mứt dừa túi ') ? 'mứt dừa ' + n.replace('Mứt dừa túi ', '') : n.replace('Dừa quả', 'dừa tươi').replace('Nước dừa chai 1L', 'nước dừa 1L')} – ${k(find(n).price * q)}${find(n).wait ? ' (đặt trước)' : ''}`);
   const nm = $('#nm').value.trim(), ad = $('#ad').value.trim(), nt = $('#nt').value.trim();
-  return ['Chào Quà của Bà, mình đặt trước:', ...lines, `Tạm tính: ${k(total())}`, `Ngày muốn nhận: ${day}`, `${mode}${ad ? ': ' + ad : ''}`, `Người nhận: ${nm ? nm + ' – ' : ''}${$('#ph').value.trim()}`, nt ? `Ghi chú: ${nt}` : ''].filter(Boolean).join('\n');
+  const hasMut = [...order.keys()].some(n => find(n).wait), hasFresh = [...order.keys()].some(n => !find(n).wait);
+  const when = [hasMut ? `Mứt dừa nhận: ${mutDay}` : '', hasFresh ? (hasMut ? (split ? 'Dừa/nước dừa: ship ngay hôm nay, mứt giao sau' : `Dừa/nước dừa: giao chung với mứt (${mutDay})`) : `Dừa/nước dừa nhận: ${freshDay}`) : ''];
+  return [hasMut ? 'Chào Quà của Bà, mình đặt hàng:' : 'Chào Quà của Bà, mình đặt dừa:', ...lines, `Tạm tính: ${k(total())}`, ...when, `${mode}${ad ? ': ' + ad : ''}`, `Người nhận: ${nm ? nm + ' – ' : ''}${$('#ph').value.trim()}`, nt ? `Ghi chú: ${nt}` : ''].filter(Boolean).join('\n');
 }
 function copySync(t) { try { const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length); const ok = document.execCommand('copy'); ta.remove(); return ok; } catch { return false; } }
 async function copyText(t) { if (copySync(t)) return true; try { await navigator.clipboard.writeText(t); return true; } catch { return false; } }
