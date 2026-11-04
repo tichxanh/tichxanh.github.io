@@ -3,103 +3,226 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Quà của Bà – Mứt dừa bà cháu cùng làm</title>
-<meta name="description" content="Mứt dừa Quà của Bà (64 Lý Thường Kiệt, Đồng Hới): bà cùng các cháu làm từng mẻ, ngon – lành – sạch. Có thêm dừa quả, nước dừa chai 1L. Đặt trước, nhận sau 1–2 ngày.">
+<title>Quà của Bà – Mứt dừa, dừa tươi, nước dừa</title>
+<meta name="description" content="Quà của Bà (64 Lý Thường Kiệt, Đồng Hới): mứt dừa bà cháu cùng làm, đặt trước 1–2 ngày; dừa quả và nước dừa 1L ship ngay. Đặt qua Zalo.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#7a4a2b">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Quà của Bà – Mứt dừa bà cháu cùng làm">
-<meta property="og:description" content="Mứt dừa ngon – lành – sạch, dừa quả, nước dừa 1L. Đặt trước qua Zalo, nhận sau 1–2 ngày.">
-<meta property="og:image" content="https://tichxanh.github.io/demo/qcb-644a1b/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://tichxanh.github.io/demo/qcb-644a1b/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Ccircle cx=%2220%22 cy=%2220%22 r=%2220%22 fill=%22%237a4a2b%22/%3E%3Ccircle cx=%2220%22 cy=%2221%22 r=%2211%22 fill=%22%23fffaf0%22/%3E%3Ccircle cx=%2220%22 cy=%2221%22 r=%227%22 fill=%22%23e9dcc6%22/%3E%3C/svg%3E">
+<meta name="theme-color" content="#f5e8c2">
+<meta property="og:type" content="website"><meta property="og:title" content="Quà của Bà – Mứt dừa bà cháu cùng làm"><meta property="og:description" content="Mứt dừa ngon – lành – sạch, đặt trước 1–2 ngày. Dừa quả 25k, nước dừa 1L 40k ship ngay. Đặt qua Zalo."><meta property="og:image" content="https://tichxanh.github.io/demo/qcb-644a1b/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://tichxanh.github.io/demo/qcb-644a1b/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Ccircle cx=%2220%22 cy=%2220%22 r=%2220%22 fill=%22%233f8a4f%22/%3E%3Ccircle cx=%2220%22 cy=%2221%22 r=%2211%22 fill=%22%23fffaf0%22/%3E%3Ccircle cx=%2220%22 cy=%2221%22 r=%227%22 fill=%22%23efe2cb%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:ital,wght@1,600&display=swap">
 <style>
-/* Hoài niệm, ấm áp: nền giấy kem, trắng cơm dừa, nâu đường thắng, xanh lá dừa, đỏ đất nung. Minh họa bà – cháu tự vẽ bằng SVG; ảnh thật cho sản phẩm. */
+/* Theo mẫu "Grocery Delivery App" (anggara.ui.ux): nền vàng bơ, app kem trắng, thẻ bo tròn, nút xanh lá, banner vàng, thanh tab đen dưới đáy.
+   Luồng: Cửa hàng → Giỏ hàng → Thanh toán (giao đến / khi nào / trả bằng) → Đơn đã soạn (gửi Zalo). */
 :root{
-  --bg:#fbf5ea; --paper:#fffdf8; --ink:#3d2516; --muted:#7c5d48; --line:#eadcc6;
-  --brown:#7a4a2b; --caramel:#c7843f; --leaf:#5f8a4e; --leaf-l:#e4eedb; --clay:#c8553d; --cream:#f3e6cf; --coco:#fffaf0;
-  --zalo:#0068ff;
-  --f:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --serif:"Lora",Georgia,serif; --script:"Dancing Script","Brush Script MT",cursive;
+  --back:#f5e8c2; --app:#fffcf5; --card:#ffffff; --soft:#f6f1e6; --ink:#1f1a14; --muted:#8a8172; --line:#efe7d6;
+  --green:#3f8a4f; --green-d:#2f6e3d; --green-l:#e3f0e3; --yellow:#f6cf4a; --yellow-l:#fdf1c4; --clay:#c8553d; --zalo:#0068ff;
+  --f:"Plus Jakarta Sans","Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --fv:"Be Vietnam Pro",system-ui,sans-serif; --serif:"Lora",Georgia,serif;
   --ease:cubic-bezier(.16,1,.3,1);
-  --shadow:0 1px 2px rgba(61,37,22,.06),0 22px 40px -24px rgba(122,74,43,.55);
+  --sh:0 1px 2px rgba(31,26,20,.05),0 10px 24px -14px rgba(31,26,20,.25);
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#1a130e; --paper:#231a13; --ink:#f5ebdc; --muted:#cdb59c; --line:#3a2c20; --cream:#2e2219; --leaf-l:#22301d;
-  --brown:#e3b384; --caramel:#e0a462; --leaf:#93bf7f; --clay:#ee8a72;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 22px 40px -24px rgba(0,0,0,.8); color-scheme:dark}}
+  --back:#17140e; --app:#1e1a14; --card:#27221a; --soft:#2d271e; --ink:#f4eee2; --muted:#b4aa98; --line:#3a3227;
+  --green:#6cbf7c; --green-d:#8fd49c; --green-l:#21331f; --yellow:#f2c94c; --yellow-l:#3a3218; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#1a130e; --paper:#231a13; --ink:#f5ebdc; --muted:#cdb59c; --line:#3a2c20; --cream:#2e2219; --leaf-l:#22301d;
-  --brown:#e3b384; --caramel:#e0a462; --leaf:#93bf7f; --clay:#ee8a72;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 22px 40px -24px rgba(0,0,0,.8); color-scheme:dark}
+  --back:#17140e; --app:#1e1a14; --card:#27221a; --soft:#2d271e; --ink:#f4eee2; --muted:#b4aa98; --line:#3a3227;
+  --green:#6cbf7c; --green-d:#8fd49c; --green-l:#21331f; --yellow:#f2c94c; --yellow-l:#3a3218; color-scheme:dark}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%}
 html,body{overflow-x:clip}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--back);color:var(--ink);font-family:var(--fv);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
 [hidden]{display:none!important}
-h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance}
-h1,h2{font-family:var(--serif);font-weight:700;letter-spacing:-.01em}
+h1,h2,h3,b.t{font-family:var(--f);margin:0;line-height:1.15;letter-spacing:-.01em}
 p{margin:0}
-button{font-family:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.sec{padding-block:56px}
-:focus-visible{outline:3px solid var(--caramel);outline-offset:3px;border-radius:10px}
-.script{font-family:var(--script);color:var(--clay);font-weight:700}
-.kick{display:inline-flex;align-items:center;gap:8px;font:700 12.5px/1 var(--f);letter-spacing:.14em;text-transform:uppercase;color:var(--leaf)}
-.kick::before{content:"";width:18px;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 20C6 9 13 4 22 3 20 12 14 19 3 20z' fill='%235f8a4e'/%3E%3C/svg%3E") center/contain no-repeat}
-.sh{text-align:center;max-width:640px;margin:0 auto 34px;display:grid;gap:10px;justify-items:center}
-.sh h2{font-size:clamp(30px,4.2vw,46px)}
-.sh p{color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:15px 24px;font:700 15px/1 var(--f);cursor:pointer;text-decoration:none;white-space:nowrap;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .2s}
-.btn:active{transform:scale(.96)}
-.btn svg{width:19px;height:19px}
-.btn-main{background:var(--brown);color:#fffaf0;box-shadow:0 14px 26px -14px rgba(122,74,43,.9)}
-:root[data-theme="dark"] .btn-main{color:#1a130e}
-.btn-main:hover{transform:translateY(-2px)}
-.btn-z{background:var(--zalo);color:#fff;box-shadow:0 14px 24px -14px rgba(0,104,255,.8)}
-.btn-z:hover{transform:translateY(-2px)}
-.btn-line{background:var(--paper);color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
-.zl{display:inline-grid;place-items:center;width:28px;height:20px;border-radius:6px;background:#fff;color:var(--zalo);font:800 8.5px/1 var(--f);flex:none}
-.btn-line .zl{background:var(--zalo);color:#fff}
+button{font-family:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:10px}
+img{display:block}
 
-.demobar{background:#3d2516;color:#f3e6cf;font-size:13px}
-.demobar .wrap{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding-block:7px;text-align:center}
-.demobar a{color:#f0c58e;font-weight:700;text-decoration:none}
-.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
-.nav.scrolled{border-bottom-color:var(--line)}
-.nav-in{display:flex;align-items:center;gap:18px;height:70px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
-.logo svg{width:44px;height:44px;flex:none}
-.logo b{display:block;font:700 23px/1 var(--serif)}
-.logo small{display:block;font:700 15px/1 var(--script);color:var(--clay);margin-top:3px}
-.nav .links{display:flex;gap:2px;margin-left:auto}
-.nav .links a{text-decoration:none;color:var(--ink);font-weight:600;font-size:14.5px;padding:9px 13px;border-radius:999px}
-.nav .links a:hover{background:var(--cream)}
-.nav .btn{padding:11px 16px;font-size:14px}
-@media (max-width:860px){.nav .links{display:none}.nav .btn{margin-left:auto}}
+/* layout: desktop = panel trái + app; mobile = app toàn màn hình */
+.layout{min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:48px;max-width:1160px;margin:0 auto;padding:32px max(20px,env(safe-area-inset-left,0px));align-items:start}
+.side{position:sticky;top:32px;display:grid;gap:20px;padding-top:24px}
+.side .brand{display:flex;align-items:center;gap:12px}
+.side .brand i{width:52px;height:52px;border-radius:16px;background:var(--green);display:grid;place-items:center}
+.side .brand i svg{width:34px;height:34px}
+.side .brand b{display:block;font:800 26px/1.1 var(--f)}
+.side .brand small{display:block;color:var(--muted);font-weight:600}
+.side h1{font-size:clamp(38px,4.4vw,56px);font-weight:800}
+.side h1 em{font-family:var(--serif);font-weight:600;color:var(--green)}
+.side p.lead{color:#5e5446;font-size:17px;max-width:46ch}
+:root[data-theme="dark"] .side p.lead{color:var(--muted)}
+.side .art{position:relative;max-width:420px;aspect-ratio:1/1}
+.side .art .people{width:100%;height:100%}
+.side .facts{display:flex;gap:10px;flex-wrap:wrap}
+.side .facts span{background:var(--card);border-radius:999px;padding:8px 14px;font:700 13.5px/1 var(--f);box-shadow:var(--sh)}
+.side .demo{font-size:12.5px;color:var(--muted)}
+.side .demo a{color:var(--green-d);font-weight:700}
+.app{position:relative;background:var(--app);border-radius:40px;box-shadow:0 0 0 10px #1f1a14,0 40px 80px -30px rgba(31,26,20,.6);height:min(880px,calc(100vh - 64px));overflow:hidden;display:grid;grid-template-rows:minmax(0,1fr)}
+.view{overflow-y:auto;overscroll-behavior:contain;padding:18px 18px 120px;scrollbar-width:none;animation:vin .45s var(--ease)}
+.view::-webkit-scrollbar{display:none}
+@keyframes vin{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+@media (max-width:900px){
+  body{background:var(--app)}
+  .layout{display:block;padding:0;max-width:none}
+  .side{display:none}
+  .app{border-radius:0;box-shadow:none;height:auto;min-height:100vh;overflow:visible;display:block}
+  .view{overflow:visible;padding:14px max(16px,env(safe-area-inset-left,0px)) calc(120px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-right,0px))}
+}
 
-/* hero */
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:30px;align-items:center;padding-block:36px 24px}
-.hero-copy{display:grid;gap:18px;justify-items:start}
-.hero h1{font-size:clamp(44px,6vw,76px)}
-.hero h1 .script{display:block;font-size:.72em;margin-top:4px}
-.hero .lead{font-size:17px;color:var(--muted);max-width:44ch}
-.trio{display:flex;gap:8px;flex-wrap:wrap}
-.trio span{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;background:var(--paper);box-shadow:inset 0 0 0 1.5px var(--line);font-weight:700;font-size:14px}
-.trio i{width:9px;height:9px;border-radius:50%;background:var(--leaf);font-style:normal}
-.ctas{display:flex;gap:10px;flex-wrap:wrap}
-.pre-note{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
-.pre-note b{color:var(--ink)}
-.pre-note svg{width:22px;height:22px;color:var(--caramel);flex:none}
-.scene{position:relative;aspect-ratio:1/1;max-width:540px;justify-self:end;width:100%}
-.scene .sun{position:absolute;inset:4% 6% 10% 4%;border-radius:50%;background:radial-gradient(circle at 50% 45%,#fff6e3,var(--cream) 55%,transparent 72%)}
-.scene svg.people{position:absolute;inset:0;width:100%;height:100%}
-.scene .photo{position:absolute;right:-2%;top:0;width:27%;aspect-ratio:3/4;border-radius:20px;overflow:hidden;border:6px solid var(--paper);box-shadow:var(--shadow);transform:rotate(7deg)}
-.scene .photo img{width:100%;height:100%;object-fit:cover;display:block}
-.scene .bubble{position:absolute;left:2%;top:10%;background:var(--paper);border-radius:20px 20px 20px 4px;padding:10px 14px;box-shadow:var(--shadow);font:700 19px/1.2 var(--script);color:var(--clay);max-width:46%}
+/* common bits */
+.top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.top .where{flex:1;min-width:0}
+.top .where small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.top .where b{display:flex;align-items:center;gap:4px;font:800 16px/1.2 var(--f);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ibtn{position:relative;width:44px;height:44px;border-radius:14px;border:0;background:var(--ink);color:var(--app);display:grid;place-items:center;cursor:pointer;flex:none}
+.ibtn svg{width:20px;height:20px}
+.ibtn.lt{background:var(--card);color:var(--ink);box-shadow:var(--sh)}
+.ibtn .dot{position:absolute;top:-4px;right:-4px;min-width:20px;height:20px;border-radius:999px;background:var(--green);color:#fff;font:800 11px/20px var(--f);text-align:center;padding:0 5px}
+.hd{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.hd .ttl{flex:1;text-align:center}
+.hd .ttl b{display:block;font:800 19px/1.2 var(--f)}
+.hd .ttl small{color:var(--muted);font-size:12.5px;font-weight:600}
+.search{display:flex;align-items:center;gap:10px;background:var(--card);border-radius:16px;padding:0 14px;height:48px;box-shadow:var(--sh);margin-bottom:12px}
+.search svg{width:18px;height:18px;color:var(--muted);flex:none}
+.search input{flex:1;min-width:0;border:0;background:none;font:500 15px/1 var(--fv);color:var(--ink);outline:none}
+.banner{display:flex;align-items:center;gap:10px;background:var(--yellow);color:#2a2208;border-radius:16px;padding:12px 14px;font:700 13.5px/1.35 var(--f);margin-bottom:18px}
+.banner svg{width:22px;height:22px;flex:none}
+.banner span b{font-weight:800}
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:20px 2px 10px}
+.sec-h h2{font-size:18px;font-weight:800}
+.sec-h small{color:var(--muted);font-weight:600;font-size:12.5px}
+.sec-h a{color:var(--green-d);font:700 13px/1 var(--f);text-decoration:none}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -2px;padding:2px}
+.chips::-webkit-scrollbar{display:none}
+.chips button{flex:none;border:0;border-radius:999px;padding:9px 14px;background:var(--card);box-shadow:var(--sh);font:700 13px/1 var(--f);cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--app)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.pc{background:var(--card);border-radius:22px;padding:10px;box-shadow:var(--sh);display:grid;gap:8px;align-content:start}
+.pc .ph{position:relative;aspect-ratio:1/1;border-radius:16px;overflow:hidden;background:var(--soft)}
+.pc .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.pc:hover .ph img{transform:scale(1.05)}
+.pill{position:absolute;left:8px;top:8px;font:800 10.5px/1 var(--f);padding:6px 8px;border-radius:999px;background:var(--green);color:#fff}
+.pill.wait{background:var(--yellow);color:#2a2208}
+.pc b.t{font-size:14.5px;font-weight:800;padding:0 2px}
+.pc .sub{font-size:12px;color:var(--muted);padding:0 2px;line-height:1.35}
+.pc .row{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 2px}
+.pc .pr{font:800 15px/1 var(--f)}
+.add{min-width:32px;height:32px;border-radius:10px;border:0;background:var(--green);color:#fff;font:800 15px/1 var(--f);cursor:pointer;display:grid;place-items:center;padding:0 8px;transition:transform .25s var(--ease)}
+.add:active{transform:scale(.9)}
+.add svg{width:16px;height:16px}
+.stp{display:flex;align-items:center;gap:2px;background:var(--green-l);border-radius:10px;padding:2px}
+.stp button{width:28px;height:28px;border-radius:8px;border:0;background:var(--card);font:800 15px/1 var(--f);cursor:pointer}
+.stp button.p{background:var(--green);color:#fff}
+.stp output{min-width:20px;text-align:center;font:800 13.5px/1 var(--f)}
+.story{background:var(--card);border-radius:24px;padding:16px;box-shadow:var(--sh);display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:center;margin-top:4px}
+.story .people{width:110px;height:110px}
+.story b.t{display:block;font-size:16px;font-weight:800;margin-bottom:4px}
+.story p{font-size:13px;color:var(--muted)}
+.story a{color:var(--green-d);font:700 13px/1 var(--f);text-decoration:none;display:inline-block;margin-top:8px}
+.addr-card{display:flex;align-items:center;gap:12px;background:var(--card);border-radius:20px;padding:12px 14px;box-shadow:var(--sh);margin-top:12px}
+.addr-card i{width:40px;height:40px;border-radius:12px;background:var(--green-l);display:grid;place-items:center;font-style:normal;font-size:20px;flex:none}
+.addr-card b.t{display:block;font-size:14px}
+.addr-card small{color:var(--muted);font-size:12.5px}
+.addr-card a{margin-left:auto;color:var(--green-d);font:700 13px/1 var(--f);text-decoration:none;white-space:nowrap}
+
+/* tab bar */
+.tabs{position:absolute;left:14px;right:14px;bottom:16px;z-index:20;background:#1f1a14;border-radius:22px;padding:8px;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;box-shadow:0 16px 30px -12px rgba(0,0,0,.5)}
+.tabs button{position:relative;height:46px;border-radius:15px;border:0;background:none;color:#b8ae9c;cursor:pointer;display:grid;place-items:center}
+.tabs button svg{width:22px;height:22px}
+.tabs button[aria-current="page"]{background:var(--yellow);color:#1f1a14}
+.tabs .dot{position:absolute;top:4px;right:18%;min-width:18px;height:18px;border-radius:999px;background:var(--green);color:#fff;font:800 10.5px/18px var(--f);text-align:center;padding:0 4px}
+@media (max-width:900px){.tabs{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:520px;margin:0 auto}}
+
+/* cart */
+.prog{background:var(--card);border-radius:18px;padding:12px 14px;box-shadow:var(--sh);margin-bottom:12px}
+.prog b.t{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--green-d)}
+.prog b.t svg{width:18px;height:18px}
+.prog .bar{height:6px;border-radius:999px;background:var(--line);margin-top:9px;overflow:hidden}
+.prog .bar i{display:block;height:100%;background:var(--green);border-radius:999px;transition:width .6s var(--ease)}
+.prog small{display:block;color:var(--muted);font-size:12px;margin-top:6px}
+.list{background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:4px 12px}
+.li{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.li:last-child{border-bottom:0}
+.li img{width:48px;height:48px;border-radius:12px;object-fit:cover}
+.li b.t{display:block;font-size:14px;font-weight:800}
+.li small{display:block;color:var(--muted);font-size:12px}
+.li .r{display:grid;justify-items:end;gap:6px}
+.li .pr{font:800 14px/1 var(--f)}
+.grp-l{font:800 11.5px/1 var(--f);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:12px 0 2px;display:flex;align-items:center;gap:6px}
+.sum{margin:14px 4px 0;display:grid;gap:8px;font-size:13.5px;color:var(--muted)}
+.sum div{display:flex;justify-content:space-between;gap:10px}
+.sum div b{color:var(--ink);font-family:var(--f)}
+.sum .tot{font-size:16px;color:var(--ink);font-weight:800;font-family:var(--f);border-top:1px dashed var(--line);padding-top:10px}
+.cta{position:absolute;left:14px;right:14px;bottom:16px;z-index:21}
+.cta .go{width:100%;height:58px;border-radius:18px;border:0;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font:800 16px/1 var(--f);cursor:pointer;box-shadow:0 18px 30px -14px rgba(47,110,61,.9);text-decoration:none}
+.cta .go:active{transform:scale(.98)}
+.cta .go.zalo{background:var(--zalo);box-shadow:0 18px 30px -14px rgba(0,104,255,.8)}
+.cta .go.dark{background:#1f1a14}
+@media (max-width:900px){.cta{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:520px;margin:0 auto}}
+.empty{text-align:center;padding:40px 10px;color:var(--muted)}
+.empty .people{width:160px;height:160px;margin:0 auto 10px}
+.empty b.t{display:block;font-size:18px;color:var(--ink);margin-bottom:4px}
+
+/* checkout */
+.blk{background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:14px;margin-bottom:12px}
+.blk > small{display:block;color:var(--muted);font:700 12px/1 var(--f);margin-bottom:10px}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:8px}
+.seg.wrap{grid-auto-flow:row;grid-template-columns:repeat(3,minmax(0,1fr))}
+.seg button{border:0;border-radius:14px;padding:10px 6px;background:var(--soft);cursor:pointer;font:800 13px/1.2 var(--f);text-align:center;box-shadow:inset 0 0 0 1.5px transparent}
+.seg button small{display:block;font:600 11px/1.3 var(--fv);color:var(--muted);margin-top:3px}
+.seg button[aria-pressed="true"]{background:var(--green-l);box-shadow:inset 0 0 0 2px var(--green);color:var(--green-d)}
+.fld{display:flex;align-items:center;gap:10px;background:var(--soft);border-radius:14px;padding:0 12px;margin-top:8px;box-shadow:inset 0 0 0 1.5px transparent}
+.fld:focus-within{box-shadow:inset 0 0 0 2px var(--green)}
+.fld.bad{box-shadow:inset 0 0 0 2px var(--clay)}
+.fld i{font-style:normal;font-size:17px;flex:none}
+.fld input,.fld textarea{flex:1;min-width:0;border:0;background:none;font:500 16px/1.3 var(--fv);color:var(--ink);padding:13px 0;outline:none;resize:none}
+.err{color:var(--clay);font-size:12px;font-weight:700;margin:6px 4px 0}
+.note{font-size:12px;color:var(--muted);margin-top:8px}
+.pay{display:flex;align-items:center;gap:12px;padding:6px 2px}
+.pay i{width:40px;height:40px;border-radius:12px;background:var(--yellow-l);display:grid;place-items:center;font-style:normal;font-size:20px;flex:none}
+.pay b.t{font-size:14px;display:block}
+.pay small{color:var(--muted);font-size:12px}
+
+/* placed */
+.done-h{text-align:center;padding:18px 0 12px}
+.done-h .ok{width:84px;height:84px;border-radius:50%;background:var(--green);margin:0 auto 14px;display:grid;place-items:center;box-shadow:0 0 0 12px var(--green-l);animation:pop .6s var(--ease)}
+@keyframes pop{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
+.done-h .ok svg{width:40px;height:40px;color:#fff}
+.done-h h2{font-size:24px;font-weight:800}
+.done-h p{color:var(--muted);font-size:13.5px;margin-top:4px}
+.thumbs{display:flex;gap:6px;margin:8px 0 10px}
+.thumbs img{width:40px;height:40px;border-radius:12px;object-fit:cover}
+.steps3{display:grid;gap:10px;margin:14px 0}
+.steps3 div{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:center;font-size:13.5px}
+.steps3 > div > b{width:30px;height:30px;border-radius:10px;background:var(--green-l);color:var(--green-d);display:grid;place-items:center;font:800 13px/1 var(--f)}
+.msgbox{white-space:pre-wrap;background:var(--soft);border-radius:14px;padding:12px;font-size:13px;line-height:1.5;margin-top:4px}
+.copy{width:100%;height:50px;border-radius:16px;border:0;background:var(--ink);color:var(--app);font:800 15px/1 var(--f);cursor:pointer;margin-top:12px;display:flex;align-items:center;justify-content:center;gap:8px}
+.copy.done{background:var(--green);color:#fff}
+.zl{display:inline-grid;place-items:center;width:30px;height:21px;border-radius:6px;background:#fff;color:var(--zalo);font:800 8.5px/1 var(--f)}
+.demo-n{font-size:12.5px;color:var(--clay);text-align:center;margin-top:8px;font-weight:600}
+
+/* story view */
+.st-hero{background:var(--yellow-l);border-radius:26px;padding:10px 14px 16px;text-align:center}
+.st-hero .people{width:100%;max-width:300px;height:auto;aspect-ratio:1;margin:0 auto}
+.st-hero h2{font-size:22px;font-weight:800}
+.st-hero h2 em{font-family:var(--serif);color:var(--green-d)}
+.st-hero p{font-size:13.5px;color:var(--muted);margin-top:6px}
+.st-steps{display:grid;gap:10px;margin-top:14px}
+.st-steps div{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;background:var(--card);border-radius:20px;padding:10px;box-shadow:var(--sh)}
+.st-steps .ic{width:64px;height:64px;border-radius:16px;background:var(--soft);display:grid;place-items:center}
+.st-steps .ic svg{width:48px;height:48px}
+.st-steps b.t{display:block;font-size:14.5px;font-weight:800}
+.st-steps small{display:block;color:var(--muted);font-size:12.5px;line-height:1.4}
+.st-steps em{display:block;font-family:var(--serif);color:var(--clay);font-size:13px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.trio div{background:var(--green-l);border-radius:16px;padding:12px 8px;text-align:center}
+.trio b.t{display:block;color:var(--green-d);font-size:16px}
+.trio small{font-size:11.5px;color:var(--muted)}
+
+.toast{position:fixed;left:50%;top:calc(18px + env(safe-area-inset-top,0px));transform:translate(-50%,-20px);z-index:96;background:#1f1a14;color:#fff;padding:11px 16px;border-radius:14px;font-size:13.5px;font-weight:600;max-width:min(92vw,420px);text-align:center;opacity:0;pointer-events:none;transition:opacity .3s,transform .45s var(--ease)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
 .bob{animation:bob 5s ease-in-out infinite;transform-origin:center bottom;transform-box:fill-box}
 @keyframes bob{50%{transform:translateY(-4px)}}
 .stir{animation:stir 2.6s ease-in-out infinite;transform-origin:70% 90%;transform-box:fill-box}
@@ -107,217 +230,30 @@ button{font-family:inherit}
 .steam path{animation:steam 3s ease-in-out infinite;opacity:.6}
 .steam path:nth-child(2){animation-delay:-1s}.steam path:nth-child(3){animation-delay:-2s}
 @keyframes steam{0%{opacity:0;transform:translateY(6px)}40%{opacity:.7}100%{opacity:0;transform:translateY(-10px)}}
-.hero-copy > *{animation:rise .9s var(--ease) both}
-.hero-copy > *:nth-child(2){animation-delay:.07s}.hero-copy > *:nth-child(3){animation-delay:.14s}.hero-copy > *:nth-child(4){animation-delay:.2s}.hero-copy > *:nth-child(5){animation-delay:.26s}
-@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-@keyframes pop{from{opacity:0;scale:.94}to{opacity:1;scale:1}}
-
-/* story */
-.story{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:34px;align-items:center}
-.story .ph{position:relative}
-.story .ph img{width:100%;border-radius:28px;display:block;box-shadow:var(--shadow);aspect-ratio:4/4.6;object-fit:cover}
-.story .ph .tape{position:absolute;top:-12px;left:50%;width:110px;height:28px;transform:translateX(-50%) rotate(-3deg);background:rgba(199,132,63,.35)}
-.story .tx{display:grid;gap:14px}
-.story h2{font-size:clamp(28px,3.8vw,42px)}
-.story p{color:var(--muted);font-size:16.5px}
-.story blockquote{margin:6px 0 0;padding:16px 20px;border-left:4px solid var(--caramel);background:var(--paper);border-radius:0 18px 18px 0;font:600 italic 18px/1.5 var(--serif)}
-.story blockquote cite{display:block;font:700 18px/1 var(--script);color:var(--clay);margin-top:8px;font-style:normal}
-
-/* steps */
-.steps-sec{background:var(--cream);position:relative}
-.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;counter-reset:st;position:relative}
-.steps::before{content:"";position:absolute;left:8%;right:8%;top:64px;border-top:2.5px dashed var(--caramel);opacity:.5}
-.step{position:relative;display:grid;justify-items:center;text-align:center;gap:8px}
-.step .ic{width:128px;height:128px;border-radius:50%;background:var(--paper);display:grid;place-items:center;box-shadow:var(--shadow);position:relative}
-.step .ic svg{width:92px;height:92px}
-.step .ic::after{counter-increment:st;content:counter(st);position:absolute;top:2px;right:2px;width:32px;height:32px;border-radius:50%;background:var(--brown);color:#fffaf0;font:700 15px/32px var(--serif);text-align:center}
-.step h3{font:700 19px/1.25 var(--serif);margin-top:6px}
-.step p{font-size:14px;color:var(--muted);max-width:24ch}
-.step .love{font:700 16px/1.2 var(--script);color:var(--clay)}
-.promise{margin-top:34px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.promise div{background:var(--paper);border-radius:22px;padding:20px;display:grid;gap:4px;text-align:center}
-.promise b{font:700 30px/1.1 var(--script);color:var(--leaf)}
-.promise span{font-size:14px;color:var(--muted)}
-
-/* products */
-.prods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:880px;margin:0 auto}
-.grp-t{grid-column:1/-1;display:flex;align-items:center;gap:12px;font:700 20px/1.2 var(--serif);margin-top:6px}
-.grp-t::after{content:"";flex:1;border-top:1.5px dashed var(--line)}
-.grp-t small{font:600 13px/1.3 var(--f);color:var(--muted)}
-.prod{background:var(--paper);border-radius:28px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);display:grid;grid-template-rows:auto 1fr;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
-.prod:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px var(--line),var(--shadow)}
-.prod .ph{position:relative;aspect-ratio:4/3.3;overflow:hidden}
-.prod .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease)}
-.prod:hover .ph img{transform:scale(1.04)}
-.avail{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;padding:5px 10px;border-radius:999px;justify-self:start}
-.avail.wait{background:#f6e7cf;color:#8a5a1c}
-.avail.now{background:var(--leaf-l);color:#3f6b31}
-:root[data-theme="dark"] .avail.wait{background:#3a2a17;color:#f0c58e}
-:root[data-theme="dark"] .avail.now{color:#a9d498}
-.prod .tag.now{background:var(--clay)}
-.prod .tag{position:absolute;left:14px;top:14px;background:var(--leaf);color:#fff;font:800 12px/1 var(--f);padding:7px 12px;border-radius:999px}
-.prod .tx{padding:20px 22px 22px;display:grid;gap:8px;align-content:start}
-.prod h3{font:700 21px/1.2 var(--serif)}
-.prod p{color:var(--muted);font-size:14.5px}
-.prod .row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:6px}
-.prod .pr{font:700 27px/1 var(--serif);color:var(--clay)}
-.prod .pr small{font:600 13px/1 var(--f);color:var(--muted)}
-.qty{display:flex;align-items:center;gap:4px;background:var(--cream);border-radius:999px;padding:4px}
-.qty button{width:38px;height:38px;border-radius:50%;border:0;background:var(--paper);color:var(--ink);font-size:20px;cursor:pointer;line-height:1}
-.qty button.plus{background:var(--brown);color:#fffaf0}
-:root[data-theme="dark"] .qty button.plus{color:#1a130e}
-.qty output{min-width:28px;text-align:center;font-weight:800;font-size:16px}
-.pre-box{max-width:880px;margin:20px auto 0;background:var(--leaf-l);border-radius:22px;padding:16px 20px;display:flex;gap:14px;align-items:center}
-.pre-box svg{width:44px;height:44px;flex:none;color:var(--leaf)}
-.pre-box b{display:block;font:700 18px/1.3 var(--serif)}
-.pre-box span{font-size:14px;color:var(--muted)}
-
-/* how + family */
-.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.how div{background:var(--paper);border-radius:22px;padding:20px;box-shadow:inset 0 0 0 1px var(--line)}
-.how b{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--cream);color:var(--brown);font:700 18px/1 var(--serif);margin-bottom:10px}
-.how h3{font-size:18px;font-weight:800}
-.how p{font-size:14px;color:var(--muted);margin-top:4px}
-.gift{margin-top:26px;background:var(--brown);color:#fffaf0;border-radius:28px;padding:28px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;position:relative;overflow:hidden}
-:root[data-theme="dark"] .gift{background:#4a2e1b}
-.gift h2{font-size:clamp(26px,3.4vw,38px);color:#fffaf0}
-.gift h2 .script{color:#f0c58e}
-.gift p{color:#ead8c2;margin-top:8px;max-width:50ch}
-.gift .btn{background:#fffaf0;color:var(--brown)}
-:root[data-theme="dark"] .gift .btn{color:#4a2e1b}
-.gift svg.mini{width:150px;height:150px}
-
-footer{background:#3d2516;color:#e6d6c2}
-.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:26px calc(110px + env(safe-area-inset-bottom,0px));font-size:13.5px}
-.foot b{display:block;font:700 22px/1.2 var(--serif);color:#fffaf0;margin-bottom:6px}
-.foot b .script{color:#f0c58e;font-size:.9em}
-.foot a{color:#f0c58e;font-weight:700;text-decoration:none}
-.foot .addr{display:block;margin-bottom:8px;color:#fffaf0;font-weight:600}
-.home{max-width:880px;margin:14px auto 0;display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--paper);border-radius:22px;padding:16px 20px;box-shadow:inset 0 0 0 1px var(--line)}
-.home b{display:block;font:700 18px/1.3 var(--serif)}
-.home span{flex:1;min-width:220px;font-size:14px;color:var(--muted)}
-.home .btn{padding:11px 16px;font-size:14px}
-
-/* order */
-.obar{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translate(-50%,0);z-index:60;width:min(600px,calc(100% - 24px));background:#3d2516;color:#fff;border-radius:22px;padding:9px 9px 9px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 22px 44px -14px rgba(0,0,0,.6);transition:transform .5s var(--ease),opacity .35s}
-.obar.off{transform:translate(-50%,130%);opacity:0;pointer-events:none}
-.obar .sum{flex:1;min-width:0;background:none;border:0;color:inherit;text-align:left;cursor:pointer;display:flex;align-items:center;gap:10px;padding:0}
-.obar .cnt{width:40px;height:40px;border-radius:12px;background:var(--caramel);display:grid;place-items:center;font-weight:800;font-size:18px;flex:none}
-.obar .sum > span:last-child{min-width:0}
-.obar .sum > span:last-child b{display:block;font-size:15px;line-height:1.2}
-.obar .sum > span:last-child span{display:block;font-size:12.5px;color:#e6d6c2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.obar .btn{padding:13px 16px}
-.fab{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:55;transition:transform .5s var(--ease),opacity .35s}
-.fab.off{transform:translateY(140%);opacity:0;pointer-events:none}
-.fab .btn{box-shadow:0 14px 30px -12px rgba(0,0,0,.55)}
-.dlg{position:fixed;inset:0;z-index:90;background:rgba(30,18,10,.55);display:grid;place-items:center;padding:16px;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
-.sheet{background:var(--paper);color:var(--ink);border-radius:26px;width:min(520px,100%);max-height:min(90vh,800px);display:grid;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden;animation:pop .35s var(--ease)}
-.sh-h{display:flex;align-items:center;justify-content:space-between;padding:18px 20px 8px}
-.sh-h h3{font:700 25px/1.1 var(--serif)}
-.x{width:40px;height:40px;border-radius:50%;border:0;background:var(--cream);color:var(--ink);font-size:22px;cursor:pointer}
-.sh-b{overflow:auto;padding:4px 20px 12px;display:grid;gap:14px;align-content:start}
-.oi{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:10px;align-items:center;border-bottom:1.5px dashed var(--line);padding-bottom:9px}
-.oi img{width:48px;height:48px;border-radius:12px;object-fit:cover}
-.oi b{display:block;font-size:15px}
-.oi span{font-size:13px;color:var(--muted)}
-.fld{display:grid;gap:6px}
-.fld > span{font-size:13.5px;font-weight:700}
-.req{color:var(--clay)}
-.seg{display:flex;gap:6px;flex-wrap:wrap}
-.seg button{border:0;box-shadow:inset 0 0 0 1.5px var(--line);background:var(--paper);color:var(--ink);border-radius:14px;padding:8px 12px;font-size:13.5px;font-weight:600;cursor:pointer;line-height:1.25;text-align:center}
-.seg button small{display:block;font-size:11.5px;font-weight:500;color:var(--muted)}
-.seg button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--caramel);background:var(--cream);font-weight:800}
-.fld input,.fld textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:11px 13px;resize:vertical}
-.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--caramel)}
-.fld input.bad{border-color:var(--clay)}
-.err{color:var(--clay);font-size:12.5px;font-weight:700}
-.hint{font-size:12.5px;color:var(--muted)}
-.sh-f{padding:12px 20px calc(16px + env(safe-area-inset-bottom,0px));border-top:1.5px solid var(--line);display:grid;gap:9px}
-.tot{display:flex;justify-content:space-between;align-items:baseline;font-weight:700}
-.tot b{font:700 28px/1 var(--serif);color:var(--clay)}
-.tot small{display:block;font-weight:500;color:var(--muted);font-size:12.5px}
-.sh-f .btn{width:100%}
-.empty{color:var(--muted);text-align:center;padding:16px 0}
-.card-s{background:var(--paper);border-radius:24px;padding:22px;width:min(420px,100%);max-height:92vh;overflow:auto;display:grid;gap:10px;text-align:center;animation:pop .35s var(--ease)}
-.card-s h3{font:700 24px/1.15 var(--serif)}
-.card-s p{font-size:13.5px;color:var(--muted)}
-.card-s .btn{width:100%}
-.ol3{margin:0;padding:0;list-style:none;display:grid;gap:7px;text-align:left;counter-reset:s}
-.ol3 li{display:grid;grid-template-columns:24px 1fr;gap:9px;font-size:14px;line-height:1.4}
-.ol3 li::before{counter-increment:s;content:counter(s);width:24px;height:24px;border-radius:50%;background:var(--brown);color:#fffaf0;display:grid;place-items:center;font-weight:800;font-size:12px}
-.msgbox{white-space:pre-wrap;text-align:left;background:var(--bg);border-radius:14px;padding:12px 14px;font-size:14px;line-height:1.5;box-shadow:inset 0 0 0 1.5px var(--line)}
-.n1{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.25);display:grid;place-items:center;font-size:12px}
-#cp.done{background:var(--leaf)}
-.toast{position:fixed;left:50%;top:calc(80px + env(safe-area-inset-top,0px));transform:translate(-50%,-20px);z-index:96;background:#3d2516;color:#fff;padding:11px 16px;border-radius:14px;font-size:14px;font-weight:600;max-width:min(92vw,440px);text-align:center;opacity:0;pointer-events:none;transition:opacity .3s,transform .45s var(--ease)}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-.rv{transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.rv.pre{opacity:0;transform:translateY(24px)}
-
-@media (max-width:960px){
-  .steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}
-  .steps::before{display:none}
-  .step:last-child{grid-column:1/-1}
-}
-@media (max-width:820px){
-  .hero .wrap{grid-template-columns:minmax(0,1fr);gap:6px;padding-block:14px 20px}
-  .scene{order:-1;justify-self:center;max-width:430px}
-  .story{grid-template-columns:minmax(0,1fr)}
-  .story .ph{max-width:420px;justify-self:center;width:100%}
-  .promise,.how{grid-template-columns:minmax(0,1fr)}
-  .how div{display:grid;grid-template-columns:40px 1fr;column-gap:12px}
-  .how b{grid-row:span 2;margin:0}
-  .gift{grid-template-columns:minmax(0,1fr)}
-  .gift svg.mini{display:none}
-}
-@media (max-width:560px){
-  .sec{padding-block:40px}
-  .nav .btn .t{display:none}.nav .btn{padding:11px 13px}
-  .logo b{font-size:20px}
-  .hero h1{font-size:46px}
-  .ctas{display:grid;grid-template-columns:minmax(0,1fr);width:100%}
-  .prods{grid-template-columns:minmax(0,1fr)}
-  .prod .ph{aspect-ratio:4/3}
-  .grp-t{flex-wrap:wrap;gap:4px 10px}.grp-t::after{display:none}.grp-t small{flex-basis:100%}
-  .step .ic{width:104px;height:104px}.step .ic svg{width:76px;height:76px}
-  .dlg{align-items:end;padding:0}
-  .sheet{border-radius:24px 24px 0 0;width:100%;max-height:92vh}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
-  .rv.pre{opacity:1;transform:none}
-  html{scroll-behavior:auto}
-}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m9 15 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="logo" viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="#7a4a2b"/><circle cx="24" cy="27" r="13" fill="#fffaf0"/><circle cx="24" cy="27" r="8.5" fill="#efe2cb"/><path d="M24 4c3 4 3 8 0 12-3-4-3-8 0-12z" fill="#5f8a4e"/><path d="M24 14c4-1 8 0 11 3-4 1-8 0-11-3zM24 14c-4-1-8 0-11 3 4 1 8 0 11-3z" fill="#7aa866"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 8a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v9H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7" cy="17.5" r="1.8" fill="currentColor"/><circle cx="17" cy="17.5" r="1.8" fill="currentColor"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 20 20"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="logo" viewBox="0 0 48 48"><circle cx="24" cy="27" r="14" fill="#fffaf0"/><circle cx="24" cy="27" r="9" fill="#efe2cb"/><path d="M24 4c3 4 3 8 0 12-3-4-3-8 0-12z" fill="#cfe8c9"/><path d="M24 14c4-1 8 0 11 3-4 1-8 0-11-3zM24 14c-4-1-8 0-11 3 4 1 8 0 11-3z" fill="#e6f3e1"/></symbol>
 </svg>
 
-<div class="demobar"><div class="wrap">Bản chạy thử: đặt hàng đã kết nối Zalo. <a href="https://tichxanh.github.io/" target="_blank" rel="noopener">Thiết kế bởi Tích Xanh →</a></div></div>
-<header class="nav" id="nav">
-  <div class="wrap nav-in">
-    <a class="logo" href="#top" aria-label="Quà của Bà – về đầu trang"><svg><use href="#logo"/></svg><span><b>Quà của Bà</b><small>mứt dừa bà cháu cùng làm</small></span></a>
-    <nav class="links" aria-label="Mục chính"><a href="#chuyen">Câu chuyện</a><a href="#cong-doan">Bà làm thế nào</a><a href="#dat-hang">Đặt hàng</a></nav>
-    <a class="btn btn-main" href="#dat-hang"><svg><use href="#i-cal"/></svg><span class="t">Đặt trước</span></a>
-  </div>
-</header>
-
-<main id="top">
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-copy">
-      <span class="kick">Mứt dừa nhà làm</span>
-      <h1>Quà của Bà<span class="script">mỗi mẻ mứt là một mẻ thương</span></h1>
-      <p class="lead">Bà cùng các cháu ngồi bên chảo, nạo từng miếng cơm dừa, sên lửa liu riu cho đến khi trắng giòn, ngọt dịu. Món ăn vặt bà làm cho cháu, giờ gửi đến nhà mình.</p>
-      <div class="trio"><span><i></i>Ngon</span><span><i></i>Lành</span><span><i></i>Sạch</span></div>
-      <div class="ctas"><a class="btn btn-main" href="#dat-hang">Đặt mứt trước</a><a class="btn btn-line" href="#cong-doan">Xem bà làm mứt</a></div>
-      <p class="pre-note"><svg><use href="#i-cal"/></svg><span>Mứt bà làm theo đơn: <b>đặt trước 1–2 ngày</b>. Dừa quả, nước dừa: <b>ship ngay</b>.</span></p>
-    </div>
-    <div class="scene" aria-hidden="true">
-      <span class="sun"></span>
-      <svg class="people" viewBox="0 0 400 400">
+<div class="layout">
+  <aside class="side" aria-label="Giới thiệu">
+    <div class="brand"><i><svg><use href="#logo"/></svg></i><span><b>Quà của Bà</b><small>Mứt dừa · dừa tươi · nước dừa</small></span></div>
+    <h1>Mỗi mẻ mứt là <em>một mẻ thương</em></h1>
+    <p class="lead">Bà cùng các cháu làm mứt dừa bằng tay, từng công đoạn. Dừa quả và nước dừa cùng vườn, ship ngay trong ngày.</p>
+    <div class="facts"><span>🥥 Dừa & nước dừa · ship ngay</span><span>⏳ Mứt · đặt trước 1–2 ngày</span><span>📍 64 Lý Thường Kiệt, Đồng Hới</span></div>
+    <div class="art"><svg class="people" aria-hidden="true" viewBox="0 0 400 400">
         <!-- mat -->
         <ellipse cx="200" cy="350" rx="185" ry="26" fill="#e9d6b6"/>
         <ellipse cx="200" cy="350" rx="160" ry="18" fill="none" stroke="#d4b98e" stroke-width="2" stroke-dasharray="6 6"/>
@@ -365,220 +301,358 @@ footer{background:#3d2516;color:#e6d6c2}
         <g fill="#c8553d" opacity=".85"><path d="M214 140c-6-8-18-2-12 8l12 12 12-12c6-10-6-16-12-8z"/><path d="M246 112c-4-5-11-1-7 5l7 7 7-7c4-6-3-10-7-5z" opacity=".6"/></g>
         <g transform="translate(26 290)"><circle cx="20" cy="20" r="20" fill="#7a4a2b"/><circle cx="20" cy="20" r="14" fill="#fffaf0"/><circle cx="20" cy="20" r="9" fill="#efe2cb"/></g>
         <g class="steam" fill="none" stroke="#c9b08a" stroke-width="3" stroke-linecap="round"><path d="M190 312c-6-8 6-12 0-20"/><path d="M206 308c-6-8 6-12 0-20"/><path d="M222 312c-6-8 6-12 0-20"/></g>
-      </svg>
-      <div class="photo"><img data-img="tui" alt=""></div>
-      <span class="bubble">“Bà ơi, mẻ này giòn quá!”</span>
-    </div>
-  </div>
-</section>
+      </svg></div>
+    <p class="demo">Bản chạy thử – đặt hàng đã kết nối Zalo · Thiết kế bởi <a href="https://tichxanh.github.io/" target="_blank" rel="noopener">Tích Xanh</a></p>
+  </aside>
 
-<section class="sec" id="chuyen">
-  <div class="wrap story">
-    <div class="ph rv"><span class="tape"></span><img data-img="dia" alt="Đĩa mứt dừa trắng, phủ lớp đường mịn"></div>
-    <div class="tx rv">
-      <span class="kick">Câu chuyện</span>
-      <h2>Món quà gắn kết <span class="script">ba thế hệ</span></h2>
-      <p>Cứ mỗi dịp các cháu về, bà lại bày chảo ra hiên. Cháu lớn tách cơm dừa, cháu nhỏ ngồi cạnh chờ bà cho nếm thử. Không có máy móc, không có phẩm màu, chỉ có dừa, đường và thời gian bà dành cho cả nhà.</p>
-      <p>Mứt dừa của bà không cầu kỳ, nhưng ăn một miếng là thấy mùi bếp nhà, thấy tiếng cười của bà cháu bên chảo mứt. Đó là lý do nhà mình gọi nó là <b>“Quà của Bà”</b>.</p>
-      <blockquote>Bà làm cho cháu ăn thì phải sạch, phải ngon. Làm cho người ta ăn cũng vậy.<cite>– Bà</cite></blockquote>
-    </div>
-  </div>
-</section>
+  <main class="app" id="app">
+    <!-- SHOP -->
+    <section class="view" id="v-shop" aria-label="Cửa hàng">
+      <div class="top">
+        <div class="where"><small>Giao trong Đồng Hới · dừa ship ngay</small><b>Quà của Bà <svg width="14" height="14" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></b></div>
+        <button class="ibtn" type="button" data-go="cart" aria-label="Giỏ hàng"><svg><use href="#i-bag"/></svg><span class="dot" data-cnt hidden>0</span></button>
+      </div>
+      <label class="search"><svg><use href="#i-search"/></svg><input id="q" type="search" placeholder="Tìm mứt dừa, dừa quả, nước dừa…" autocomplete="off"></label>
+      <div class="banner"><svg><use href="#i-truck"/></svg><span><b>Dừa & nước dừa ship ngay</b> · Mứt bà làm theo đơn, đặt trước 1–2 ngày</span></div>
+      <div class="chips" id="cats" role="group" aria-label="Lọc"><button type="button" data-c="all" aria-pressed="true">Tất cả</button><button type="button" data-c="now" aria-pressed="false">⚡ Ship ngay</button><button type="button" data-c="mut" aria-pressed="false">🥥 Mứt dừa</button></div>
+      <div id="shopList"></div>
+      <div class="sec-h"><h2>Chuyện của bà</h2><a href="#" data-go="story">Xem thêm</a></div>
+      <div class="story"><div><svg class="people" aria-hidden="true" viewBox="0 0 400 400">
+        <!-- mat -->
+        <ellipse cx="200" cy="350" rx="185" ry="26" fill="#e9d6b6"/>
+        <ellipse cx="200" cy="350" rx="160" ry="18" fill="none" stroke="#d4b98e" stroke-width="2" stroke-dasharray="6 6"/>
+        <!-- tray of mứt between -->
+        <g>
+          <ellipse cx="206" cy="332" rx="62" ry="14" fill="#c99a5e"/>
+          <ellipse cx="206" cy="328" rx="56" ry="11" fill="#fffaf0"/>
+          <g stroke="#f1e6d2" stroke-width="5" stroke-linecap="round" fill="none"><path d="M168 326c10-6 18 4 28-2"/><path d="M196 330c8-5 16 3 26-2"/><path d="M214 324c8-4 14 3 22-1"/><path d="M180 332c6-3 12 2 18-1"/></g>
+        </g>
+        <!-- GRANDMA (left) -->
+        <g class="bob">
+          <path d="M60 345c0-52 22-88 62-88s62 36 62 88z" fill="#8a5a8a"/>
+          <path d="M98 262l24 34 24-34" fill="none" stroke="#6d4370" stroke-width="3"/>
+          <circle cx="111" cy="300" r="2.5" fill="#f3e6cf"/><circle cx="111" cy="314" r="2.5" fill="#f3e6cf"/>
+          <rect x="110" y="236" width="24" height="26" rx="10" fill="#e8b996"/>
+          <circle cx="122" cy="206" r="40" fill="#f0c4a2"/>
+          <path d="M84 200c0-30 18-44 38-44s38 14 38 44c-8-14-22-20-38-20s-30 6-38 20z" fill="#d9d4cf"/>
+          <circle cx="122" cy="156" r="16" fill="#d9d4cf"/><circle cx="122" cy="156" r="16" fill="none" stroke="#bfb8b0" stroke-width="2"/>
+          <circle cx="107" cy="210" r="9" fill="none" stroke="#6b4a33" stroke-width="2.5"/><circle cx="137" cy="210" r="9" fill="none" stroke="#6b4a33" stroke-width="2.5"/><path d="M116 210h12" stroke="#6b4a33" stroke-width="2.5"/>
+          <path d="M103 211q4-3 8 0M133 211q4-3 8 0" stroke="#4a2f1f" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <path d="M112 228q10 8 20 0" stroke="#a8553f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+          <circle cx="98" cy="224" r="6" fill="#f2a28c" opacity=".6"/><circle cx="146" cy="224" r="6" fill="#f2a28c" opacity=".6"/>
+          <!-- arm with ladle stirring -->
+          <g class="stir"><path d="M168 292q30 6 42 26" stroke="#8a5a8a" stroke-width="20" fill="none" stroke-linecap="round"/><circle cx="212" cy="318" r="10" fill="#f0c4a2"/><path d="M214 316l30-44" stroke="#8b6239" stroke-width="5" stroke-linecap="round"/></g>
+        </g>
+        <!-- CHILD (right) -->
+        <g class="bob" style="animation-delay:-2.5s">
+          <path d="M262 345c0-40 16-66 46-66s46 26 46 66z" fill="#e9805f"/>
+          <path d="M282 300h52" stroke="#fffaf0" stroke-width="5" opacity=".7"/><path d="M280 318h56" stroke="#fffaf0" stroke-width="5" opacity=".7"/>
+          <circle cx="308" cy="238" r="34" fill="#f6cfae"/>
+          <path d="M274 236c0-24 14-38 34-38s34 14 34 38c-6-6-12-14-14-22-8 8-26 12-44 10-4 4-8 8-10 12z" fill="#3b2418"/>
+          <path d="M338 222c10-2 16 6 12 14" stroke="#3b2418" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <circle cx="352" cy="238" r="5" fill="#e9805f"/>
+          <circle cx="296" cy="242" r="4" fill="#3b2418"/><circle cx="320" cy="242" r="4" fill="#3b2418"/>
+          <circle cx="297.5" cy="240.5" r="1.3" fill="#fff"/><circle cx="321.5" cy="240.5" r="1.3" fill="#fff"/>
+          <path d="M300 256q8 8 16 0" stroke="#a8553f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+          <circle cx="287" cy="254" r="5.5" fill="#f2a28c" opacity=".7"/><circle cx="329" cy="254" r="5.5" fill="#f2a28c" opacity=".7"/>
+          <!-- arm holding a mứt strip to mouth -->
+          <path d="M276 300q-16 -10 -2 -36" stroke="#e9805f" stroke-width="16" fill="none" stroke-linecap="round"/>
+          <circle cx="276" cy="262" r="8" fill="#f6cfae"/>
+          <path d="M274 258c6-10 16-10 22-4" stroke="#fffaf0" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <path d="M274 258c6-10 16-10 22-4" stroke="#e8dcc6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </g>
+        <!-- hearts & coconut -->
+        <g fill="#c8553d" opacity=".85"><path d="M214 140c-6-8-18-2-12 8l12 12 12-12c6-10-6-16-12-8z"/><path d="M246 112c-4-5-11-1-7 5l7 7 7-7c4-6-3-10-7-5z" opacity=".6"/></g>
+        <g transform="translate(26 290)"><circle cx="20" cy="20" r="20" fill="#7a4a2b"/><circle cx="20" cy="20" r="14" fill="#fffaf0"/><circle cx="20" cy="20" r="9" fill="#efe2cb"/></g>
+        <g class="steam" fill="none" stroke="#c9b08a" stroke-width="3" stroke-linecap="round"><path d="M190 312c-6-8 6-12 0-20"/><path d="M206 308c-6-8 6-12 0-20"/><path d="M222 312c-6-8 6-12 0-20"/></g>
+      </svg></div><div><b class="t">Bà cháu cùng làm</b><p>Lấy cơm dừa, làm sạch, thấm đường, sên dừa, sấy khô. Mỗi công đoạn là một lần thương.</p><a href="#" data-go="story">5 công đoạn của bà →</a></div></div>
+      <div class="addr-card"><i>🏡</i><span><b class="t">Nhà bà · 64 Lý Thường Kiệt</b><small>Phường Đồng Hới, tỉnh Quảng Trị</small></span><a href="https://www.google.com/maps/search/?api=1&amp;query=64%20L%C3%BD%20Th%C6%B0%E1%BB%9Dng%20Ki%E1%BB%87t%2C%20%C4%90%E1%BB%93ng%20H%E1%BB%9Bi%2C%20Qu%E1%BA%A3ng%20Tr%E1%BB%8B" target="_blank" rel="noopener">Chỉ đường</a></div>
+    </section>
 
-<section class="sec steps-sec" id="cong-doan">
-  <div class="wrap">
-    <div class="sh rv"><span class="kick">Bà làm thế nào</span><h2>Năm công đoạn, <span class="script">năm lần thương</span></h2><p>Từng công đoạn bà làm bằng tay, có các cháu phụ một tay. Chậm một chút, nhưng mẻ nào cũng như mẻ bà làm cho cháu.</p></div>
-    <div class="steps">
-      <div class="step rv"><span class="ic"><svg viewBox="0 0 100 100"><circle cx="50" cy="56" r="34" fill="#7a4a2b"/><circle cx="50" cy="56" r="26" fill="#fffaf0"/><ellipse cx="50" cy="58" rx="18" ry="16" fill="#efe2cb"/><path d="M70 22l-14 28" stroke="#8b6239" stroke-width="6" stroke-linecap="round"/><path d="M73 18l6-8" stroke="#b9b2aa" stroke-width="7" stroke-linecap="round"/></svg></span><h3>Lấy cơm dừa</h3><p>Chọn dừa già cơm dày, bà và cháu tách lấy phần cơm trắng.</p><span class="love">chọn từng trái</span></div>
-      <div class="step rv"><span class="ic"><svg viewBox="0 0 100 100"><path d="M18 50h64l-6 28a8 8 0 0 1-8 6H32a8 8 0 0 1-8-6z" fill="#8fb6c9"/><ellipse cx="50" cy="50" rx="32" ry="7" fill="#cfe5ee"/><path d="M34 46c4-3 8 3 12 0M50 48c4-3 8 3 12 0" stroke="#fffaf0" stroke-width="5" stroke-linecap="round" fill="none"/><circle cx="30" cy="30" r="5" fill="#cfe5ee"/><circle cx="44" cy="22" r="3.5" fill="#cfe5ee"/><circle cx="62" cy="28" r="4" fill="#cfe5ee"/></svg></span><h3>Làm sạch</h3><p>Gọt sạch vỏ nâu, rửa kỹ, thái sợi đều tay.</p><span class="love">rửa đi rửa lại</span></div>
-      <div class="step rv"><span class="ic"><svg viewBox="0 0 100 100"><rect x="28" y="30" width="44" height="54" rx="10" fill="#e9dcc6"/><rect x="24" y="22" width="52" height="14" rx="5" fill="#c7843f"/><path d="M32 52h36v24a6 6 0 0 1-6 6H38a6 6 0 0 1-6-6z" fill="#fffaf0"/><g fill="#d9cdb8"><circle cx="40" cy="62" r="2"/><circle cx="50" cy="58" r="2"/><circle cx="58" cy="66" r="2"/><circle cx="46" cy="72" r="2"/></g></svg></span><h3>Thấm đường</h3><p>Ướp dừa với đường cho ngấm đều, để qua thời gian vừa đủ.</p><span class="love">chờ cho ngấm</span></div>
-      <div class="step rv"><span class="ic"><svg viewBox="0 0 100 100"><path d="M14 54h72a36 22 0 0 1-72 0z" fill="#4a3426"/><ellipse cx="50" cy="54" rx="36" ry="8" fill="#6b4c37"/><path d="M30 52c6-4 10 3 16 0s10-4 16 0" stroke="#fffaf0" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M60 50l22-30" stroke="#8b6239" stroke-width="5" stroke-linecap="round"/><path d="M34 86h32" stroke="#e9805f" stroke-width="6" stroke-linecap="round"/><path d="M40 90l4-6 4 6 4-6 4 6" stroke="#f0b04a" stroke-width="3" fill="none"/></svg></span><h3>Sên dừa</h3><p>Lửa nhỏ, tay đảo đều, đến khi đường kết tinh trắng mịn.</p><span class="love">đảo không rời tay</span></div>
-      <div class="step rv"><span class="ic"><svg viewBox="0 0 100 100"><circle cx="72" cy="26" r="12" fill="#f0b04a"/><g stroke="#f0b04a" stroke-width="3" stroke-linecap="round"><path d="M72 6v5M72 41v5M52 26h5M87 26h5M58 12l3 3M83 37l3 3M86 12l-3 3"/></g><rect x="12" y="56" width="70" height="26" rx="5" fill="#c99a5e"/><rect x="16" y="58" width="62" height="20" rx="3" fill="#fffaf0"/><g stroke="#e8dcc6" stroke-width="4" stroke-linecap="round" fill="none"><path d="M22 66c5-3 9 2 14 0"/><path d="M42 72c5-3 9 2 14 0"/><path d="M58 64c5-3 9 2 14 0"/></g></svg></span><h3>Sấy khô</h3><p>Hong cho ráo, giòn nhẹ bên ngoài, dẻo bùi bên trong, rồi đóng túi zip.</p><span class="love">đóng túi khi còn thơm</span></div>
-    </div>
-    <div class="promise">
-      <div class="rv"><b>Ngon</b><span>Dừa già cơm dày, ngọt dịu, bùi béo tự nhiên.</span></div>
-      <div class="rv"><b>Lành</b><span>Chỉ dừa và đường, không phẩm màu, không chất tạo mùi.</span></div>
-      <div class="rv"><b>Sạch</b><span>Làm tay tại bếp nhà, đóng túi zip kín ngay sau khi sấy.</span></div>
-    </div>
-  </div>
-</section>
+    <!-- CART -->
+    <section class="view" id="v-cart" aria-label="Giỏ hàng" hidden>
+      <div class="hd"><button class="ibtn lt" type="button" data-go="shop" aria-label="Quay lại"><svg><use href="#i-back"/></svg></button><div class="ttl"><b>Giỏ hàng</b><small id="cartSub">0 món</small></div><button class="ibtn lt" type="button" id="clear" aria-label="Xoá giỏ"><svg><use href="#i-trash"/></svg></button></div>
+      <div id="cartBody"></div>
+    </section>
 
-<section class="sec" id="dat-hang">
-  <div class="wrap">
-    <div class="sh rv"><span class="kick">Đặt mứt</span><h2>Chọn quà <span class="script">cho cả nhà</span></h2><p>Mứt dừa bà làm theo đơn nên cần đặt trước 1–2 ngày. Dừa quả và nước dừa có sẵn, ship ngay trong ngày.</p></div>
-    <div class="prods" id="prods"></div>
-    <div class="home rv"><span style="font-size:30px;flex:none;min-width:0">🏡</span><span><b>Nhà bà: 64 Lý Thường Kiệt</b>Phường Đồng Hới, tỉnh Quảng Trị. Ghé lấy tại nhà hoặc nhờ bà ship tận nơi.</span><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=64%20L%C3%BD%20Th%C6%B0%E1%BB%9Dng%20Ki%E1%BB%87t%2C%20%C4%90%E1%BB%93ng%20H%E1%BB%9Bi%2C%20Qu%E1%BA%A3ng%20Tr%E1%BB%8B" target="_blank" rel="noopener">📍 Chỉ đường</a></div>
-    <div class="pre-box rv"><svg><use href="#i-cal"/></svg><span><b>Mứt chờ 1–2 ngày · Dừa & nước dừa ship ngay</b>Đơn có cả hai, bạn chọn ship dừa ngay rồi giao mứt sau, hoặc gom giao chung một lần. Bà nhắn xác nhận qua Zalo.</span></div>
-  </div>
-</section>
+    <!-- CHECKOUT -->
+    <section class="view" id="v-checkout" aria-label="Thanh toán" hidden>
+      <div class="hd"><button class="ibtn lt" type="button" data-go="cart" aria-label="Quay lại"><svg><use href="#i-back"/></svg></button><div class="ttl"><b>Đặt hàng</b><small id="coSub"></small></div><span style="width:44px"></span></div>
+      <div class="blk"><small>Nhận hàng</small>
+        <div class="seg" id="mode"><button type="button" data-v="ship" aria-pressed="true">🛵 Giao tận nơi<small>trong Đồng Hới</small></button><button type="button" data-v="pick" aria-pressed="false">🏡 Ghé nhà bà<small>64 Lý Thường Kiệt</small></button></div>
+        <label class="fld" id="adF"><i>📍</i><input id="ad" autocomplete="street-address" placeholder="Địa chỉ nhận hàng"></label>
+        <label class="fld"><i>👤</i><input id="nm" autocomplete="name" placeholder="Tên người nhận"></label>
+        <label class="fld" id="phF"><i>📞</i><input id="ph" type="tel" inputmode="tel" autocomplete="tel" placeholder="Số điện thoại *"></label>
+        <p class="err" id="phErr" hidden>Nhập số điện thoại 10 số để bà gọi khi giao.</p>
+      </div>
+      <div class="blk" id="whenFresh" hidden><small>⚡ Dừa quả &amp; nước dừa – khi nào?</small><div class="seg" id="segFresh"></div></div>
+      <div class="blk" id="whenMut" hidden><small>⏳ Mứt dừa – ngày nhận (bà làm theo đơn)</small><div class="seg wrap" id="segMut"></div><p class="note">Sớm nhất là ngày mai. Bà nhắn xác nhận qua Zalo.</p></div>
+      <div class="blk"><small>Thanh toán</small>
+        <div class="seg" id="pay"><button type="button" data-v="Tiền mặt khi nhận" aria-pressed="true">💵 Tiền mặt<small>khi nhận hàng</small></button><button type="button" data-v="Chuyển khoản khi bà xác nhận" aria-pressed="false">🏦 Chuyển khoản<small>sau khi bà xác nhận</small></button></div>
+        <label class="fld"><i>📝</i><textarea id="nt" rows="1" placeholder="Ghi chú (gói quà, giờ gọi…)"></textarea></label>
+      </div>
+      <div class="sum" id="coSum"></div>
+    </section>
 
-<section class="sec" style="padding-top:8px">
-  <div class="wrap">
-    <div class="how">
-      <div class="rv"><b>1</b><h3>Chọn sản phẩm</h3><p>Mứt dừa, dừa quả, nước dừa: bấm + chọn số lượng, đơn hiện ở thanh dưới.</p></div>
-      <div class="rv"><b>2</b><h3>Chọn lúc nhận</h3><p>Dừa, nước dừa ship ngay; mứt chọn ngày nhận sau 1–2 ngày. Ghi số điện thoại, địa chỉ.</p></div>
-      <div class="rv"><b>3</b><h3>Gửi đơn qua Zalo</h3><p>Tin nhắn đơn soạn sẵn. Bà xác nhận, làm mẻ mới và giao đúng hẹn.</p></div>
-    </div>
-    <div class="gift rv">
-      <div><h2>Biếu ai đó <span class="script">một chút thương</span></h2><p>Túi mứt nhỏ làm quà cho ông bà, bố mẹ, bạn bè dịp lễ Tết. Đặt nhiều túi, ghi chú để bà gói riêng từng phần.</p><a class="btn" href="#dat-hang" style="margin-top:16px">Đặt mứt làm quà</a></div>
-      <svg class="mini" viewBox="0 0 100 100" aria-hidden="true"><rect x="18" y="38" width="64" height="48" rx="6" fill="#c8553d"/><rect x="14" y="30" width="72" height="14" rx="4" fill="#e9805f"/><rect x="46" y="30" width="8" height="56" fill="#f0c58e"/><path d="M50 30c-8-14-24-12-18 0M50 30c8-14 24-12 18 0" stroke="#f0c58e" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
-    </div>
-  </div>
-</section>
-</main>
+    <!-- PLACED -->
+    <section class="view" id="v-done" aria-label="Đơn đã soạn" hidden>
+      <div class="hd"><button class="ibtn lt" type="button" data-go="checkout" aria-label="Quay lại"><svg><use href="#i-back"/></svg></button><div class="ttl"><b>Gửi đơn</b><small>qua Zalo của bà</small></div><span style="width:44px"></span></div>
+      <div class="done-h"><div class="ok"><svg><use href="#i-check"/></svg></div><h2>Đơn đã soạn xong</h2><p>Còn một bước: gửi tin nhắn đơn qua Zalo để bà xác nhận.</p></div>
+      <div class="blk"><small id="doneSub"></small><div class="thumbs" id="thumbs"></div>
+        <div class="steps3"><div><b>1</b><span>Bấm <b>Chép tin nhắn</b></span></div><div><b>2</b><span>Bấm <b>Mở Zalo gửi bà</b></span></div><div><b>3</b><span>Trong khung chat: nhấn giữ → <b>Dán</b> → <b>Gửi</b></span></div></div>
+        <div class="msgbox" id="msg"></div>
+        <button class="copy" type="button" id="cp"><span id="cpT">① Chép tin nhắn</span></button>
+        <p class="demo-n" id="demoN" hidden>Bản xem thử: nút Zalo chưa nối số của bà.</p>
+      </div>
+    </section>
 
-<footer>
-  <div class="wrap foot">
-    <div><b>Quà của Bà <span class="script">mứt dừa bà cháu cùng làm</span></b><span class="addr">📍 Nhà bà: 64 Lý Thường Kiệt, phường Đồng Hới, tỉnh Quảng Trị · <a href="https://www.google.com/maps/search/?api=1&amp;query=64%20L%C3%BD%20Th%C6%B0%E1%BB%9Dng%20Ki%E1%BB%87t%2C%20%C4%90%E1%BB%93ng%20H%E1%BB%9Bi%2C%20Qu%E1%BA%A3ng%20Tr%E1%BB%8B" target="_blank" rel="noopener">Chỉ đường</a></span>© 2026 Quà của Bà. Trang giới thiệu sản phẩm, nhận đặt trước qua Zalo; không đặt hàng hay thanh toán trực tuyến.</div>
-    <span>Thiết kế bởi <a href="https://tichxanh.github.io/" target="_blank" rel="noopener">Tích Xanh</a></span>
-  </div>
-</footer>
+    <!-- STORY -->
+    <section class="view" id="v-story" aria-label="Chuyện của bà" hidden>
+      <div class="hd"><button class="ibtn lt" type="button" data-go="shop" aria-label="Quay lại"><svg><use href="#i-back"/></svg></button><div class="ttl"><b>Chuyện của bà</b><small>Quà của Bà</small></div><span style="width:44px"></span></div>
+      <div class="st-hero"><svg class="people" aria-hidden="true" viewBox="0 0 400 400">
+        <!-- mat -->
+        <ellipse cx="200" cy="350" rx="185" ry="26" fill="#e9d6b6"/>
+        <ellipse cx="200" cy="350" rx="160" ry="18" fill="none" stroke="#d4b98e" stroke-width="2" stroke-dasharray="6 6"/>
+        <!-- tray of mứt between -->
+        <g>
+          <ellipse cx="206" cy="332" rx="62" ry="14" fill="#c99a5e"/>
+          <ellipse cx="206" cy="328" rx="56" ry="11" fill="#fffaf0"/>
+          <g stroke="#f1e6d2" stroke-width="5" stroke-linecap="round" fill="none"><path d="M168 326c10-6 18 4 28-2"/><path d="M196 330c8-5 16 3 26-2"/><path d="M214 324c8-4 14 3 22-1"/><path d="M180 332c6-3 12 2 18-1"/></g>
+        </g>
+        <!-- GRANDMA (left) -->
+        <g class="bob">
+          <path d="M60 345c0-52 22-88 62-88s62 36 62 88z" fill="#8a5a8a"/>
+          <path d="M98 262l24 34 24-34" fill="none" stroke="#6d4370" stroke-width="3"/>
+          <circle cx="111" cy="300" r="2.5" fill="#f3e6cf"/><circle cx="111" cy="314" r="2.5" fill="#f3e6cf"/>
+          <rect x="110" y="236" width="24" height="26" rx="10" fill="#e8b996"/>
+          <circle cx="122" cy="206" r="40" fill="#f0c4a2"/>
+          <path d="M84 200c0-30 18-44 38-44s38 14 38 44c-8-14-22-20-38-20s-30 6-38 20z" fill="#d9d4cf"/>
+          <circle cx="122" cy="156" r="16" fill="#d9d4cf"/><circle cx="122" cy="156" r="16" fill="none" stroke="#bfb8b0" stroke-width="2"/>
+          <circle cx="107" cy="210" r="9" fill="none" stroke="#6b4a33" stroke-width="2.5"/><circle cx="137" cy="210" r="9" fill="none" stroke="#6b4a33" stroke-width="2.5"/><path d="M116 210h12" stroke="#6b4a33" stroke-width="2.5"/>
+          <path d="M103 211q4-3 8 0M133 211q4-3 8 0" stroke="#4a2f1f" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <path d="M112 228q10 8 20 0" stroke="#a8553f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+          <circle cx="98" cy="224" r="6" fill="#f2a28c" opacity=".6"/><circle cx="146" cy="224" r="6" fill="#f2a28c" opacity=".6"/>
+          <!-- arm with ladle stirring -->
+          <g class="stir"><path d="M168 292q30 6 42 26" stroke="#8a5a8a" stroke-width="20" fill="none" stroke-linecap="round"/><circle cx="212" cy="318" r="10" fill="#f0c4a2"/><path d="M214 316l30-44" stroke="#8b6239" stroke-width="5" stroke-linecap="round"/></g>
+        </g>
+        <!-- CHILD (right) -->
+        <g class="bob" style="animation-delay:-2.5s">
+          <path d="M262 345c0-40 16-66 46-66s46 26 46 66z" fill="#e9805f"/>
+          <path d="M282 300h52" stroke="#fffaf0" stroke-width="5" opacity=".7"/><path d="M280 318h56" stroke="#fffaf0" stroke-width="5" opacity=".7"/>
+          <circle cx="308" cy="238" r="34" fill="#f6cfae"/>
+          <path d="M274 236c0-24 14-38 34-38s34 14 34 38c-6-6-12-14-14-22-8 8-26 12-44 10-4 4-8 8-10 12z" fill="#3b2418"/>
+          <path d="M338 222c10-2 16 6 12 14" stroke="#3b2418" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <circle cx="352" cy="238" r="5" fill="#e9805f"/>
+          <circle cx="296" cy="242" r="4" fill="#3b2418"/><circle cx="320" cy="242" r="4" fill="#3b2418"/>
+          <circle cx="297.5" cy="240.5" r="1.3" fill="#fff"/><circle cx="321.5" cy="240.5" r="1.3" fill="#fff"/>
+          <path d="M300 256q8 8 16 0" stroke="#a8553f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+          <circle cx="287" cy="254" r="5.5" fill="#f2a28c" opacity=".7"/><circle cx="329" cy="254" r="5.5" fill="#f2a28c" opacity=".7"/>
+          <!-- arm holding a mứt strip to mouth -->
+          <path d="M276 300q-16 -10 -2 -36" stroke="#e9805f" stroke-width="16" fill="none" stroke-linecap="round"/>
+          <circle cx="276" cy="262" r="8" fill="#f6cfae"/>
+          <path d="M274 258c6-10 16-10 22-4" stroke="#fffaf0" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <path d="M274 258c6-10 16-10 22-4" stroke="#e8dcc6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </g>
+        <!-- hearts & coconut -->
+        <g fill="#c8553d" opacity=".85"><path d="M214 140c-6-8-18-2-12 8l12 12 12-12c6-10-6-16-12-8z"/><path d="M246 112c-4-5-11-1-7 5l7 7 7-7c4-6-3-10-7-5z" opacity=".6"/></g>
+        <g transform="translate(26 290)"><circle cx="20" cy="20" r="20" fill="#7a4a2b"/><circle cx="20" cy="20" r="14" fill="#fffaf0"/><circle cx="20" cy="20" r="9" fill="#efe2cb"/></g>
+        <g class="steam" fill="none" stroke="#c9b08a" stroke-width="3" stroke-linecap="round"><path d="M190 312c-6-8 6-12 0-20"/><path d="M206 308c-6-8 6-12 0-20"/><path d="M222 312c-6-8 6-12 0-20"/></g>
+      </svg><h2>Món quà gắn kết <em>ba thế hệ</em></h2><p>Mỗi dịp các cháu về, bà bày chảo ra hiên. Cháu lớn tách cơm dừa, cháu nhỏ chờ bà cho nếm thử. Chỉ có dừa, đường và thời gian bà dành cho cả nhà.</p></div>
+      <div class="st-steps"><div><span class="ic"><svg viewBox="0 0 100 100"><circle cx="50" cy="56" r="34" fill="#7a4a2b"/><circle cx="50" cy="56" r="26" fill="#fffaf0"/><ellipse cx="50" cy="58" rx="18" ry="16" fill="#efe2cb"/><path d="M70 22l-14 28" stroke="#8b6239" stroke-width="6" stroke-linecap="round"/><path d="M73 18l6-8" stroke="#b9b2aa" stroke-width="7" stroke-linecap="round"/></svg></span><span><b class="t">1. Lấy cơm dừa</b><small>Chọn dừa già cơm dày, bà và cháu tách lấy phần cơm trắng.</small><em>chọn từng trái</em></span></div><div><span class="ic"><svg viewBox="0 0 100 100"><path d="M18 50h64l-6 28a8 8 0 0 1-8 6H32a8 8 0 0 1-8-6z" fill="#8fb6c9"/><ellipse cx="50" cy="50" rx="32" ry="7" fill="#cfe5ee"/><path d="M34 46c4-3 8 3 12 0M50 48c4-3 8 3 12 0" stroke="#fffaf0" stroke-width="5" stroke-linecap="round" fill="none"/><circle cx="30" cy="30" r="5" fill="#cfe5ee"/><circle cx="44" cy="22" r="3.5" fill="#cfe5ee"/><circle cx="62" cy="28" r="4" fill="#cfe5ee"/></svg></span><span><b class="t">2. Làm sạch</b><small>Gọt sạch vỏ nâu, rửa kỹ, thái sợi đều tay.</small><em>rửa đi rửa lại</em></span></div><div><span class="ic"><svg viewBox="0 0 100 100"><rect x="28" y="30" width="44" height="54" rx="10" fill="#e9dcc6"/><rect x="24" y="22" width="52" height="14" rx="5" fill="#c7843f"/><path d="M32 52h36v24a6 6 0 0 1-6 6H38a6 6 0 0 1-6-6z" fill="#fffaf0"/><g fill="#d9cdb8"><circle cx="40" cy="62" r="2"/><circle cx="50" cy="58" r="2"/><circle cx="58" cy="66" r="2"/><circle cx="46" cy="72" r="2"/></g></svg></span><span><b class="t">3. Thấm đường</b><small>Ướp dừa với đường cho ngấm đều, để qua thời gian vừa đủ.</small><em>chờ cho ngấm</em></span></div><div><span class="ic"><svg viewBox="0 0 100 100"><path d="M14 54h72a36 22 0 0 1-72 0z" fill="#4a3426"/><ellipse cx="50" cy="54" rx="36" ry="8" fill="#6b4c37"/><path d="M30 52c6-4 10 3 16 0s10-4 16 0" stroke="#fffaf0" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M60 50l22-30" stroke="#8b6239" stroke-width="5" stroke-linecap="round"/><path d="M34 86h32" stroke="#e9805f" stroke-width="6" stroke-linecap="round"/><path d="M40 90l4-6 4 6 4-6 4 6" stroke="#f0b04a" stroke-width="3" fill="none"/></svg></span><span><b class="t">4. Sên dừa</b><small>Lửa nhỏ, tay đảo đều, đến khi đường kết tinh trắng mịn.</small><em>đảo không rời tay</em></span></div><div><span class="ic"><svg viewBox="0 0 100 100"><circle cx="72" cy="26" r="12" fill="#f0b04a"/><g stroke="#f0b04a" stroke-width="3" stroke-linecap="round"><path d="M72 6v5M72 41v5M52 26h5M87 26h5M58 12l3 3M83 37l3 3M86 12l-3 3"/></g><rect x="12" y="56" width="70" height="26" rx="5" fill="#c99a5e"/><rect x="16" y="58" width="62" height="20" rx="3" fill="#fffaf0"/><g stroke="#e8dcc6" stroke-width="4" stroke-linecap="round" fill="none"><path d="M22 66c5-3 9 2 14 0"/><path d="M42 72c5-3 9 2 14 0"/><path d="M58 64c5-3 9 2 14 0"/></g></svg></span><span><b class="t">5. Sấy khô</b><small>Hong cho ráo, giòn nhẹ bên ngoài, dẻo bùi bên trong, rồi đóng túi zip.</small><em>đóng túi khi còn thơm</em></span></div></div>
+      <div class="trio"><div><b class="t">Ngon</b><small>dừa già cơm dày</small></div><div><b class="t">Lành</b><small>không phẩm màu</small></div><div><b class="t">Sạch</b><small>làm tay, túi zip kín</small></div></div>
+      <div class="addr-card"><i>🏡</i><span><b class="t">Nhà bà · 64 Lý Thường Kiệt</b><small>Phường Đồng Hới, tỉnh Quảng Trị</small></span><a href="https://www.google.com/maps/search/?api=1&amp;query=64%20L%C3%BD%20Th%C6%B0%E1%BB%9Dng%20Ki%E1%BB%87t%2C%20%C4%90%E1%BB%93ng%20H%E1%BB%9Bi%2C%20Qu%E1%BA%A3ng%20Tr%E1%BB%8B" target="_blank" rel="noopener">Chỉ đường</a></div>
+    </section>
 
-<div class="fab off" id="fab"><a class="btn btn-main" href="#dat-hang"><svg><use href="#i-cal"/></svg>Đặt mứt</a></div>
-<div class="obar off" id="obar" role="region" aria-label="Đơn đang chọn">
-  <button class="sum" type="button" data-open><span class="cnt" id="oc">0</span><span><b id="ot">0k</b><span id="on"></span></span></button>
-  <button class="btn btn-z" type="button" data-open><span class="zl">Zalo</span>Gửi đơn</button>
-</div>
-
-<div class="dlg" id="orderDlg" hidden>
-  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="oTitle">
-    <div class="sh-h"><h3 id="oTitle">Đơn của bạn</h3><button class="x" type="button" data-close aria-label="Đóng">×</button></div>
-    <div class="sh-b">
-      <div id="ol"></div>
-      <div id="whenBox" class="fld" style="gap:12px"></div>
-      <div class="fld"><span>Nhận hàng</span><small class="hint" id="pickHint" hidden>Ghé lấy tại nhà bà: 64 Lý Thường Kiệt, phường Đồng Hới.</small><div class="seg" id="mode"><button type="button" aria-pressed="true" data-v="Giao tận nơi">Giao tận nơi</button><button type="button" aria-pressed="false" data-v="Tự đến lấy">Tự đến lấy</button></div></div>
-      <label class="fld"><span>Tên người nhận</span><input id="nm" autocomplete="name" placeholder="VD: Chị Lan"></label>
-      <label class="fld"><span>Số điện thoại <b class="req">*</b></span><input id="ph" type="tel" inputmode="tel" autocomplete="tel" placeholder="VD: 0912 345 678"><small class="err" id="phErr" hidden>Nhập số điện thoại 10 số để bà gọi khi giao.</small></label>
-      <label class="fld"><span id="adLbl">Địa chỉ nhận</span><input id="ad" autocomplete="street-address" placeholder="VD: 12 Lê Lợi, Đồng Hới"></label>
-      <label class="fld"><span>Ghi chú</span><textarea id="nt" rows="2" placeholder="VD: gói riêng 2 túi làm quà"></textarea></label>
-    </div>
-    <div class="sh-f">
-      <div class="tot"><span>Tạm tính<small>Chưa gồm phí ship</small></span><b id="tt">0k</b></div>
-      <button class="btn btn-z" type="button" id="next"><span class="zl">Zalo</span>Gửi đơn qua Zalo</button>
-    </div>
-  </div>
-</div>
-
-<div class="dlg" id="sendDlg" hidden>
-  <div class="card-s" role="dialog" aria-modal="true" aria-labelledby="sTitle">
-    <h3 id="sTitle">Đơn đã soạn xong</h3>
-    <p id="sSub" hidden></p>
-    <ol class="ol3"><li><span>Bấm <b>Chép tin nhắn</b>.</span></li><li><span>Bấm <b>Mở Zalo</b>.</span></li><li><span>Trong khung chat: <b>nhấn giữ</b> ô nhập tin → <b>Dán</b> → <b>Gửi</b>.</span></li></ol>
-    <div class="msgbox" id="msgTxt"></div>
-    <button class="btn btn-main" type="button" id="cp"><b class="n1">1</b><span id="cpT">Chép tin nhắn</span></button>
-    <a class="btn btn-z" id="go" href="#" rel="noopener"><b class="n1">2</b><span class="zl">Zalo</span>Mở Zalo đặt mứt</a>
-    <button class="btn btn-line" type="button" data-close>Đóng</button>
-  </div>
+    <nav class="tabs" id="tabs" aria-label="Điều hướng">
+      <button type="button" data-go="shop" aria-label="Cửa hàng" aria-current="page"><svg><use href="#i-home"/></svg></button>
+      <button type="button" data-go="search" aria-label="Tìm"><svg><use href="#i-search"/></svg></button>
+      <button type="button" data-go="cart" aria-label="Giỏ hàng"><svg><use href="#i-bag"/></svg><span class="dot" data-cnt hidden>0</span></button>
+      <button type="button" data-go="story" aria-label="Chuyện của bà"><svg><use href="#i-heart"/></svg></button>
+    </nav>
+    <div class="cta" id="cta" hidden></div>
+  </main>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (() => {
-/* ===== CẤU HÌNH =====
-   CONTACT.zalo: 'https://zalo.me/<số>' – để trống = chế độ xem thử.
-   LEAD_DAYS: số ngày sớm nhất có thể nhận (đặt trước 1–2 ngày). DAYS_SHOWN: số ngày cho khách chọn. */
-const SHOP = 'Quà của Bà';
+/* ===== CẤU HÌNH ===== */
 const CONTACT = { zalo: 'https://zalo.me/0915506709' };
 const LEAD_DAYS = 1, DAYS_SHOWN = 6;
 const IMG = {"dia": "img/dia.jpg", "dua-qua": "img/dua-qua.jpg", "nuoc-dua": "img/nuoc-dua.jpg", "say-kho": "img/say-kho.jpg", "tui": "img/tui.jpg"};
-const PRODUCTS = [
-  {name:'Mứt dừa túi 300g', wait:1, price:40, unit:'/túi', img:'tui', tag:'Ăn vặt', note:'Túi zip nhỏ, vừa nhâm nhi cả tuần, tiện làm quà.'},
-  {name:'Mứt dừa túi 1kg', wait:1, price:120, unit:'/túi', img:'say-kho', tag:'Tiết kiệm', note:'Cho cả nhà cùng ăn, đãi khách ngày Tết, chia quà nhiều phần.'},
-  {name:'Dừa quả', price:25, unit:'/quả', img:'dua-qua', tag:'Ship ngay', grp:'dua', note:'Dừa tươi nguyên quả, nước ngọt thanh, cơm non.'},
-  {name:'Nước dừa chai 1L', price:40, unit:'/chai', img:'nuoc-dua', tag:'Ship ngay', grp:'dua', note:'Nước dừa nguyên chất, ngọt thanh, mặn nhẹ. Để tủ lạnh uống mát.'}
+const P = [
+  {id:'dua', name:'Dừa quả', sub:'1 quả · nước ngọt thanh', price:25, unit:'quả', img:'dua-qua', now:1},
+  {id:'nuoc', name:'Nước dừa chai 1L', sub:'1 lít · để mát uống', price:40, unit:'chai', img:'nuoc-dua', now:1},
+  {id:'m300', name:'Mứt dừa 300g', sub:'túi zip · bà làm theo đơn', price:40, unit:'túi', img:'tui'},
+  {id:'m1k', name:'Mứt dừa 1kg', sub:'túi lớn · đãi cả nhà', price:120, unit:'túi', img:'say-kho'}
 ];
-const GROUPS = [['mut','Mứt dừa','đặt trước 1–2 ngày · bà làm theo đơn'],['dua','Dừa tươi & nước dừa','có sẵn · ship ngay trong ngày']];
-
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const k = n => n + 'k';
-const find = n => PRODUCTS.find(p => p.name === n);
-$$('img[data-img]').forEach(i => i.src = IMG[i.dataset.img]);
-
-$('#prods').innerHTML = GROUPS.map(([g, t, sub]) => `<h3 class="grp-t">${t}<small>${sub}</small></h3>` + PRODUCTS.filter(p => (p.grp || 'mut') === g).map(p => `<article class="prod rv"><div class="ph"><img src="${IMG[p.img]}" alt="${esc(p.name)}" loading="lazy"><span class="tag${p.wait ? '' : ' now'}">${esc(p.tag)}</span></div>
-  <div class="tx">${p.wait ? '<span class="avail wait">⏳ Đặt trước 1–2 ngày</span>' : '<span class="avail now">⚡ Ship ngay trong ngày</span>'}<h3>${esc(p.name)}</h3><p>${esc(p.note)}</p><div class="row"><span class="pr">${k(p.price)}<small>${esc(p.unit)}</small></span>
-  <span class="qty"><button type="button" data-dec="${esc(p.name)}" aria-label="Bớt ${esc(p.name)}">−</button><output data-q="${esc(p.name)}">0</output><button type="button" class="plus" data-inc="${esc(p.name)}" aria-label="Thêm ${esc(p.name)}">+</button></span></div></div></article>`).join('')).join('');
-
-/* lúc nhận: mứt chờ LEAD_DAYS, dừa & nước dừa ship ngay */
-const WD = ['Chủ nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];
-const fmt = d => `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}`;
-const t0 = new Date(); t0.setHours(0,0,0,0);
-const dayList = (from, n) => Array.from({length: n}, (_, i) => { const d = new Date(t0); d.setDate(d.getDate() + from + i); return [`${WD[d.getDay()]} ${fmt(d)}`, from + i]; });
-const MUT_DAYS = dayList(LEAD_DAYS, DAYS_SHOWN), FRESH_DAYS = dayList(0, 5);
-let mutDay = MUT_DAYS[Math.min(1, MUT_DAYS.length - 1)][0], freshDay = 'Ship ngay hôm nay', split = true;
-const chip = (k, v, label, sub, on) => `<button type="button" data-k="${k}" data-v="${v}" aria-pressed="${on}">${label}${sub ? `<small>${sub}</small>` : ''}</button>`;
-function paintWhen(hasMut, hasFresh) {
-  let h = '';
-  if (hasMut) h += `<div class="fld"><span>⏳ Ngày nhận mứt dừa <b class="req">*</b></span><div class="seg">${MUT_DAYS.map(([d], i) => chip('mut', d, d.split(' ').slice(0, -1).join(' '), d.split(' ').pop() + (i === 0 ? ' · sớm nhất' : ''), d === mutDay)).join('')}</div><small class="hint">Bà làm mứt theo đơn nên cần 1–2 ngày.</small></div>`;
-  if (hasFresh && hasMut) h += `<div class="fld"><span>⚡ Dừa quả &amp; nước dừa</span><div class="seg">${chip('split', '1', 'Ship ngay hôm nay', 'mứt giao sau', split)}${chip('split', '0', 'Giao chung với mứt', 'một lần ship', !split)}</div></div>`;
-  if (hasFresh && !hasMut) h += `<div class="fld"><span>⚡ Nhận dừa quả &amp; nước dừa</span><div class="seg">${FRESH_DAYS.map(([d, o]) => { const v = o === 0 ? 'Ship ngay hôm nay' : d; return chip('fresh', v, o === 0 ? 'Ship ngay' : d.split(' ').slice(0, -1).join(' '), o === 0 ? 'hôm nay' : d.split(' ').pop(), v === freshDay); }).join('')}</div></div>`;
-  $('#whenBox').innerHTML = h; $('#whenBox').hidden = !h;
-}
-$('#whenBox').addEventListener('click', e => { const b = e.target.closest('[data-k]'); if (!b) return; const k = b.dataset.k, v = b.dataset.v; if (k === 'mut') mutDay = v; if (k === 'fresh') freshDay = v; if (k === 'split') split = v === '1'; paint(); });
-
-const order = new Map(); let mode = 'Giao tận nơi';
-try { JSON.parse(localStorage.getItem('qcb-order') || '[]').forEach(([n, q]) => find(n) && order.set(n, q)); $('#ph').value = localStorage.getItem('qcb-ph') || ''; } catch {}
-const save = () => { try { localStorage.setItem('qcb-order', JSON.stringify([...order])); } catch {} };
-const count = () => [...order.values()].reduce((a, b) => a + b, 0);
-const total = () => [...order].reduce((a, [n, q]) => a + find(n).price * q, 0);
-const obar = $('#obar'), fab = $('#fab');
-function paint() {
-  $$('[data-q]').forEach(o => o.textContent = order.get(o.dataset.q) || 0);
-  const c = count();
-  obar.classList.toggle('off', !c); fab.classList.toggle('off', c > 0 || scrollY < innerHeight * .6);
-  $('#oc').textContent = c; $('#ot').textContent = k(total()); $('#tt').textContent = k(total());
-  $('#on').textContent = [...order].map(([n, q]) => `${q} × ${n.replace('Mứt dừa ', 'mứt ')}`).join(', ');
-  const hasMut = [...order.keys()].some(n => find(n).wait), hasFresh = [...order.keys()].some(n => !find(n).wait);
-  paintWhen(hasMut, hasFresh);
-  $('#ol').innerHTML = c ? [...order].map(([n, q]) => { const p = find(n); return `<div class="oi"><img src="${IMG[p.img]}" alt=""><span><b>${esc(n)}</b><span>${k(p.price)}${esc(p.unit)}</span></span><span class="qty"><button type="button" data-dec="${esc(n)}" aria-label="Bớt">−</button><output>${q}</output><button type="button" class="plus" data-inc="${esc(n)}" aria-label="Thêm">+</button></span></div>`; }).join('') : '<p class="empty">Chưa chọn sản phẩm nào.</p>';
-}
-const toast = $('#toast'); let tt;
-const say = m => { toast.textContent = m; toast.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('show'), 2400); };
-let last = null;
-const open = d => { last = document.activeElement; d.hidden = false; d.querySelector('[data-close]')?.focus(); };
-const close = d => { d.hidden = true; last?.focus?.(); };
+const byId = id => P.find(p => p.id === id);
 const MOBILE = /android|iphone|ipad|ipod|zalo/i.test(navigator.userAgent);
-document.addEventListener('click', e => {
-  const i = e.target.closest('[data-inc]'); if (i) { const n = i.dataset.inc; order.set(n, (order.get(n) || 0) + 1); save(); paint(); if (!e.target.closest('.sheet')) say('Đã thêm ' + n); return; }
-  const d = e.target.closest('[data-dec]'); if (d) { const n = d.dataset.dec, q = (order.get(n) || 0) - 1; q > 0 ? order.set(n, q) : order.delete(n); save(); paint(); return; }
-  if (e.target.closest('[data-open]')) { if (!count()) { $('#dat-hang').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'}); say('Bấm + để chọn sản phẩm trước nhé'); return; } open($('#orderDlg')); }
-});
-$$('.dlg').forEach(dl => dl.addEventListener('click', e => { if (e.target === dl || e.target.closest('[data-close]')) close(dl); }));
-addEventListener('keydown', e => { if (e.key === 'Escape') $$('.dlg').forEach(dl => dl.hidden || close(dl)); });
-$('#mode').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; mode = b.dataset.v; $$('#mode button').forEach(x => x.setAttribute('aria-pressed', x === b)); const p = mode === 'Tự đến lấy'; $('#pickHint').hidden = !p; $('#adLbl').textContent = p ? 'Giờ đến lấy' : 'Địa chỉ nhận'; $('#ad').placeholder = p ? 'VD: 17h' : 'VD: 12 Lê Lợi, Đồng Hới'; });
+const wide = () => matchMedia('(min-width: 901px)').matches;
 
+/* state */
+const cart = new Map(); let mode = 'ship', pay = 'Tiền mặt khi nhận', fresh = 'now', mutDay = '', cat = 'all', view = 'shop';
+try { JSON.parse(localStorage.getItem('qcb2-cart') || '[]').forEach(([i, q]) => byId(i) && cart.set(i, q)); const f = JSON.parse(localStorage.getItem('qcb2-me') || '{}'); ['nm','ph','ad'].forEach(x => f[x] && ($('#' + x).value = f[x])); } catch {}
+const save = () => { try { localStorage.setItem('qcb2-cart', JSON.stringify([...cart])); localStorage.setItem('qcb2-me', JSON.stringify({nm: $('#nm').value, ph: $('#ph').value, ad: $('#ad').value})); } catch {} };
+const count = () => [...cart.values()].reduce((a, b) => a + b, 0);
+const total = () => [...cart].reduce((a, [i, q]) => a + byId(i).price * q, 0);
+const hasMut = () => [...cart.keys()].some(i => !byId(i).now), hasNow = () => [...cart.keys()].some(i => byId(i).now);
+
+/* dates */
+const WD = ['CN','T2','T3','T4','T5','T6','T7'], WDL = ['Chủ nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];
+const t0 = new Date(); t0.setHours(0,0,0,0);
+const DAYS = Array.from({length: DAYS_SHOWN}, (_, i) => { const d = new Date(t0); d.setDate(d.getDate() + LEAD_DAYS + i); const dm = `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}`; return {short: WD[d.getDay()] + ' ' + dm, long: WDL[d.getDay()] + ' ' + dm, first: !i}; });
+mutDay = DAYS[Math.min(1, DAYS.length - 1)].long;
+const FRESH = () => [['now','Ngay bây giờ','~30–60 phút'],['noon','Trưa nay','11:00–12:00'],['eve','Chiều nay','17:00–18:00']].concat(hasMut() ? [['with','Cùng mứt','một lần ship']] : []);
+const freshLabel = () => ({now:'ship ngay bây giờ', noon:'trưa nay 11:00–12:00', eve:'chiều nay 17:00–18:00', with:`giao chung với mứt (${mutDay})`})[fresh];
+
+/* UI helpers */
+const toast = $('#toast'); let tt;
+const say = m => { toast.textContent = m; toast.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('show'), 2200); };
+const ctrl = p => { const q = cart.get(p.id) || 0; return q ? `<span class="stp"><button type="button" data-dec="${p.id}" aria-label="Bớt ${esc(p.name)}">−</button><output>${q}</output><button type="button" class="p" data-inc="${p.id}" aria-label="Thêm ${esc(p.name)}">+</button></span>` : `<button class="add" type="button" data-inc="${p.id}" aria-label="Thêm ${esc(p.name)}"><svg><use href="#i-plus"/></svg></button>`; };
+const card = p => `<article class="pc"><div class="ph"><img src="${IMG[p.img]}" alt="${esc(p.name)}" loading="lazy"><span class="pill${p.now ? '' : ' wait'}">${p.now ? '⚡ Ship ngay' : '⏳ Đặt trước'}</span></div><b class="t">${esc(p.name)}</b><span class="sub">${esc(p.sub)}</span><div class="row"><span class="pr">${k(p.price)}</span>${ctrl(p)}</div></article>`;
+
+function renderShop() {
+  const q = $('#q').value.trim().toLowerCase();
+  const ok = p => (!q || p.name.toLowerCase().includes(q)) && (cat === 'all' || (cat === 'now' ? p.now : !p.now));
+  const a = P.filter(p => p.now && ok(p)), b = P.filter(p => !p.now && ok(p));
+  $('#shopList').innerHTML = (a.length ? `<div class="sec-h"><h2>Có sẵn · ship ngay</h2><small>cùng vườn dừa nhà</small></div><div class="grid">${a.map(card).join('')}</div>` : '') +
+    (b.length ? `<div class="sec-h"><h2>Mứt dừa của bà</h2><small>đặt trước 1–2 ngày</small></div><div class="grid">${b.map(card).join('')}</div>` : '') +
+    (!a.length && !b.length ? '<p class="empty">Không tìm thấy món phù hợp.</p>' : '');
+}
+function renderCart() {
+  const c = count(); $('#cartSub').textContent = c + ' món';
+  if (!c) { $('#cartBody').innerHTML = `<div class="empty"><svg class="people" aria-hidden="true" viewBox="0 0 400 400">
+        <!-- mat -->
+        <ellipse cx="200" cy="350" rx="185" ry="26" fill="#e9d6b6"/>
+        <ellipse cx="200" cy="350" rx="160" ry="18" fill="none" stroke="#d4b98e" stroke-width="2" stroke-dasharray="6 6"/>
+        <!-- tray of mứt between -->
+        <g>
+          <ellipse cx="206" cy="332" rx="62" ry="14" fill="#c99a5e"/>
+          <ellipse cx="206" cy="328" rx="56" ry="11" fill="#fffaf0"/>
+          <g stroke="#f1e6d2" stroke-width="5" stroke-linecap="round" fill="none"><path d="M168 326c10-6 18 4 28-2"/><path d="M196 330c8-5 16 3 26-2"/><path d="M214 324c8-4 14 3 22-1"/><path d="M180 332c6-3 12 2 18-1"/></g>
+        </g>
+        <!-- GRANDMA (left) -->
+        <g class="bob">
+          <path d="M60 345c0-52 22-88 62-88s62 36 62 88z" fill="#8a5a8a"/>
+          <path d="M98 262l24 34 24-34" fill="none" stroke="#6d4370" stroke-width="3"/>
+          <circle cx="111" cy="300" r="2.5" fill="#f3e6cf"/><circle cx="111" cy="314" r="2.5" fill="#f3e6cf"/>
+          <rect x="110" y="236" width="24" height="26" rx="10" fill="#e8b996"/>
+          <circle cx="122" cy="206" r="40" fill="#f0c4a2"/>
+          <path d="M84 200c0-30 18-44 38-44s38 14 38 44c-8-14-22-20-38-20s-30 6-38 20z" fill="#d9d4cf"/>
+          <circle cx="122" cy="156" r="16" fill="#d9d4cf"/><circle cx="122" cy="156" r="16" fill="none" stroke="#bfb8b0" stroke-width="2"/>
+          <circle cx="107" cy="210" r="9" fill="none" stroke="#6b4a33" stroke-width="2.5"/><circle cx="137" cy="210" r="9" fill="none" stroke="#6b4a33" stroke-width="2.5"/><path d="M116 210h12" stroke="#6b4a33" stroke-width="2.5"/>
+          <path d="M103 211q4-3 8 0M133 211q4-3 8 0" stroke="#4a2f1f" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <path d="M112 228q10 8 20 0" stroke="#a8553f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+          <circle cx="98" cy="224" r="6" fill="#f2a28c" opacity=".6"/><circle cx="146" cy="224" r="6" fill="#f2a28c" opacity=".6"/>
+          <!-- arm with ladle stirring -->
+          <g class="stir"><path d="M168 292q30 6 42 26" stroke="#8a5a8a" stroke-width="20" fill="none" stroke-linecap="round"/><circle cx="212" cy="318" r="10" fill="#f0c4a2"/><path d="M214 316l30-44" stroke="#8b6239" stroke-width="5" stroke-linecap="round"/></g>
+        </g>
+        <!-- CHILD (right) -->
+        <g class="bob" style="animation-delay:-2.5s">
+          <path d="M262 345c0-40 16-66 46-66s46 26 46 66z" fill="#e9805f"/>
+          <path d="M282 300h52" stroke="#fffaf0" stroke-width="5" opacity=".7"/><path d="M280 318h56" stroke="#fffaf0" stroke-width="5" opacity=".7"/>
+          <circle cx="308" cy="238" r="34" fill="#f6cfae"/>
+          <path d="M274 236c0-24 14-38 34-38s34 14 34 38c-6-6-12-14-14-22-8 8-26 12-44 10-4 4-8 8-10 12z" fill="#3b2418"/>
+          <path d="M338 222c10-2 16 6 12 14" stroke="#3b2418" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <circle cx="352" cy="238" r="5" fill="#e9805f"/>
+          <circle cx="296" cy="242" r="4" fill="#3b2418"/><circle cx="320" cy="242" r="4" fill="#3b2418"/>
+          <circle cx="297.5" cy="240.5" r="1.3" fill="#fff"/><circle cx="321.5" cy="240.5" r="1.3" fill="#fff"/>
+          <path d="M300 256q8 8 16 0" stroke="#a8553f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+          <circle cx="287" cy="254" r="5.5" fill="#f2a28c" opacity=".7"/><circle cx="329" cy="254" r="5.5" fill="#f2a28c" opacity=".7"/>
+          <!-- arm holding a mứt strip to mouth -->
+          <path d="M276 300q-16 -10 -2 -36" stroke="#e9805f" stroke-width="16" fill="none" stroke-linecap="round"/>
+          <circle cx="276" cy="262" r="8" fill="#f6cfae"/>
+          <path d="M274 258c6-10 16-10 22-4" stroke="#fffaf0" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <path d="M274 258c6-10 16-10 22-4" stroke="#e8dcc6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </g>
+        <!-- hearts & coconut -->
+        <g fill="#c8553d" opacity=".85"><path d="M214 140c-6-8-18-2-12 8l12 12 12-12c6-10-6-16-12-8z"/><path d="M246 112c-4-5-11-1-7 5l7 7 7-7c4-6-3-10-7-5z" opacity=".6"/></g>
+        <g transform="translate(26 290)"><circle cx="20" cy="20" r="20" fill="#7a4a2b"/><circle cx="20" cy="20" r="14" fill="#fffaf0"/><circle cx="20" cy="20" r="9" fill="#efe2cb"/></g>
+        <g class="steam" fill="none" stroke="#c9b08a" stroke-width="3" stroke-linecap="round"><path d="M190 312c-6-8 6-12 0-20"/><path d="M206 308c-6-8 6-12 0-20"/><path d="M222 312c-6-8 6-12 0-20"/></g>
+      </svg><b class="t">Giỏ còn trống</b>Bà đang chờ cháu chọn quà đó!</div>`; return; }
+  const row = ([i, q]) => { const p = byId(i); return `<div class="li"><img src="${IMG[p.img]}" alt=""><span><b class="t">${esc(p.name)}</b><small>${esc(p.sub)}</small></span><span class="r"><span class="pr">${k(p.price * q)}</span><span class="stp"><button type="button" data-dec="${i}" aria-label="Bớt">−</button><output>${q}</output><button type="button" class="p" data-inc="${i}" aria-label="Thêm">+</button></span></span></div>`; };
+  const nowI = [...cart].filter(([i]) => byId(i).now), mutI = [...cart].filter(([i]) => !byId(i).now);
+  const pct = hasMut() && hasNow() ? 60 : 100;
+  $('#cartBody').innerHTML = `<div class="prog"><b class="t"><svg><use href="#i-truck"/></svg>${hasNow() && !hasMut() ? 'Dừa & nước dừa · ship ngay hôm nay' : hasMut() && !hasNow() ? 'Mứt dừa · bà làm và giao sau 1–2 ngày' : 'Dừa ship ngay · mứt giao sau 1–2 ngày'}</b><div class="bar"><i style="width:${pct}%"></i></div><small>Phí ship trong Đồng Hới: bà báo khi xác nhận đơn.</small></div>
+    <div class="list">${nowI.length ? `<div class="grp-l">⚡ Ship ngay</div>${nowI.map(row).join('')}` : ''}${mutI.length ? `<div class="grp-l">⏳ Đặt trước</div>${mutI.map(row).join('')}` : ''}</div>
+    <div class="sum"><div><span>Tạm tính</span><b>${k(total())}</b></div><div><span>Phí ship</span><b>Bà báo khi xác nhận</b></div><div class="tot"><span>Tổng tạm tính</span><span>${k(total())}</span></div></div>`;
+}
+function renderCheckout() {
+  $('#coSub').textContent = count() + ' món · ' + k(total());
+  $('#adF').hidden = mode === 'pick';
+  $('#whenFresh').hidden = !hasNow(); $('#whenMut').hidden = !hasMut();
+  if (!FRESH().some(f => f[0] === fresh)) fresh = 'now';
+  $('#segFresh').innerHTML = FRESH().map(([v, a, b]) => `<button type="button" data-f="${v}" aria-pressed="${v === fresh}">${a}<small>${b}</small></button>`).join('');
+  $('#segFresh').classList.toggle('wrap', FRESH().length > 3); $('#segFresh').style.gridTemplateColumns = FRESH().length > 3 ? 'repeat(2,minmax(0,1fr))' : '';
+  $('#segMut').innerHTML = DAYS.map(d => `<button type="button" data-m="${d.long}" aria-pressed="${d.long === mutDay}">${d.short.split(' ')[0]}<small>${d.short.split(' ')[1]}${d.first ? ' · sớm nhất' : ''}</small></button>`).join('');
+  $('#coSum').innerHTML = `<div><span>Tạm tính</span><b>${k(total())}</b></div><div><span>Phí ship</span><b>${mode === 'pick' ? 'Miễn phí (ghé nhà bà)' : 'Bà báo khi xác nhận'}</b></div><div class="tot"><span>Tổng tạm tính</span><span>${k(total())}</span></div>`;
+}
 function compose() {
-  const lines = [...order].map(([n, q]) => `• ${q} ${find(n).unit.slice(1)} ${n.startsWith('Mứt dừa túi ') ? 'mứt dừa ' + n.replace('Mứt dừa túi ', '') : n.replace('Dừa quả', 'dừa tươi').replace('Nước dừa chai 1L', 'nước dừa 1L')} – ${k(find(n).price * q)}${find(n).wait ? ' (đặt trước)' : ''}`);
-  const nm = $('#nm').value.trim(), ad = $('#ad').value.trim(), nt = $('#nt').value.trim();
-  const hasMut = [...order.keys()].some(n => find(n).wait), hasFresh = [...order.keys()].some(n => !find(n).wait);
-  const when = [hasMut ? `Mứt dừa nhận: ${mutDay}` : '', hasFresh ? (hasMut ? (split ? 'Dừa/nước dừa: ship ngay hôm nay, mứt giao sau' : `Dừa/nước dừa: giao chung với mứt (${mutDay})`) : `Dừa/nước dừa nhận: ${freshDay}`) : ''];
-  return [hasMut ? 'Chào Quà của Bà, mình đặt hàng:' : 'Chào Quà của Bà, mình đặt dừa:', ...lines, `Tạm tính: ${k(total())}`, ...when, `${mode === 'Tự đến lấy' ? 'Tự đến lấy tại 64 Lý Thường Kiệt' : mode}${ad ? ': ' + ad : ''}`, `Người nhận: ${nm ? nm + ' – ' : ''}${$('#ph').value.trim()}`, nt ? `Ghi chú: ${nt}` : ''].filter(Boolean).join('\n');
+  const lines = [...cart].map(([i, q]) => { const p = byId(i); return `• ${q} ${p.unit} ${p.name.replace('Mứt dừa ', 'mứt dừa ').replace('Dừa quả', 'dừa tươi').replace('Nước dừa chai 1L', 'nước dừa 1L')} – ${k(p.price * q)}${p.now ? '' : ' (đặt trước)'}`; });
+  const ph = $('#ph').value.trim(), nm = $('#nm').value.trim(), ad = $('#ad').value.trim(), nt = $('#nt').value.trim();
+  return ['Chào Quà của Bà, mình đặt hàng:', ...lines, `Tạm tính: ${k(total())}`,
+    hasNow() ? `Dừa/nước dừa: ${freshLabel()}` : '', hasMut() ? `Mứt dừa nhận: ${mutDay}` : '',
+    mode === 'pick' ? 'Nhận hàng: ghé nhà bà (64 Lý Thường Kiệt)' : `Giao tới: ${ad || '(mình nhắn địa chỉ sau)'}`,
+    `Người nhận: ${nm ? nm + ' – ' : ''}${ph}`, `Thanh toán: ${pay}`, nt ? `Ghi chú: ${nt}` : ''].filter(Boolean).join('\n');
 }
-function copySync(t) { try { const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length); const ok = document.execCommand('copy'); ta.remove(); return ok; } catch { return false; } }
-async function copyText(t) { if (copySync(t)) return true; try { await navigator.clipboard.writeText(t); return true; } catch { return false; } }
-const phOk = () => /^(0|\+?84)\d{9}$/.test($('#ph').value.replace(/[\s.\-]/g, ''));
-$('#ph').addEventListener('input', () => { try { localStorage.setItem('qcb-ph', $('#ph').value); } catch {} if (phOk()) { $('#ph').classList.remove('bad'); $('#phErr').hidden = true; } });
-$('#next').onclick = () => {
-  if (!count()) { say('Bấm + để chọn sản phẩm trước nhé'); return; }
-  if (!phOk()) { $('#ph').classList.add('bad'); $('#phErr').hidden = false; $('#ph').focus(); return; }
-  const t = compose(); copySync(t);
-  $('#msgTxt').textContent = t; $('#cp').classList.remove('done'); $('#cpT').textContent = 'Chép tin nhắn';
-  $('#sSub').hidden = !!CONTACT.zalo; $('#sSub').textContent = 'Bản xem thử: khi duyệt, nút số 2 mở Zalo nhận đơn của Quà của Bà.';
-  const go = $('#go'); go.href = CONTACT.zalo || '#'; MOBILE ? go.removeAttribute('target') : go.target = '_blank';
-  close($('#orderDlg')); open($('#sendDlg'));
-};
-$('#cp').onclick = async () => { if (await copyText($('#msgTxt').textContent)) { $('#cp').classList.add('done'); $('#cpT').textContent = 'Đã chép ✓'; say('Đã chép, giờ bấm Mở Zalo'); } else say('Nhấn giữ vào khung đơn để chép'); };
-$('#go').addEventListener('click', e => { copySync($('#msgTxt').textContent); if (!CONTACT.zalo) { e.preventDefault(); say('Bản xem thử: nút này mở Zalo khi duyệt.'); } });
+function renderDone() {
+  $('#doneSub').textContent = `Đơn ${count()} món · ${k(total())}`;
+  $('#thumbs').innerHTML = [...cart.keys()].map(i => `<img src="${IMG[byId(i).img]}" alt="">`).join('');
+  $('#msg').textContent = compose(); $('#cp').classList.remove('done'); $('#cpT').textContent = '① Chép tin nhắn';
+  $('#demoN').hidden = !!CONTACT.zalo;
+}
+function renderCta() {
+  const c = count(), el = $('#cta');
+  if (view === 'shop' && c) el.innerHTML = `<button class="go dark" type="button" data-go="cart"><span>Xem giỏ · ${c} món</span><span>${k(total())} ›</span></button>`;
+  else if (view === 'cart' && c) el.innerHTML = `<button class="go" type="button" data-go="checkout"><span>Đặt hàng</span><span>${k(total())}</span></button>`;
+  else if (view === 'checkout') el.innerHTML = `<button class="go" type="button" id="place"><span>Soạn đơn gửi bà</span><span>${k(total())}</span></button>`;
+  else if (view === 'done') el.innerHTML = `<a class="go zalo" id="goZalo" href="${CONTACT.zalo || '#'}" rel="noopener"${MOBILE ? '' : ' target="_blank"'}><span><span class="zl">Zalo</span>&nbsp; ② Mở Zalo gửi bà</span><span>›</span></a>`;
+  else el.innerHTML = '';
+  el.hidden = !el.innerHTML;
+  $('#tabs').hidden = view === 'checkout' || view === 'done' || (view === 'cart' && c) || (view === 'shop' && c && !wide() && false);
+  if (view === 'shop' && c) $('#tabs').hidden = true;
+}
+function paintBadges() { $$('[data-cnt]').forEach(d => { d.textContent = count(); d.hidden = !count(); }); }
+function show(v) {
+  if (v === 'search') { v = 'shop'; setTimeout(() => $('#q').focus(), 50); }
+  if (v === 'checkout' && !count()) { say('Giỏ còn trống'); v = 'shop'; }
+  view = v;
+  $$('.view').forEach(s => s.hidden = s.id !== 'v-' + v);
+  $$('#tabs button').forEach(b => b.toggleAttribute('aria-current', b.dataset.go === v) || b.removeAttribute('aria-current'));
+  $$('#tabs button').forEach(b => b.dataset.go === v ? b.setAttribute('aria-current', 'page') : b.removeAttribute('aria-current'));
+  render(); const sc = $('#v-' + v); sc.scrollTop = 0; if (!wide()) scrollTo(0, 0);
+}
+function render() { if (view === 'shop') renderShop(); if (view === 'cart') renderCart(); if (view === 'checkout') renderCheckout(); if (view === 'done') renderDone(); renderCta(); paintBadges(); }
 
-const nav = $('#nav');
-const onScroll = () => { nav.classList.toggle('scrolled', scrollY > 8); fab.classList.toggle('off', count() > 0 || scrollY < innerHeight * .6); };
-addEventListener('scroll', onScroll, {passive: true});
-paint(); onScroll();
-if (!reduce && 'IntersectionObserver' in window) {
-  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.remove('pre'); io.unobserve(en.target); } }), {rootMargin: '0px 0px -8% 0px'});
-  $$('.rv').forEach(el => { if (el.getBoundingClientRect().top > innerHeight * .95) { el.classList.add('pre'); io.observe(el); } });
-}
+/* events */
+document.addEventListener('click', e => {
+  const g = e.target.closest('[data-go]'); if (g) { e.preventDefault(); show(g.dataset.go); return; }
+  const i = e.target.closest('[data-inc]'); if (i) { const id = i.dataset.inc; cart.set(id, (cart.get(id) || 0) + 1); save(); render(); if (view === 'shop' && cart.get(id) === 1) say('Đã thêm ' + byId(id).name); return; }
+  const d = e.target.closest('[data-dec]'); if (d) { const id = d.dataset.dec, q = (cart.get(id) || 0) - 1; q > 0 ? cart.set(id, q) : cart.delete(id); save(); render(); return; }
+  const f = e.target.closest('[data-f]'); if (f) { fresh = f.dataset.f; renderCheckout(); return; }
+  const m = e.target.closest('[data-m]'); if (m) { mutDay = m.dataset.m; renderCheckout(); return; }
+  if (e.target.closest('#place')) {
+    const ok = /^(0|\+?84)\d{9}$/.test($('#ph').value.replace(/[\s.\-]/g, ''));
+    $('#phF').classList.toggle('bad', !ok); $('#phErr').hidden = ok;
+    if (!ok) { $('#ph').focus(); return; }
+    save(); show('done'); copySync(compose()); return;
+  }
+  const z = e.target.closest('#goZalo'); if (z) { copySync($('#msg').textContent); if (!CONTACT.zalo) { e.preventDefault(); say('Bản xem thử: nút này mở Zalo của bà khi duyệt.'); } }
+});
+$('#mode').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; mode = b.dataset.v; $$('#mode button').forEach(x => x.setAttribute('aria-pressed', x === b)); renderCheckout(); });
+$('#pay').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; pay = b.dataset.v; $$('#pay button').forEach(x => x.setAttribute('aria-pressed', x === b)); });
+$('#cats').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; cat = b.dataset.c; $$('#cats button').forEach(x => x.setAttribute('aria-pressed', x === b)); renderShop(); });
+$('#q').addEventListener('input', renderShop);
+$('#ph').addEventListener('input', () => { if (/^(0|\+?84)\d{9}$/.test($('#ph').value.replace(/[\s.\-]/g, ''))) { $('#phF').classList.remove('bad'); $('#phErr').hidden = true; } });
+$('#clear').onclick = () => { cart.clear(); save(); render(); };
+function copySync(t) { try { const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length); const ok = document.execCommand('copy'); ta.remove(); return ok; } catch { return false; } }
+$('#cp').onclick = async () => { let ok = copySync($('#msg').textContent); if (!ok) try { await navigator.clipboard.writeText($('#msg').textContent); ok = true; } catch {} if (ok) { $('#cp').classList.add('done'); $('#cpT').textContent = '✓ Đã chép – giờ mở Zalo'; } else say('Nhấn giữ vào khung đơn để chép'); };
+addEventListener('resize', renderCta);
+show('shop');
 })();
 </script>
 </body>
