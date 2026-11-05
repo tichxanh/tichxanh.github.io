@@ -322,6 +322,30 @@ details.how{border-radius:18px}details.how summary{font-size:14px}.how-b{font-si
 .sec-h h2{position:relative;padding-left:12px}.sec-h h2::before{content:"";position:absolute;left:0;top:3px;bottom:3px;width:4px;border-radius:2px;background:#fccf12}
 .demobar{background:#fccf12;color:#111}
 .lk{color:var(--pri);font-weight:700;text-decoration:none;white-space:nowrap}.lk:hover{text-decoration:underline}
+
+/* cỡ chữ lớn hơn, dễ đọc trên điện thoại */
+body{font-size:14.5px}
+.sn a,.sn button{font-size:14px}.search input,.cd-chip,.zchip{font-size:14px}
+.card h3{font-size:14px;min-height:38px}.price b{font-size:16.5px}.price s{font-size:12px}.kg{font-size:11px}.orig{font-size:11.5px}.brand{font-size:10.5px}.lbl{font-size:11.5px}
+.sz{min-width:34px;min-height:32px;font-size:12.5px}.mc{min-height:30px;font-size:12px}.add{font-size:13.5px}
+.sec-h h2{font-size:18px}.fb{font-size:13.5px}.tile h3{font-size:15.5px}.tile small{font-size:12.5px}.hero p{font-size:14.5px}.ic{font-size:13px}.count{font-size:13px}
+.trust b{font-size:13.5px}.trust small{font-size:12px}.how-b{font-size:14px}.cart .oi b{font-size:13.5px}.cart .oi span span{font-size:12.5px}.cart .sumrow{font-size:14px}.club small{font-size:13px}
+.fld{font-size:14.5px}.fld input,.fld textarea{font-size:16px}.tot{font-size:14.5px}.oi b{font-size:14.5px}.oi span span{font-size:13px}.msgbox{font-size:14px}.card-s p{font-size:14px}.sh-h h3,.card-s h3{font-size:19px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.two .btn{font-size:14.5px;padding:12px 8px}
+.hint{color:var(--muted);font-size:12.5px;line-height:1.45}
+@media (max-width:900px){
+ body{font-size:16px}
+ .hero h1{font-size:30px}.hero p{font-size:15.5px}.tag{font-size:13px}.hero .btn{font-size:15px;min-height:46px}
+ .card h3{font-size:15px;min-height:42px}.price b{font-size:18px}.price s{font-size:13px}.kg{font-size:12px}.orig{font-size:12.5px}.brand{font-size:11px}.lbl{font-size:12.5px}
+ .sz{min-width:38px;min-height:38px;font-size:14px}.mc{min-height:34px;font-size:13px;padding:5px 11px}.add{min-height:46px;font-size:15px}
+ .sec-h h2{font-size:21px}.fb{font-size:14.5px;min-height:40px}.tile h3{font-size:17px}.tile small{font-size:14px}.ic{font-size:14px}.ic i{width:58px;height:58px}.count{font-size:14px}
+ .trust b{font-size:14.5px}.trust small{font-size:13px}.how-b{font-size:15px}details.how summary{font-size:16px}
+ .search input{font-size:16px}.logo b{font-size:17px}.foot{font-size:13.5px}
+ .obar b{font-size:18px}.obar small{font-size:13.5px}.obar .btn{font-size:15px}
+ .fld{font-size:15.5px}.tot{font-size:15.5px}.oi b{font-size:15.5px}.oi span span{font-size:14px}.msgbox{font-size:15px}.card-s p{font-size:14.5px}.sh-h h3,.card-s h3{font-size:21px}.btn{font-size:16px}
+ .two .btn{font-size:15px}.hint{font-size:13.5px}
+ .grid{gap:12px}
+}
 </style>
 </head>
 <body>
@@ -447,7 +471,7 @@ details.how{border-radius:18px}details.how summary{font-size:14px}.how-b{font-si
         <div class="big"><span>Cọc khi chốt (<span id="tCocP">50</span>%)</span><span class="coc" id="tCoc">0đ</span></div>
         <small id="tNote">Giá +kg: chưa gồm cước vận chuyển, hàng về báo kg thực tế (1kg = 300k). Shop xác nhận lại khi chốt.</small>
       </div>
-      <button class="btn btn-sale" type="button" id="next">Tiếp tục gửi đơn ›</button>
+      <div class="two"><button class="btn btn-line" type="button" id="ask">💬 Gửi shop tư vấn</button><button class="btn btn-sale" type="button" id="next">Lên đơn chốt ›</button></div><small class="hint">Chưa chắc size, giá hay hàng về? Bấm <b>Gửi shop tư vấn</b>. Muốn đặt luôn thì bấm <b>Lên đơn chốt</b>.</small>
     </div>
   </div>
 </div>
@@ -659,26 +683,29 @@ $('#mode').addEventListener('click', e => { const b = e.target.closest('button')
 
 /* gửi đơn */
 const MOBILE = /android|iphone|ipad|ipod|zalo|fban|fbav/i.test(navigator.userAgent);
-function compose() {
+function compose(kind) {
   const lines = [...order.values()].map(o => `• ${o.q} × ${label(o)} – ${fmt(lineTotal(o))}`);
-  const wh = $('#wh').value.trim(), nt = $('#nt').value.trim(), r = ['USD','EUR','KRW','JPY','CNY'].filter(k => [...order.values()].some(o => byMa(o.ma).tien === k));
-  return [`Chào ${SHOP.ten}, mình đặt hàng ${SALE.ten}:`, ...lines, `Tạm tính: ${fmt(sub())}`, `Cọc ${SALE.coc}%: ${fmt(cocAmt())}`, `${mode}${wh ? ': ' + wh : ''}`, `SĐT: ${$('#ph').value.trim()}`, nt ? `Ghi chú: ${nt}` : '',
-    `Giá chưa gồm cước +kg (hàng về báo kg thực tế, 1kg = ${Math.round(KG/1000)}k)`
-  ].filter(Boolean).join('\n');
+  const wh = $('#wh').value.trim(), nt = $('#nt').value.trim(), ph = $('#ph').value.trim();
+  if (kind === 'ask') return [`Chào ${SHOP.ten}, mình muốn nhờ shop tư vấn các sản phẩm sau:`, ...lines, `Tạm tính: ${fmt(sub())} (chưa gồm cước +kg)`, nt ? `Mình cần tư vấn: ${nt}` : 'Nhờ shop tư vấn size, giá và thời gian hàng về giúp mình.', ph ? `SĐT: ${ph}` : ''].filter(Boolean).join('\n');
+  return [`Chào ${SHOP.ten}, mình đặt hàng ${SALE.ten}:`, ...lines, `Tạm tính: ${fmt(sub())}`, `Cọc ${SALE.coc}%: ${fmt(cocAmt())}`, `${mode}${wh ? ': ' + wh : ''}`, `SĐT: ${ph}`, nt ? `Ghi chú: ${nt}` : '', `Giá chưa gồm cước +kg (hàng về báo kg thực tế, 1kg = ${Math.round(KG / 1000)}k)`].filter(Boolean).join('\n');
 }
 function copySync(t) { try { const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length); const ok = document.execCommand('copy'); ta.remove(); return ok; } catch { return false; } }
 async function copyText(t) { if (copySync(t)) return true; try { await navigator.clipboard.writeText(t); return true; } catch { return false; } }
 const phOk = () => /^(0|\+?84)\d{9}$/.test($('#ph').value.replace(/[\s.\-]/g, ''));
 $('#ph').addEventListener('input', () => { try { localStorage.setItem('mo-ph', $('#ph').value); } catch {} if (phOk()) { $('#ph').classList.remove('bad'); $('#phErr').hidden = true; } });
-$('#next').onclick = () => {
+function sendFlow(kind) {
   if (!cnt()) { say('Chọn sản phẩm trước nhé'); return; }
-  if (!phOk()) { $('#ph').classList.add('bad'); $('#phErr').hidden = false; $('#ph').focus(); return; }
-  const t = compose(); copySync(t); $('#msgTxt').textContent = t;
+  if (kind === 'order' && !phOk()) { $('#ph').classList.add('bad'); $('#phErr').hidden = false; $('#ph').focus(); return; }
+  const t = compose(kind); copySync(t); $('#msgTxt').textContent = t;
+  $('#sTitle').textContent = kind === 'ask' ? 'Gửi shop tư vấn' : 'Gửi đơn cho shop chốt';
+  $('#goZl').innerHTML = kind === 'ask' ? '<b>2</b>&nbsp;Mở Zalo để được tư vấn' : '<b>2</b>&nbsp;Mở Zalo để lên đơn';
   const gz = $('#goZl'); gz.href = SHOP.zalo; MOBILE ? gz.removeAttribute('target') : gz.target = '_blank';
-  const gm = $('#goMs'); gm.hidden = !SHOP.messenger; if (SHOP.messenger) { gm.href = SHOP.messenger + '?text=' + encodeURIComponent(t); MOBILE ? gm.removeAttribute('target') : gm.target = '_blank'; }
+  const gm = $('#goMs'); gm.textContent = kind === 'ask' ? 'Hoặc tư vấn qua Messenger' : 'Hoặc lên đơn qua Messenger'; gm.hidden = !SHOP.messenger; if (SHOP.messenger) { gm.href = SHOP.messenger + '?text=' + encodeURIComponent(t); MOBILE ? gm.removeAttribute('target') : gm.target = '_blank'; }
   $('#demoNote').hidden = !SHOP.demo;
   close($('#orderDlg')); open($('#sendDlg'));
-};
+}
+$('#next').onclick = () => sendFlow('order');
+$('#ask').onclick = () => sendFlow('ask');
 $('#goZl').addEventListener('click', () => copySync($('#msgTxt').textContent));
 $('#copyZ').onclick = async () => say(await copyText($('#msgTxt').textContent) ? 'Đã chép, giờ bấm Mở Zalo của shop' : 'Nhấn giữ vào khung đơn để chép');
 
