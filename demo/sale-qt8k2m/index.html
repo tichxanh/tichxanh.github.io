@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Quynh Trang Authentic – Order hàng sale (bản xem thử)</title>
-<meta name="description" content="Quynh Trang Authentic: bản xem thử web order hàng sale: giá tự tính theo tỷ giá hôm nay, chọn size, gửi đơn chốt qua Zalo hoặc Messenger.">
+<meta name="description" content="Quynh Trang Authentic: bản xem thử web order hàng sale: chọn size, gửi đơn chốt qua Zalo.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#6b4de6">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23e4572e'/%3E%3Cpath d='M8 12h16l-2 12H10z' fill='%23fff'/%3E%3Cpath d='M12 12a4 4 0 0 1 8 0' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E">
@@ -343,7 +343,7 @@ details.how{border-radius:18px}details.how summary{font-size:14px}.how-b{font-si
     <div>
       <span class="tag" id="eb">Bộ sưu tập mới</span>
       <h1>Hàng hiệu authentic,<br>order giá sale ✨</h1>
-      <p>Chọn món, chọn size, gửi đơn qua Zalo cho Quynh Trang chốt. Giá VNĐ tự cập nhật theo tỷ giá hôm nay.</p>
+      <p>Chọn món, chọn size, gửi đơn qua Zalo cho Quynh Trang chốt. Giá VNĐ hiển thị sẵn, chọn size là đặt được.</p>
       <a class="btn" href="#san-pham">Mua ngay <span aria-hidden="true">→</span></a>
     </div>
     <div class="hero-art" id="heroArt" aria-hidden="true"><div class="c hc1"></div><div class="c hc2"></div><div class="c hc3"></div></div>
@@ -353,7 +353,7 @@ details.how{border-radius:18px}details.how summary{font-size:14px}.how-b{font-si
 
   <section class="tiles">
     <div class="tile t1"><h3>Flash Sale</h3><small>Ưu đãi có hạn · giảm đến <b class="big" id="maxOff">0%</b></small><div class="fs" id="fs"><span>00<small>giờ</small></span><span>00<small>phút</small></span><span>00<small>giây</small></span></div></div>
-    <div class="tile t2"><h3>Tỷ giá hôm nay</h3><div id="rate" aria-live="polite"></div></div>
+    <div class="tile t2"><h3>Đặt hàng 3 bước</h3><small>1. Chọn size, thêm vào đơn<br>2. Gửi đơn qua Zalo cho shop<br>3. Cọc <b>50%</b>, shop order giúp bạn</small></div>
     <div class="tile t3"><h3>Cọc <span id="nCoc">50</span>% khi chốt</h3><small>Hàng về báo <b>kg thực tế</b><br><b>1kg = 300k</b> · giá hiển thị là <b>+kg</b></small></div>
   </section>
 
@@ -376,7 +376,7 @@ details.how{border-radius:18px}details.how summary{font-size:14px}.how-b{font-si
   <details class="how" id="huong-dan" open><summary>Lưu ý đặt hàng</summary>
     <div class="how-b">
       <ol>
-        <li>Giá hiển thị đã gồm <b><span id="phiTxt">8</span>% phí dịch vụ</b>, tính theo tỷ giá hôm nay, <b>chưa gồm cước vận chuyển về VN (+kg)</b>.</li>
+        <li>Giá hiển thị là giá bán, <b>chưa gồm cước vận chuyển về VN (+kg)</b>.</li>
         <li>Khi hàng về, shop báo <b>cân nặng thực tế</b>. Cước tính <b>1kg = 300.000đ</b>.</li>
         <li>Chốt đơn: cọc <b><span id="coc2">50</span>%</b> giá trị tạm tính, phần còn lại + cước kg thanh toán khi hàng về.</li>
         <li>Mỗi hãng một bảng size khác nhau, chưa chắc size hãy nhắn Zalo shop để được tư vấn.</li>
@@ -391,10 +391,10 @@ details.how{border-radius:18px}details.how summary{font-size:14px}.how-b{font-si
         <li>Sửa giá gốc, size, hết hàng trên Sheet là web tự đổi (có thể chậm vài phút).</li>
       </ol>
       <div class="tbl"><table><thead><tr><th>ma</th><th>ten</th><th>hang</th><th>tien</th><th>gia_goc</th><th>gia_cu</th><th>size</th><th>het_size</th><th>mau</th><th>anh</th><th>trang_thai</th></tr></thead><tbody id="sheetRows"></tbody></table></div>
-      <p>Giá bán = giá gốc × tỷ giá × (1 + 8% phí). Cột <b>het_size</b> ghi size đã hết, ví dụ <i>M, L</i>. Cột <b>trang_thai</b> ghi <i>het</i> để khoá sản phẩm.</p>
+      <p>Giá bán = giá gốc × (tỷ giá + 1.000) × 1,08, web tự tính. Cột <b>het_size</b> ghi size đã hết, ví dụ <i>M, L</i>. Cột <b>trang_thai</b> ghi <i>het</i> để khoá sản phẩm.</p>
     </div>
   </details>
-  <p class="foot"><b>Quynh Trang Authentic</b> · Giá hiển thị là giá tạm tính theo tỷ giá hôm nay (chưa gồm cước +kg), shop xác nhận lại khi chốt. Trang giới thiệu sản phẩm và nhận đặt hàng qua tin nhắn, không thanh toán trực tuyến trên web. Thiết kế bởi <a href="https://tichxanh.github.io/" target="_blank" rel="noopener">Tích Xanh</a></p>
+  <p class="foot"><b>Quynh Trang Authentic</b> · Giá hiển thị chưa gồm cước +kg, shop xác nhận lại khi chốt. Trang giới thiệu sản phẩm và nhận đặt hàng qua tin nhắn, không thanh toán trực tuyến trên web. Thiết kế bởi <a href="https://tichxanh.github.io/" target="_blank" rel="noopener">Tích Xanh</a></p>
 </div>
 
 <aside class="cartcol">
@@ -429,7 +429,7 @@ details.how{border-radius:18px}details.how summary{font-size:14px}.how-b{font-si
       <div class="tot">
         <div><span>Tạm tính</span><b id="tSub">0đ</b></div>
         <div class="big"><span>Cọc khi chốt (<span id="tCocP">50</span>%)</span><span class="coc" id="tCoc">0đ</span></div>
-        <small id="tNote">Giá +kg: chưa gồm cước vận chuyển, hàng về báo kg thực tế (1kg = 300k). Giá theo tỷ giá hôm nay, shop xác nhận lại khi chốt.</small>
+        <small id="tNote">Giá +kg: chưa gồm cước vận chuyển, hàng về báo kg thực tế (1kg = 300k). Shop xác nhận lại khi chốt.</small>
       </div>
       <button class="btn btn-sale" type="button" id="next">Tiếp tục gửi đơn ›</button>
     </div>
@@ -521,13 +521,15 @@ async function loadRates() {
   } catch { rateState = 'fallback'; }
 }
 const roundTo = (n, s) => s > 1 ? Math.round(n / s) * s : Math.round(n);
-const vnd = (p, usd) => roundTo(usd * (RATE[p.tien] || 0) * (1 + SALE.phi / 100), SALE.lamTron);
+const CONG = { USD: 1000, EUR: 1000, CNY: 1000, KRW: 0, JPY: 0 };   /* cộng thêm vào tỷ giá (đ / 1 đơn vị ngoại tệ) */
+const vnd = (p, usd) => roundTo(usd * ((RATE[p.tien] || 0) + (CONG[p.tien] || 0)) * (1 + SALE.phi / 100), SALE.lamTron);
 const price = p => vnd(p, +p.gia_goc);
 const oldPrice = p => p.gia_cu ? vnd(p, +p.gia_cu) : 0;
 const off = p => oldPrice(p) > price(p) ? Math.round((1 - price(p) / oldPrice(p)) * 100) : 0;
 const gocTxt = p => `${(+p.gia_goc).toLocaleString('en-US', {maximumFractionDigits: 2})} ${p.tien}`;
 
 function paintRate() {
+  if (!$('#rate')) return;
   const cur = ['USD', 'EUR', 'KRW', 'JPY', 'CNY'].filter(k => RATE[k]);
   $('#rate').innerHTML = `<span class="tg ${rateState === 'live' ? 'live' : 'warn'}">${rateState === 'live' ? '● Cập nhật' + (rateTime ? ' ' + rateTime : '') : 'Tỷ giá tạm tính'}</span>` +
     cur.map(k => `<span><b>1 ${k}</b> = ${Math.round(RATE[k]).toLocaleString('vi-VN')}đ</span>`).join('') +
@@ -644,8 +646,8 @@ function compose() {
   const lines = [...order.values()].map(o => `• ${o.q} × ${label(o)} – ${fmt(lineTotal(o))}`);
   const wh = $('#wh').value.trim(), nt = $('#nt').value.trim(), r = ['USD','EUR','KRW','JPY','CNY'].filter(k => [...order.values()].some(o => byMa(o.ma).tien === k));
   return [`Chào ${SHOP.ten}, mình đặt hàng ${SALE.ten}:`, ...lines, `Tạm tính: ${fmt(sub())}`, `Cọc ${SALE.coc}%: ${fmt(cocAmt())}`, `${mode}${wh ? ': ' + wh : ''}`, `SĐT: ${$('#ph').value.trim()}`, nt ? `Ghi chú: ${nt}` : '',
-    `Giá chưa gồm cước +kg (hàng về báo kg thực tế, 1kg = ${Math.round(KG/1000)}k)`,
-    r.length ? `(Giá tạm tính theo tỷ giá ${r.map(k => `1 ${k} = ${Math.round(RATE[k]).toLocaleString('vi-VN')}đ`).join(', ')}, shop xác nhận lại khi chốt)` : ''].filter(Boolean).join('\n');
+    `Giá chưa gồm cước +kg (hàng về báo kg thực tế, 1kg = ${Math.round(KG/1000)}k)`
+  ].filter(Boolean).join('\n');
 }
 function copySync(t) { try { const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length); const ok = document.execCommand('copy'); ta.remove(); return ok; } catch { return false; } }
 async function copyText(t) { if (copySync(t)) return true; try { await navigator.clipboard.writeText(t); return true; } catch { return false; } }
@@ -675,7 +677,7 @@ function tick() {
   [p2(H), p2(m), p2(s)].forEach((v, i) => fs[i].firstChild.textContent = v);
 }
 $('#nCoc').textContent = SALE.coc;
-$('#promoS').textContent = SALE.ten; $('#phiTxt').textContent = SALE.phi; $('#coc2').textContent = SALE.coc;
+$('#promoS').textContent = SALE.ten; $('#coc2').textContent = SALE.coc;
 $('#eb').textContent = SALE.ten + ' · order theo đợt';
 
 (async () => {
