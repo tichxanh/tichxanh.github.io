@@ -457,7 +457,7 @@ details.how{border-radius:18px}details.how summary{font-size:14px}.how-b{font-si
 const SHOP  = { ten: 'Quynh Trang Authentic', zalo: 'https://zalo.me/0915506709', messenger: 'https://m.me/quynhtrangkt', demo: false };
 const KG = 300000;   /* cước vận chuyển 1kg, báo theo kg thực tế khi hàng về */
 const SALE  = { ten: 'Sale cuối năm', han: '2026-11-25T23:59:00+07:00', phi: 8, coc: 50, lamTron: 1000 };
-const RATE_DU_PHONG = { USD: 26300, KRW: 19, JPY: 172, CNY: 3650, EUR: 30500 };   /* đ cho 1 đơn vị ngoại tệ, dùng khi không lấy được tỷ giá */
+const RATE_DU_PHONG = { USD: 26300, KRW: 19, JPY: 172, CNY: 3650, EUR: 30500, GBP: 35000 };   /* đ cho 1 đơn vị ngoại tệ, dùng khi không lấy được tỷ giá */
 const SHEET_CSV = '';   /* link Google Sheet đã "Xuất bản lên web" dạng CSV. Để trống = dùng dữ liệu mẫu bên dưới */
 /* Dữ liệu mẫu, cột giống hệt Google Sheet. hinh/mauve chỉ dùng để vẽ hình minh hoạ khi chưa có ảnh thật */
 const MAU = [
@@ -467,16 +467,6 @@ const MAU = [
  {ma:'M05',ten:'Chân váy midi khoá cài',hang:'Massimo Dutti',nguon:'massimodutti.com (Tây Ban Nha)',loai:'Đầm váy',tien:'EUR',gia_goc:49.95,gia_cu:89.95,size:'34,36,38,40',het_size:'34',mau:'Nâu xám',anh:'',trang_thai:'con',hinh:'dress',mauve:'#8a7565'},
  {ma:'M06',ten:'Áo thun cotton 100% có nẹp cúc',hang:'Massimo Dutti',nguon:'massimodutti.com (Tây Ban Nha)',loai:'Áo',tien:'EUR',gia_goc:19.95,gia_cu:29.95,size:'S,M,L,XL',het_size:'',mau:'Đen',anh:'',trang_thai:'con',hinh:'tee',mauve:'#26262b'},
  {ma:'M01',ten:'Jersey punto cổ khoá kéo pha len',hang:'Massimo Dutti',nguon:'massimodutti.com (Tây Ban Nha)',loai:'Áo',tien:'EUR',gia_goc:39.95,gia_cu:59.95,size:'XS,S,M,L,XL',het_size:'XL',mau:'Nâu chocolate,Kaki đậm',anh:'',trang_thai:'con',hinh:'knit',mauve:'#6b4a3a'},
- {ma:'A01',ten:'Áo khoác dạ dáng dài',hang:'Zara',nguon:'zara.com (Mỹ)',loai:'Áo khoác',tien:'USD',gia_goc:119,gia_cu:159,size:'XS,S,M,L',het_size:'M',mau:'Be,Đen',anh:'',trang_thai:'con',hinh:'coat',mauve:'#b9926a'},
- {ma:'D02',ten:'Đầm midi hoa nhí',hang:'Shein',nguon:'shein.com',loai:'Đầm váy',tien:'USD',gia_goc:24.99,gia_cu:38,size:'S,M,L,XL',het_size:'S',mau:'Hồng,Xanh',anh:'',trang_thai:'con',hinh:'dress',mauve:'#e79aa8'},
- {ma:'H03',ten:'Hoodie oversize unisex',hang:'Musinsa',nguon:'musinsa.com (Hàn)',loai:'Áo',tien:'KRW',gia_goc:59000,gia_cu:79000,size:'M,L,XL',het_size:'',mau:'Xám,Đen',anh:'',trang_thai:'con',hinh:'hoodie',mauve:'#7b8590'},
- {ma:'Q04',ten:'Quần jeans ống rộng',hang:'Uniqlo',nguon:'uniqlo.com (Nhật)',loai:'Quần',tien:'JPY',gia_goc:4990,gia_cu:'',size:'26,27,28,29,30',het_size:'28',mau:'',anh:'',trang_thai:'con',hinh:'jeans',mauve:'#5f84b8'},
- {ma:'T05',ten:'Áo thun cotton basic',hang:'Uniqlo',nguon:'uniqlo.com (Nhật)',loai:'Áo',tien:'JPY',gia_goc:1500,gia_cu:1990,size:'S,M,L,XL',het_size:'',mau:'Kem,Đen',anh:'',trang_thai:'con',hinh:'tee',mauve:'#efe9da'},
- {ma:'G06',ten:'Giày sneaker trắng đế dày',hang:'Taobao',nguon:'taobao.com (Trung)',loai:'Giày dép',tien:'CNY',gia_goc:289,gia_cu:399,size:'36,37,38,39,40,41',het_size:'37,40',mau:'',anh:'',trang_thai:'con',hinh:'sneaker',mauve:'#f4f4f1'},
- {ma:'B07',ten:'Túi tote canvas',hang:'Taobao',nguon:'taobao.com (Trung)',loai:'Phụ kiện',tien:'CNY',gia_goc:89,gia_cu:129,size:'',het_size:'',mau:'Nâu,Đen',anh:'',trang_thai:'con',hinh:'bag',mauve:'#c9a46a'},
- {ma:'M08',ten:'Mũ lưỡi trai thêu chữ',hang:'Musinsa',nguon:'musinsa.com (Hàn)',loai:'Phụ kiện',tien:'KRW',gia_goc:29000,gia_cu:39000,size:'',het_size:'',mau:'Xanh navy',anh:'',trang_thai:'het',hinh:'cap',mauve:'#34505f'},
- {ma:'S09',ten:'Áo sơ mi linen',hang:'Uniqlo',nguon:'uniqlo.com (Nhật)',loai:'Áo',tien:'JPY',gia_goc:3990,gia_cu:4990,size:'S,M,L',het_size:'',mau:'Xanh bạc hà,Trắng',anh:'',trang_thai:'con',hinh:'tee',mauve:'#bfdcc9'},
- {ma:'V10',ten:'Chân váy xếp ly',hang:'Zara',nguon:'zara.com (Mỹ)',loai:'Đầm váy',tien:'USD',gia_goc:35.9,gia_cu:'',size:'S,M,L',het_size:'L',mau:'Tím,Đen',anh:'',trang_thai:'con',hinh:'dress',mauve:'#8d6c91'}
 ];
 /* ============================================================ */
 
@@ -522,7 +512,7 @@ async function loadRates() {
   } catch { rateState = 'fallback'; }
 }
 const roundTo = (n, s) => s > 1 ? Math.round(n / s) * s : Math.round(n);
-const CONG = { USD: 1000, EUR: 1000, CNY: 1000, KRW: 0, JPY: 0 };   /* cộng thêm vào tỷ giá (đ / 1 đơn vị ngoại tệ) */
+const CONG = { USD: 1000, EUR: 1000, GBP: 1000, CNY: 0, KRW: 0, JPY: 0 };   /* cộng thêm vào tỷ giá (đ / 1 đơn vị ngoại tệ) */
 const vnd = (p, usd) => roundTo(usd * ((RATE[p.tien] || 0) + (CONG[p.tien] || 0)) * (1 + SALE.phi / 100), SALE.lamTron);
 const price = p => vnd(p, +p.gia_goc);
 const oldPrice = p => p.gia_cu ? vnd(p, +p.gia_cu) : 0;
@@ -685,7 +675,7 @@ $('#eb').textContent = SALE.ten + ' · order theo đợt';
   await Promise.all([loadData(), loadRates()]);
   paintRate(); paintCats(); render(); paintOrder(); tick(); setInterval(tick, 1000);
   $('#maxOff').textContent = Math.max(0, ...DATA.map(off)) + '%'; $('#promoOff').textContent = Math.max(0, ...DATA.map(off));
-  $('#heroArt').insertAdjacentHTML('beforeend', ['coat','dress','sneaker'].map((h,i)=>`<div class="c hc${i+1}" style="background:none;pointer-events:none">${art({hinh:h,mauve:['#fff','#ffd2de','#fff'][i]},true)}</div>`).join(''));
+  $('#heroArt').insertAdjacentHTML('beforeend', ['knit','dress','tee'].map((h,i)=>`<div class="c hc${i+1}" style="background:none;pointer-events:none">${art({hinh:h,mauve:['#fff','#ffd2de','#ffe9c7'][i]},true)}</div>`).join(''));
   $('#sheetRows').innerHTML = DATA.slice(0, 4).map(p => `<tr>${['ma','ten','hang','tien','gia_goc','gia_cu','size','het_size','mau'].map(k => `<td>${esc(p[k])}</td>`).join('')}<td>(link ảnh)</td><td>${esc(p.trang_thai)}</td></tr>`).join('');
 })();
 })();
