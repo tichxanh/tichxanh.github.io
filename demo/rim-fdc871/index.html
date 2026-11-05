@@ -296,6 +296,26 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:var(--bg);o
 .grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr))}
 .hero h1{font-size:clamp(40px,4.6vw,60px)}
 @media (max-width:560px){.grid{grid-template-columns:1fr 1fr}.grid > .item:last-child:nth-child(odd){grid-column:span 2}.grid > .item:last-child:nth-child(odd) .ph{aspect-ratio:16/9}}
+/* ảnh món là chính: thẻ Hôm nay xếp dọc, ảnh lớn phía trên */
+.tgrid{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.tcard{position:relative;grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr}
+.tcard .ph:has(.ill){aspect-ratio:16/6}
+.tcard .ph .ill span{font-size:46px}
+.tcard .ph{min-height:0;aspect-ratio:4/3}
+.tcard .tx{padding:14px 16px 16px;align-content:start;gap:6px}
+.tcard h3{font-size:20px}
+.tcard p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tcard .live{position:absolute;top:10px;left:10px;background:var(--paper);border-radius:999px;padding:6px 11px}
+.item .ph{aspect-ratio:1/1}
+@media (max-width:560px){
+  .today{padding:12px;border-radius:24px}
+  .today .sh{padding:8px 6px 0}
+  .today-note{padding:0 6px 4px}
+  .tcard{border-radius:20px}
+  .tcard .ph{aspect-ratio:1/.8}
+  .tcard h3{font-size:19px}
+  .item .ph{aspect-ratio:1/.9}
+}
 .logo b{line-height:1.3;white-space:nowrap}
 .logo b em{display:inline-block;line-height:1.05;padding:3px 9px 1px;margin-left:5px;vertical-align:1px}
 .logo small{margin-top:6px}
