@@ -393,7 +393,7 @@ body{font-size:14.5px}
   <section class="tiles">
     <div class="tile t1"><h3>Flash Sale</h3><small>Ưu đãi có hạn · giảm đến <b class="big" id="maxOff">0%</b></small><div class="fs" id="fs"><span>00<small>giờ</small></span><span>00<small>phút</small></span><span>00<small>giây</small></span></div></div>
     <div class="tile t2"><h3>Đặt hàng 3 bước</h3><small>1. Chọn size, thêm vào đơn<br>2. Gửi đơn qua Zalo cho shop<br>3. Cọc <b>50%</b>, shop order giúp bạn</small></div>
-    <div class="tile t3"><h3>Cọc <span id="nCoc">50</span>% khi chốt</h3><small>Hàng về báo <b>kg thực tế</b><br><b>1kg = 300k</b> · giá hiển thị là <b>+kg</b></small></div>
+    <div class="tile t3"><h3>Cọc <span id="nCoc">50</span>% khi chốt</h3><small>Hàng về báo <b>kg thực tế</b><br>Giá hiển thị là <b>+kg</b> (cước tính theo nước mua hàng)</small></div>
   </section>
 
   <section id="deals" class="sec"><div class="sec-h"><h2>Giá sốc hôm nay</h2><a class="va" href="#san-pham">Xem tất cả</a></div><div class="grid" id="dealGrid"></div></section>
@@ -407,7 +407,7 @@ body{font-size:14.5px}
 
   <div class="trust">
     <div><i>🛡️</i><span><b>Hàng authentic</b><small>Order từ web chính hãng</small></span></div>
-    <div><i>⚖️</i><span><b>Báo kg thực tế</b><small>1kg = 300k, minh bạch</small></span></div>
+    <div><i>⚖️</i><span><b>Báo kg thực tế</b><small>Cước theo nước mua hàng</small></span></div>
     <div><i>💬</i><span><b>Hỗ trợ qua Zalo</b><small>0915 506 709</small></span></div>
     <div><i>📏</i><span><b>Tư vấn size</b><small>Mỗi hãng một bảng size</small></span></div>
   </div>
@@ -416,7 +416,7 @@ body{font-size:14.5px}
     <div class="how-b">
       <ol>
         <li>Giá hiển thị là giá bán, <b>chưa gồm cước vận chuyển về VN (+kg)</b>.</li>
-        <li>Khi hàng về, shop báo <b>cân nặng thực tế</b>. Cước tính <b>1kg = 300.000đ</b>.</li>
+        <li>Khi hàng về, shop báo <b>cân nặng thực tế</b>. Cước tính theo <b>đơn giá kg của nước mua hàng</b>, shop báo cụ thể khi chốt.</li>
         <li>Chốt đơn: cọc <b><span id="coc2">50</span>%</b> giá trị tạm tính, phần còn lại + cước kg thanh toán khi hàng về.</li>
         <li>Ảnh, size và màu lấy theo trang web của hãng tại thời điểm shop đăng. Bấm <b>Xem trên web hãng</b> để xem size còn hàng mới nhất, shop xác nhận lại khi chốt đơn.</li>
         <li>Mỗi hãng một bảng size khác nhau, chưa chắc size hãy nhắn Zalo shop để được tư vấn.</li>
@@ -444,7 +444,7 @@ body{font-size:14.5px}
     <div class="sumrow"><span>Tạm tính</span><b id="cSub">0đ</b></div>
     <div class="sumrow"><span>Cước vận chuyển</span><b class="kgb">+kg thực tế</b></div>
     <div class="sumrow total"><span>Cọc khi chốt (<span id="cCocP">50</span>%)</span><b id="cCoc">0đ</b></div>
-    <small class="n">Hàng về báo kg thực tế, 1kg = 300k. Phần còn lại thanh toán khi hàng về.</small>
+    <small class="n">Hàng về báo kg thực tế. Phần còn lại thanh toán khi hàng về.</small>
     <button class="btn btn-sale" type="button" data-open>Gửi đơn chốt ›</button>
   </div>
   <div class="club"><b>Quynh Trang Authentic</b><small>Nhận báo sale mới, hàng về sớm qua Zalo.</small><a class="btn" href="https://zalo.me/0915506709" target="_blank" rel="noopener">Nhắn Zalo ngay</a></div>
@@ -469,7 +469,7 @@ body{font-size:14.5px}
       <div class="tot">
         <div><span>Tạm tính</span><b id="tSub">0đ</b></div>
         <div class="big"><span>Cọc khi chốt (<span id="tCocP">50</span>%)</span><span class="coc" id="tCoc">0đ</span></div>
-        <small id="tNote">Giá +kg: chưa gồm cước vận chuyển, hàng về báo kg thực tế (1kg = 300k). Shop xác nhận lại khi chốt.</small>
+        <small id="tNote">Giá +kg: chưa gồm cước vận chuyển, hàng về báo kg thực tế. Shop xác nhận lại khi chốt.</small>
       </div>
       <div class="two"><button class="btn btn-line" type="button" id="ask">💬 Gửi shop tư vấn</button><button class="btn btn-sale" type="button" id="next">Lên đơn chốt ›</button></div><small class="hint">Chưa chắc size, giá hay hàng về? Bấm <b>Gửi shop tư vấn</b>. Muốn đặt luôn thì bấm <b>Lên đơn chốt</b>.</small>
     </div>
@@ -494,7 +494,6 @@ body{font-size:14.5px}
 (() => {
 /* ================= CẤU HÌNH (shop sửa ở đây) ================= */
 const SHOP  = { ten: 'Quynh Trang Authentic', zalo: 'https://zalo.me/0915506709', messenger: 'https://m.me/quynhtrangkt', demo: false };
-const KG = 300000;   /* cước vận chuyển 1kg, báo theo kg thực tế khi hàng về */
 const SALE  = { ten: 'Sale cuối năm', han: '2026-11-25T23:59:00+07:00', phi: 8, coc: 50, lamTron: 1000 };
 const RATE_DU_PHONG = { USD: 26300, KRW: 19, JPY: 172, CNY: 3650, EUR: 30500, GBP: 35000 };   /* đ cho 1 đơn vị ngoại tệ, dùng khi không lấy được tỷ giá */
 const SHEET_CSV = '';   /* link Google Sheet đã "Xuất bản lên web" dạng CSV. Để trống = dùng dữ liệu mẫu bên dưới */
@@ -688,7 +687,7 @@ function compose(kind) {
   const lines = [...order.values()].map(o => `• ${o.q} × ${label(o)} – ${fmt(lineTotal(o))}`);
   const wh = $('#wh').value.trim(), nt = $('#nt').value.trim(), ph = $('#ph').value.trim();
   if (kind === 'ask') return [`Chào ${SHOP.ten}, mình muốn nhờ shop tư vấn các sản phẩm sau:`, ...lines, `Tạm tính: ${fmt(sub())} (chưa gồm cước +kg)`, nt ? `Mình cần tư vấn: ${nt}` : 'Nhờ shop tư vấn size, giá và thời gian hàng về giúp mình.', ph ? `SĐT: ${ph}` : ''].filter(Boolean).join('\n');
-  return [`Chào ${SHOP.ten}, mình đặt hàng ${SALE.ten}:`, ...lines, `Tạm tính: ${fmt(sub())}`, `Cọc ${SALE.coc}%: ${fmt(cocAmt())}`, `${mode}${wh ? ': ' + wh : ''}`, `SĐT: ${ph}`, nt ? `Ghi chú: ${nt}` : '', `Giá chưa gồm cước +kg (hàng về báo kg thực tế, 1kg = ${Math.round(KG / 1000)}k)`].filter(Boolean).join('\n');
+  return [`Chào ${SHOP.ten}, mình đặt hàng ${SALE.ten}:`, ...lines, `Tạm tính: ${fmt(sub())}`, `Cọc ${SALE.coc}%: ${fmt(cocAmt())}`, `${mode}${wh ? ': ' + wh : ''}`, `SĐT: ${ph}`, nt ? `Ghi chú: ${nt}` : '', `Giá chưa gồm cước +kg (hàng về báo kg thực tế)`].filter(Boolean).join('\n');
 }
 function copySync(t) { try { const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length); const ok = document.execCommand('copy'); ta.remove(); return ok; } catch { return false; } }
 async function copyText(t) { if (copySync(t)) return true; try { await navigator.clipboard.writeText(t); return true; } catch { return false; } }
