@@ -90,10 +90,6 @@ section.blk{padding-block:46px 0}
 .card .in{position:absolute;top:8px;left:8px;background:var(--accent);color:#fff;border-radius:3px;font-size:12px;font-weight:600;padding:3px 8px}
 .none{color:var(--muted);padding:18px 0;margin:0}
 
-.promo{background:var(--tint);border-top:3px solid var(--accent);border-radius:0 0 4px 4px;padding:26px 22px;display:grid;gap:22px;align-items:center}
-.promo h2{font-size:clamp(26px,5.4vw,42px);margin:0 0 10px;color:var(--accent)}
-.promo p{color:var(--muted);margin:0 0 18px;max-width:42ch}
-.promo .promoImg img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px}
 footer{margin-top:48px;border-top:1px solid var(--rule);padding-block:22px 110px;color:var(--muted);font-size:13px}
 
 /* product */
@@ -167,12 +163,9 @@ label.f input{background:var(--paper);border:1.5px solid var(--rule);border-radi
 body.inProd .nav{display:none}
 
 @media (min-width:640px){
-  .strip{display:grid;grid-template-columns:1fr 1fr}
-  .strip li+li{border-top:1px solid var(--rule)}
-  .strip li:nth-child(even){padding-left:22px;border-left:1px solid var(--rule)}
-  .strip li:nth-child(2){border-top:0}
+  .strip{display:grid;grid-template-columns:repeat(3,1fr)}
+  .strip li+li{border-top:0;padding-left:22px;border-left:1px solid var(--rule)}
   .grid{grid-template-columns:repeat(3,1fr);gap:26px 18px}
-  .promo{grid-template-columns:1.4fr .6fr;padding:34px 32px}
 }
 @media (min-width:900px){
   .links{display:flex}
@@ -180,7 +173,6 @@ body.inProd .nav{display:none}
   .nav{display:none}
   footer{padding-bottom:28px}
   .hero{grid-template-columns:1.05fr .95fr;padding-block:52px 0;align-items:end;gap:40px}
-  .strip li:nth-child(2){border-top:1px solid var(--rule)}
   .grid{grid-template-columns:repeat(4,1fr)}
   .pv{grid-template-columns:1fr 1fr;gap:46px;padding-bottom:48px;align-items:start}
   .pv .ph{position:sticky;top:80px}
@@ -220,8 +212,7 @@ body.inProd .nav{display:none}
     <li><b>Về sau 2 đến 3 tuần</b><span>Tính từ lúc shop chốt đơn</span></li>
     <li><b>Cọc 50% khi đặt</b><span>Phần còn lại trả khi nhận hàng</span></li>
     <li><b>Gửi đơn qua Zalo</b><span>Trang soạn sẵn đơn, bạn chỉ cần dán</span></li>
-    <li><b>Áo giữ nhiệt từ 99k</b><span>Khi mua từ 2 áo, trộn màu và size</span></li>
-  </ul>
+      </ul>
 
   <section class="blk" id="san-pham" style="scroll-margin-top:72px">
     <div class="hd"><h2>Đang nhận order</h2><span class="rail" aria-hidden="true"></span><span class="cnt-note" id="catalogNote"></span></div>
@@ -233,16 +224,6 @@ body.inProd .nav{display:none}
     <p class="none" id="none" hidden>Không tìm thấy sản phẩm nào. Thử từ khác hoặc chọn Tất cả.</p>
   </section>
 
-  <section class="blk">
-    <div class="promo">
-      <div>
-        <h2>Áo giữ nhiệt từ 2 áo còn 99k</h2>
-        <p>Mua một áo giá 119k. Từ hai áo trở lên còn 99k mỗi áo, chọn màu và size khác nhau vẫn được tính combo.</p>
-        <a class="pill" href="#giu-nhiet">Chọn áo giữ nhiệt</a>
-      </div>
-      <div class="promoImg"><img loading="lazy" src="img/soc-nau.jpg" alt="Bé gái mặc áo giữ nhiệt sọc nâu"></div>
-    </div>
-  </section>
 </div>
 <footer><div class="wrap">BBS Order. Nhận order quần áo trẻ em, đặt hàng và hỏi size qua Zalo 0915 506 709.</div></footer>
 </div>
